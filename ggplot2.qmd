@@ -23,7 +23,6 @@ pre.numberSource code
   { counter-reset: none; }
 </style>
 ```
-
 ```{r,echo=FALSE,message=FALSE}
 
 options("digits" = 5)
@@ -55,7 +54,6 @@ geom_boxplot <- function(...) ggplot2::geom_boxplot(..., fill = viridis(10, alph
 theme_set(theme_classic(base_size = 20))
 ```
 
-
 ```{r functions and data, eval=T, echo=F}
 
 hylaeformis_data <- read.csv(
@@ -69,30 +67,27 @@ hylaeformis_data <- read.csv(
 -   Comprender la lógica detras de la estructura los gráficos con ggplot2
 
 -   Ser capaz de intregrar en un gŕafico diferentes fuentes de información que representen la complejidad de los datos
-
 :::
 
  
 
-&nbsp; 
+ 
 
-<div class="alert alert-warning">
-
+::: {.alert .alert-warning}
 ## ggplot2 {.unnumbered .unlisted}
 
-  - Un paquete de R diseñado específicamente para producir gráficos
+-   Un paquete de R diseñado específicamente para producir gráficos
 
-  - A diferencia de otros paquetes, ggplot2 tiene su propia gramática
+-   A diferencia de otros paquetes, ggplot2 tiene su propia gramática
 
-  - La gramática se basa en la "Gramática de los gráficos" (Wilkinson 2005)
+-   La gramática se basa en la "Gramática de los gráficos" (Wilkinson 2005)
 
-  - Módulos independientes que pueden combinarse de muchas formas
+-   Módulos independientes que pueden combinarse de muchas formas
 
-  - Esta gramática proporciona una gran flexibilidad
+-   Esta gramática proporciona una gran flexibilidad
+:::
 
-</div>
-
-&nbsp; 
+ 
 
 ## Gramática de gráficos
 
@@ -100,26 +95,26 @@ La idea principal es empezar con una capa base de datos brutos y luego añadir m
 
 Aprender la gramática no sólo es útil para producir un gráfico de interés, sino también para pensar en otros gráficos más complejos. La ventaja de esta gramática es la posibilidad de crear nuevos gráficos compuestos por nuevas combinaciones de elementos.
 
-&nbsp; 
+ 
 
 ## Componentes del gráfico
 
 Todos los gráficos ggplot2 contienen los siguientes componentes:
 
-  - **Datos** - El objeto R con la información que necesita ser trazada
-  - **Capas** - Los datos específicos que serán graficados (ej. 'x' & 'y')
-  - **Escala** - Rango de datos a incluir
-  - **Coordenadas** - Sistema de coordenadas (no se utiliza muy a menudo)
-  - **Parcelas (facets)** - Determina cómo dividir los datos en subparcelas en un multipanel
-  - **Tema** - Controla el estilo del gráfico 
+-   **Datos** - El objeto R con la información que necesita ser trazada
+-   **Capas** - Los datos específicos que serán graficados (ej. 'x' & 'y')
+-   **Escala** - Rango de datos a incluir
+-   **Coordenadas** - Sistema de coordenadas (no se utiliza muy a menudo)
+-   **Parcelas (facets)** - Determina cómo dividir los datos en subparcelas en un multipanel
+-   **Tema** - Controla el estilo del gráfico
 
-&nbsp; 
+ 
 
 Estos componentes se juntan utilizando "+".
 
-La sintaxis más habitual incluye los datos dentro de la llamada "ggplot" y una capa "geom_".
+La sintaxis más habitual incluye los datos dentro de la llamada "ggplot" y una capa "geom\_".
 
-&nbsp; 
+ 
 
 Primero instala/carga el paquete:
 
@@ -131,7 +126,8 @@ install.packages("ggplot2")
 # load library
 library(ggplot2)
 ```
-&nbsp; 
+
+ 
 
 ## Gráficos de dispersión
 
@@ -142,14 +138,12 @@ Utilicemos el conjunto de datos "iris" para crear gráficos de dispersión:
 ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Petal.Length)) +
   geom_point()
 ```
-&nbsp; 
 
-This plot is defined by 3 components:
-  1. "data"- iris
-  1. "aes" - Sepal.length vs Petal.length
-  1. "layer" - Points (geom)
+ 
 
-&nbsp; 
+This plot is defined by 3 components: 1. "data"- iris 1. "aes" - Sepal.length vs Petal.length 1. "layer" - Points (geom)
+
+ 
 
 ## Atributos estéticos
 
@@ -176,7 +170,8 @@ ggplot(
 ) +
   geom_point()
 ```
-&nbsp; 
+
+ 
 
 Tenga en cuenta que los argumentos estéticos también pueden incluirse en la capa "geom":
 
@@ -188,8 +183,8 @@ ggplot(
 ) +
   geom_point(aes(color = Species, shape = Species))
 ```
-&nbsp; 
 
+ 
 
 También podemos incluir un valor fijo:
 
@@ -201,21 +196,20 @@ ggplot(
 ) +
   geom_point(color = "red2")
 ```
-&nbsp; 
+
+ 
 
 Algunos atributos funcionan mejor con algunos tipos de datos:
 
-  - Color y forma: variables categóricas
-  - Tamaño: variables continuas
+-   Color y forma: variables categóricas
+-   Tamaño: variables continuas
 
-&nbsp; 
-
+ 
 
 </br>
 
-<div class="alert alert-info">
-
-<font size="5">Ejercicio 1</font> 
+::: {.alert .alert-info}
+<font size="5">Ejercicio 1</font>
 
 Utilizando el conjunto de datos "hylaeformis":
 
@@ -234,7 +228,7 @@ head(hylaeformis_data, 20)
 
 </br>
 
-1.1 Create a scatter plot of  vs "meanfreq" (mean frequency)
+1.1 Create a scatter plot of vs "meanfreq" (mean frequency)
 
 1.1 Crear un gráfico de dispersión de duración ("duration") vs frecuencia promedio ("meanfreq")
 
@@ -274,17 +268,16 @@ ggplot(
 ```
 
 </br>
+:::
 
-</div>
-
-&nbsp;
+ 
 
 ## Gráficos multipanel (Facetting)
 
-  - Otra forma de visualizar variables categóricas
-  - Permite crear gráficos multipanel para cada nivel de la variable
-  - 2 tipos: "grid" & "wrap"
-  
+-   Otra forma de visualizar variables categóricas
+-   Permite crear gráficos multipanel para cada nivel de la variable
+-   2 tipos: "grid" & "wrap"
+
 ```{r}
 
 ggplot(iris, aes(Sepal.Length, Petal.Length)) +
@@ -297,10 +290,10 @@ ggplot(iris, aes(Sepal.Length, Petal.Length)) +
   geom_point() +
   facet_grid(~Species)
 ```
-&nbsp; 
 
+ 
 
-La escala puede ser fija o libre para los ejes _x_ e _y_, y puede modificarse el número de columnas y filas:
+La escala puede ser fija o libre para los ejes *x* e *y*, y puede modificarse el número de columnas y filas:
 
 ```{r}
 # free x
@@ -309,7 +302,6 @@ ggplot(iris, aes(Sepal.Length, Petal.Length)) +
   facet_wrap(~Species, scales = "free_x")
 ```
 
-
 ```{r, fig.height=8}
 # free x and 3 rows
 ggplot(iris, aes(Sepal.Length, Petal.Length)) +
@@ -317,14 +309,14 @@ ggplot(iris, aes(Sepal.Length, Petal.Length)) +
   facet_wrap(~Species, scales = "free_y", nrow = 3)
 ```
 
-
 ```{r, fig.height=6}
 # both free and 2 rows
 ggplot(iris, aes(Sepal.Length, Petal.Length)) +
   geom_point() +
   facet_wrap(~Species, scales = "free", nrow = 2)
 ```
-&nbsp; 
+
+ 
 
 Tenga en cuenta que también podemos guardar el componente básico como un objeto **R** y añadir otros componentes más adelante en el código:
 
@@ -336,16 +328,15 @@ p <- ggplot(iris, aes(Sepal.Length, Petal.Length)) +
 p + facet_wrap(~Species, scales = "free_x", nrow = 3)
 ```
 
-
 ## "geoms" adicionales
 
-- `geom_smooth()` - añade las líneas de mejor ajuste (incluyendo CI)
-- `geom_boxplot()` - Distribución de frecuencias 
-- `geom_histogram()` & `geom_freqpoly()` - distribuciones de frecuencia
-- `geom_bar()` - distribución de frecuencias de variables categóricas
-- `geom_path()` & `geom_line()` - añade líneas a los gráficos de dispersión
+-   `geom_smooth()` - añade las líneas de mejor ajuste (incluyendo CI)
+-   `geom_boxplot()` - Distribución de frecuencias
+-   `geom_histogram()` & `geom_freqpoly()` - distribuciones de frecuencia
+-   `geom_bar()` - distribución de frecuencias de variables categóricas
+-   `geom_path()` & `geom_line()` - añade líneas a los gráficos de dispersión
 
-&nbsp; 
+ 
 
 ### geom_smooth()
 
@@ -365,11 +356,11 @@ ggplot(iris, aes(Sepal.Length, Petal.Length)) +
   geom_smooth(method = "lm", se = FALSE) +
   facet_wrap(~Species, scales = "free", nrow = 3)
 ```
-&nbsp; 
 
-<div class="alert alert-info">
+ 
 
-<font size="5">Ejercicio 2</font> 
+::: {.alert .alert-info}
+<font size="5">Ejercicio 2</font>
 
 Utilizando el conjunto de datos de ejemplo "msleep":
 
@@ -444,10 +435,9 @@ ggplot(data = msleep[msleep$order %in% names(tab)[tab > 3], ], mapping = aes(x =
   geom_smooth() +
   facet_wrap(~order, scales = "free")
 ```
+
 </br>
-
-</div>
-
+:::
 
 ### Boxplots
 
@@ -460,12 +450,14 @@ ggplot(iris, aes(Species, Petal.Length)) +
 ```
 
 Una alternativa interesante son los gráficos de violines:
+
 ```{r}
 
 ggplot(iris, aes(Species, Petal.Length)) +
   geom_violin()
 ```
-&nbsp; 
+
+ 
 
 ### Histogramas
 
@@ -483,23 +475,28 @@ ggplot(iris, aes(Petal.Length)) +
   geom_histogram() +
   geom_freqpoly()
 ```
-&nbsp; 
+
+ 
 
 Podemos controlar la anchura de las barras:
+
 ```{r}
 
 ggplot(iris, aes(Petal.Length)) +
   geom_histogram(binwidth = 1, fill = adjustcolor("red2", alpha.f = 0.3))
 ```
-&nbsp; 
+
+ 
 
 Y compara la distribución de los distintos grupos dentro del mismo histograma:
+
 ```{r}
 
 ggplot(iris, aes(Petal.Length, fill = Species)) +
   geom_histogram(binwidth = 0.4)
 ```
-&nbsp; 
+
+ 
 
 ### Gráfico de barras
 
@@ -515,8 +512,8 @@ df <-
 ggplot(df, aes(Var1, Freq)) +
   geom_bar(stat = "identity")
 ```
-&nbsp; 
 
+ 
 
 ```{r, eval=F, echo=F}
 
@@ -746,7 +743,7 @@ p2 + expand_limits(x = c(0, 6), y = c(0, 80))
 
 Además de las funciones básicas (por ejemplo, componentes) descritas anteriormente, ggplot tiene muchas otras herramientas (tanto argumentos como funciones adicionales) para personalizar aún más los gráficos. Prácticamente todo se puede modificar. Aquí vemos algunas de las herramientas más comunes.
 
-&nbsp; 
+ 
 
 ### Temas
 
@@ -763,11 +760,12 @@ p + theme_bw()
 
 p + theme_minimal()
 ```
-&nbsp; 
+
+ 
 
 La mayoría de los temas difieren en el uso de cuadrículas, líneas de borde y patrones de etiquetado de ejes.
 
-&nbsp; 
+ 
 
 ### Personalización de ejes
 
@@ -784,7 +782,8 @@ ggplot(iris, aes(Sepal.Length, Petal.Length, col = Species)) +
   xlim(c(0, 10)) +
   ylim(c(0, 9))
 ```
-&nbsp; 
+
+ 
 
 Los ejes también pueden transformarse:
 
@@ -796,7 +795,7 @@ ggplot(iris, aes(Sepal.Length, Petal.Length, col = Species)) +
   scale_y_continuous(trans = "log2")
 ```
 
-&nbsp; 
+ 
 
 o invertidos:
 
@@ -806,8 +805,6 @@ ggplot(iris, aes(Sepal.Length, Petal.Length, col = Species)) +
   geom_point() +
   scale_y_reverse()
 ```
-
-
 
 ### Guardar ggplots
 
@@ -825,13 +822,12 @@ ggplot(
 # Export
 ggsave("plot.png", width = 5, height = 5)
 ```
-&nbsp; 
 
+ 
 
 El tipo de archivo de imagen se identificará por la extensión en el nombre del archivo
 
-&nbsp; 
-
+ 
 
 Personalización adicional del eje:
 
@@ -891,9 +887,9 @@ p2 + annotation_logticks(sides = "lr")
 p2 + annotation_logticks(sides = "trbl")
 ```
 
-&nbsp; 
+ 
 
-### Otros gráficos 
+### Otros gráficos
 
 Se pueden generar muchos otros tipos de gráficos. Aquí muestro un ejemplo de gráficos de contorno y de "mapa de calor":
 
@@ -907,34 +903,32 @@ ggplot(faithfuld, aes(eruptions, waiting)) +
 ggplot(faithfuld, aes(eruptions, waiting)) +
   geom_raster(aes(fill = density))
 ```
-&nbsp; 
 
+ 
 
 ## Otros paquetes de gráficos en R
 
-- **ggvis** (ggplots interactivos)
-- **vcd** (Warnes 2015)
-- **plotrix** (Lemon et al. 2006)
-- **gplots** (Warnes 2015)
+-   **ggvis** (ggplots interactivos)
+-   **vcd** (Warnes 2015)
+-   **plotrix** (Lemon et al. 2006)
+-   **gplots** (Warnes 2015)
 
 Consulte la [CRAN Graphics Task View](http://cran.r-project.org/web/views/Graphics.html) para obtener una lista más completa de herramientas gráficas en **R**.
 
----
+------------------------------------------------------------------------
 
-&nbsp; 
+ 
 
-## References 
+## References
 
-- Lemon J (2006) Plotrix: a package in the red light district of R. R-News
-6(4):8–12
-- Warnes GR, Bolker B, Bonebakker L, Gentleman R, Liaw WHA, Lumley
-T, Maechler M, Magnusson A, Moeller S, Schwartz M, Venables B (2015) gplots: various R programming tools for plotting data. R package version 2.17.0. https://CRAN.R-project.org/package=gplots
-- Wickham H (2010) A layered grammar of graphics. J Comput Graph Stat 19(1):3–28
-- Wilkinson L (2005) The grammar of graphics. Statistics and computing, 2nd edn. Springer, New York
+-   Lemon J (2006) Plotrix: a package in the red light district of R. R-News 6(4):8--12
+-   Warnes GR, Bolker B, Bonebakker L, Gentleman R, Liaw WHA, Lumley T, Maechler M, Magnusson A, Moeller S, Schwartz M, Venables B (2015) gplots: various R programming tools for plotting data. R package version 2.17.0. https://CRAN.R-project.org/package=gplots
+-   Wickham H (2010) A layered grammar of graphics. J Comput Graph Stat 19(1):3--28
+-   Wilkinson L (2005) The grammar of graphics. Statistics and computing, 2nd edn. Springer, New York
 
----
+------------------------------------------------------------------------
 
----
+------------------------------------------------------------------------
 
 <font size="4">Información de la sesión</font>
 
