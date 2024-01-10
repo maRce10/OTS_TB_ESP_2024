@@ -361,7 +361,7 @@
     "href": "fundamentos_de_r.html#ejercicio-1",
     "title": "Elementos básicos del lenguaje R",
     "section": "4.7 Ejercicio 1",
-    "text": "4.7 Ejercicio 1\n \n\nCree un vector numérico con 8 elementos que contenga números positivos y negativos\nCree un vector de caracteres con los nombres de las estaciones que se visitarán durante el curso\nAñada al vector de punto anterior un NA\nCree una matriz de numérica con 3 columnas y 3 filas\nCree una matriz de caracteres con 4 columnas y 3 filas\n¿Qué tipo de objeto es ‘iris’ y cuales son sus dimensiones?\nCree un cuadro de datos (data frame) con una columna numérica, una columna de caracteres y una columna con factores"
+    "text": "4.7 Ejercicio 1\n \n\nCree un vector numérico con 8 elementos que contenga números positivos y negativos\nCree un vector de caracteres con los nombres de las estaciones que se visitarán durante el curso\nAñada al vector de punto anterior un NA\nCree una matriz numérica con 3 columnas y 3 filas\nCree una matriz de caracteres con 4 columnas y 3 filas\n¿Qué tipo de objeto es ‘iris’ y cuales son sus dimensiones?\nCree un cuadro de datos (data frame) con una columna numérica, una columna de caracteres y una columna con factores"
   },
   {
     "objectID": "fundamentos_de_r.html#funciones",

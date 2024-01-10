@@ -362,7 +362,7 @@ m <-
 
 -  Añada al vector de punto anterior un NA
 
--  Cree una matriz de numérica con 3 columnas y 3 filas
+-  Cree una matriz numérica con 3 columnas y 3 filas
 
 -  Cree una matriz de caracteres con 4 columnas y 3 filas
 
