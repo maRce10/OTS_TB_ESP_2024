@@ -368,7 +368,7 @@ m <-
 
 - ¿Qué tipo de objeto es 'iris' y cuales son sus dimensiones?
 
-- Cree un data frame con una columna numérica, una columna de caracteres y una columna con factores
+- Cree un cuadro de datos (data frame) con una columna numérica, una columna de caracteres y una columna con factores
 
 :::
 
@@ -426,10 +426,11 @@ m[, -1]
 m[-1, -1]
 
 
-df <- data.frame(family = c("Psittacidae", "Trochilidae", 
-                            "Psittacidae"), 
+df <- data.frame(
+  family = c("Psittacidae", "Trochilidae", "Psittacidae"), 
   genus = c("Amazona", "Phaethornis", "Ara"), 
-	species = c("aestiva", "philippii", "ararauna"))
+	species = c("aestiva", "philippii", "ararauna")
+  )
 
 df
 
@@ -457,7 +458,9 @@ Las listas requieren 1 índice entre dobles corchetes `[[índice]]`:
 
 ```{r}
 
-l <- list(ID = c("a", "b", "c", "d", "e"), size = c(1, 2, 3, 4, 5), observed = c(FALSE, TRUE, FALSE, FALSE, FALSE))
+l <- list(c("a", "b"),
+          c(1, 2, 3),
+          c(FALSE, TRUE, FALSE, FALSE))
 
 l[[1]]
 
@@ -547,6 +550,7 @@ bi <- builtins()
 
 length(bi)
 
+set.seed(22)
 sample(bi, 10)
 
 ```
@@ -578,9 +582,9 @@ Operadores aritméticos:
 
 ```{r, echo=F}
 d <- data.frame(
-c("\\+" , "suma"),
-c("\\-", 	"resta"),
-c("\\*" ,	"multiplicación"),
+c("+" , "suma"),
+c("-", 	"resta"),
+c("*" ,	"multiplicación"),
 c("/",	"división"),
 c("^ or **",	"exponente"))
 
@@ -614,24 +618,17 @@ knitr::kable(d, row.names = F, escape = FALSE) |>
 
 Operadores lógicos:
 
-```{r, echo=F}
-d <- data.frame(
-c("<", "menor que"),
-c("<=", "menor o igual que"),
-c(">", "mayo que"),
-c(">=",	"mayor o igual que"),
-c("==", "exactamente igual que"),
-c("!=",	"diferente que"),
-c("!x",	"No es x"),
-c("x | y", "	x O y"),
-c("x & y", 	"x Y y"),
-c("x %in% y",	"correspondencia"))
+```{r, echo=F, results='asis'}
+d <- matrix(
+c("<", "menor que", "<=", "menor o igual que",">", "mayor que", ">=",	"mayor o igual que", "==", "exactamente igual que", "!=",	"diferente que", "!x",	"No es x", "x | y", "	x O y", "x & y", "x Y y","x %in% y", "correspondencia"), ncol = 2, byrow = TRUE)
 
-d <- t(d)
 
-colnames(d) <- c("Operador      ", "Descrición  ")
 
-knitr::kable(d, row.names = F, escape = FALSE) |>
+d <- as.data.frame(d)
+
+names(d) <- c("Operador      ", "Descrición  ")
+
+knitr::kable(d, row.names = F,  booktabs = TRUE, escape = TRUE) |>
  kableExtra::kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 18)
 
 ```
