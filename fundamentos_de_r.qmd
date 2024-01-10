@@ -257,7 +257,7 @@ Los atributos se utilizan para definir los factores. Un factor es un vector que 
 
 Los factores se construyen sobre vectores enteros utilizando dos atributos:
 
--   clase "factor": hace que se comporten de forma diferente a los vectores enteros normales
+-   clase "factor": hace que se comporten de forma diferente a los vectores de caracteres normales
 -   niveles: define el conjunto de valores permitidos
 
 ```{r}
