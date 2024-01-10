@@ -1,0 +1,55 @@
+---
+title: <font size="7"><b>Programación y métodos estadísticos avanzados en R</b></font>
+date: ""
+format:
+  html:
+    code-tools: false
+    css: index_styles.css
+---
+
+<center><font size="4"><b>Escuela de Biología, Universidad de Costa Rica<br></b></font></center>
+
+<center><font size="4"><b><a href="https://marce10.github.io/">Marcelo Araya-Salas PhD</a> <br></b></font></center>
+
+Este taller pretende profundizar en los elementos de programación computacional, manipulación de bases de datos, diseño experimental, graficación personalizada, y el uso de técnicas y modelaje estadístico avanzadas utilizando R como plataforma. El taller está dirigido a estudiantes avanzados de carrera, de licenciatura o postgrado. En el taller se pretende cubrir las bases de los principales análisis y técnicas de modelaje estadístico, así como análisis emergentes. Todas las semanas se realizarán prácticas de laboratorio en donde se aplicarán los conceptos desarrollados durante las clases de teoría. Además, durante el taller cada estudiante presentará un paquete o extensión (conjunto de herramientas aplicables a análisis específicos) de R, en donde profundizará sobre sus aplicaciones en el campo de la biología demostrando en clase en que consiste el análisis.
+
+ 
+
+::: {.alert .alert-info}
+### **Objetivos** {.unnumbered .unlisted}
+
+-   Familiarizar al estudiante con la programación en R
+-   Brindar herramientas para la manipulación de bases de datos
+-   Emplear métodos de visualización de datos
+-   Cubrir algunos de los análisis estadísticos tradicionales
+-   Proveer a los estudiantes con experiencia en la aplicación de las herramientas brindadas por medio de prácticas y proyectos de investigación
+:::
+
+ 
+
+### **Dinámica del taller** {.unnumbered .unlisted}
+
+-   Pueden hacer preguntas en cualquier momento
+-   Sientanse libres de responder preguntas de compañeros
+-   Traten siempre de correr el código y de entender todos sus elementos
+-   Las líneas de código estan numeradas. Podemos usar esos números para referirnos a códigos específicos en los manuales. Los bloques de código también incluyen un botón que permite copiar el código:
+
+```{r, out.width = "100%", echo = FALSE, fig.align= "center"}
+
+knitr::include_graphics("./images/chunk.png")
+```
+
+-   También usaremos el enlace ["Compartir código"](https://codefile.io/f/XOIzH23KfULuZKyZ1TYT) en el menú principal de este sitio (arriba) para pasar códigos que se desarrollen en clase
+
+ 
+
+::: {.alert .alert-warning}
+**Consejos para garantizar el máximo aprovechamiento del taller**
+
+ 
+
+-   Aseguráte de tener todo lo que necesitas antes del comienzo del taller
+-   Tratá de estar preparado unos minutos antes del comienzo del taller
+-   Intenta concentrarte al máximo en el taller, cierra otros programas o pestañas innecesarias del navegador de internet (por ejemplo, instagram, twitter, etc)
+-   Comentá el código
+:::
