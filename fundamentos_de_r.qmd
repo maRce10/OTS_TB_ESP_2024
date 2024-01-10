@@ -366,7 +366,9 @@ m <-
 
 -  Cree una matriz de caracteres con 4 columnas y 3 filas
 
-- ¿Cuál es el largo del vector 'iris'?
+- ¿Qué tipo de objeto es 'iris' y cuales son sus dimensiones?
+
+- Cree un data frame con una columna numérica, una columna de caracteres y una columna con factores
 
 :::
 
