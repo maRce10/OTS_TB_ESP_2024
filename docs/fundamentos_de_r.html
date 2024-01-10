@@ -197,8 +197,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ejercicio-1" id="toc-ejercicio-1" class="nav-link" data-scroll-target="#ejercicio-1"><span class="header-section-number">4.7</span> Ejercicio 1</a></li>
   <li><a href="#extraer-subconjuntos-usando-indexación-indexing" id="toc-extraer-subconjuntos-usando-indexación-indexing" class="nav-link" data-scroll-target="#extraer-subconjuntos-usando-indexación-indexing"><span class="header-section-number">4.8</span> Extraer subconjuntos usando indexación (indexing)</a></li>
   <li><a href="#explorar-objectos" id="toc-explorar-objectos" class="nav-link" data-scroll-target="#explorar-objectos"><span class="header-section-number">4.9</span> Explorar objectos</a></li>
-  <li><a href="#ejercicio-2" id="toc-ejercicio-2" class="nav-link" data-scroll-target="#ejercicio-2"><span class="header-section-number">4.10</span> Ejercicio 2</a></li>
-  <li><a href="#funciones" id="toc-funciones" class="nav-link" data-scroll-target="#funciones"><span class="header-section-number">4.11</span> Funciones</a></li>
+  <li><a href="#funciones" id="toc-funciones" class="nav-link" data-scroll-target="#funciones"><span class="header-section-number">4.10</span> Funciones</a></li>
+  <li><a href="#ejercicio-2" id="toc-ejercicio-2" class="nav-link" data-scroll-target="#ejercicio-2"><span class="header-section-number">4.11</span> Ejercicio 2</a></li>
   </ul></li>
   <li><a href="#el-estilo-importa" id="toc-el-estilo-importa" class="nav-link" data-scroll-target="#el-estilo-importa"><span class="header-section-number">5</span> El estilo importa</a>
   <ul class="collapse">
@@ -1254,22 +1254,11 @@ Levels: a b</code></pre>
 </details>
 </div>
 <p>&nbsp;</p>
-</section>
-<section id="ejercicio-2" class="level2 alert alert-info" data-number="4.10">
-<h2 data-number="4.10" class="anchored" data-anchor-id="ejercicio-2"><span class="header-section-number">4.10</span> Ejercicio 2</h2>
-<p>&nbsp;</p>
-<ul>
-<li><p>Utilice los datos de ejemplo <code>iris</code> para crear un subconjunto de datos con sólo las observaciones de la especie <code>setosa</code></p></li>
-<li><p>Ahora cree un subconjunto de datos que contenga las observaciones tanto de “setosa” como de “versicolor”</p></li>
-<li><p>También con <code>iris</code> cree un subconjunto de datos con las observaciones para las que <code>iris$Sepal.length</code> es mayor que 6</p></li>
-<li><p>¿Cuántas observaciones tienen una longitud de sépalo superior a 6?</p></li>
-</ul>
-</section>
-<p>&nbsp;</p>
 <hr>
 <p>&nbsp;</p>
-<section id="funciones" class="level2" data-number="4.11">
-<h2 data-number="4.11" class="anchored" data-anchor-id="funciones"><span class="header-section-number">4.11</span> Funciones</h2>
+</section>
+<section id="funciones" class="level2" data-number="4.10">
+<h2 data-number="4.10" class="anchored" data-anchor-id="funciones"><span class="header-section-number">4.10</span> Funciones</h2>
 <p>Todas las funciones se crean con la función <code>function()</code> y siguen la misma estructura:</p>
 <p><img src="images/function.png" alt="R" height="350" width="900"></p>
 <p><font size="2">* Modified from <i>Grolemund 2014</i></font> &nbsp;</p>
@@ -1330,8 +1319,8 @@ Levels: a b</code></pre>
 </div>
 </div>
 <p>&nbsp;</p>
-<section id="operadores-mas-utilizados" class="level3" data-number="4.11.1">
-<h3 data-number="4.11.1" class="anchored" data-anchor-id="operadores-mas-utilizados"><span class="header-section-number">4.11.1</span> Operadores mas utilizados</h3>
+<section id="operadores-mas-utilizados" class="level3" data-number="4.10.1">
+<h3 data-number="4.10.1" class="anchored" data-anchor-id="operadores-mas-utilizados"><span class="header-section-number">4.10.1</span> Operadores mas utilizados</h3>
 <p>Operadores aritméticos:</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -1524,6 +1513,18 @@ Levels: a b</code></pre>
 <pre><code>[1] FALSE</code></pre>
 </div>
 </div>
+</section>
+</section>
+<section id="ejercicio-2" class="level2 alert alert-info" data-number="4.11">
+<h2 data-number="4.11" class="anchored" data-anchor-id="ejercicio-2"><span class="header-section-number">4.11</span> Ejercicio 2</h2>
+<p>&nbsp;</p>
+<ul>
+<li><p>Utilice los datos de ejemplo <code>iris</code> para crear un subconjunto de datos con sólo las observaciones de la especie <code>setosa</code></p></li>
+<li><p>Ahora cree un subconjunto de datos que contenga las observaciones tanto de “setosa” como de “versicolor”</p></li>
+<li><p>También con <code>iris</code> cree un subconjunto de datos con las observaciones para las que <code>iris$Sepal.length</code> es mayor que 6</p></li>
+<li><p>¿Cuántas observaciones tienen una longitud de sépalo superior a 6?</p></li>
+</ul>
+</section>
 <p>&nbsp;</p>
 <p>La mayoría de las funciones están vectorizadas:</p>
 <div class="cell">
@@ -1583,8 +1584,6 @@ uno menor</code></pre>
 </div>
 <p>&nbsp;</p>
 <hr>
-</section>
-</section>
 </section>
 <section id="el-estilo-importa" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> El estilo importa</h1>
@@ -2527,593 +2526,592 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb170-369"><a href="#cb170-369"></a></span>
 <span id="cb170-370"><a href="#cb170-370"></a><span class="ss">-   </span>Cree un vector de caracteres con los nombres de las estaciones que se visitarán durante el curso</span>
 <span id="cb170-371"><a href="#cb170-371"></a></span>
-<span id="cb170-372"><a href="#cb170-372"></a><span class="ss">-  </span>Añada al vector de punto anterior un NA</span>
+<span id="cb170-372"><a href="#cb170-372"></a><span class="ss">-   </span>Añada al vector de punto anterior un NA</span>
 <span id="cb170-373"><a href="#cb170-373"></a></span>
-<span id="cb170-374"><a href="#cb170-374"></a><span class="ss">-  </span>Cree una matriz numérica con 3 columnas y 3 filas</span>
+<span id="cb170-374"><a href="#cb170-374"></a><span class="ss">-   </span>Cree una matriz numérica con 3 columnas y 3 filas</span>
 <span id="cb170-375"><a href="#cb170-375"></a></span>
-<span id="cb170-376"><a href="#cb170-376"></a><span class="ss">-  </span>Cree una matriz de caracteres con 4 columnas y 3 filas</span>
+<span id="cb170-376"><a href="#cb170-376"></a><span class="ss">-   </span>Cree una matriz de caracteres con 4 columnas y 3 filas</span>
 <span id="cb170-377"><a href="#cb170-377"></a></span>
-<span id="cb170-378"><a href="#cb170-378"></a><span class="ss">- </span>¿Qué tipo de objeto es 'iris' y cuales son sus dimensiones?</span>
+<span id="cb170-378"><a href="#cb170-378"></a><span class="ss">-   </span>¿Qué tipo de objeto es 'iris' y cuales son sus dimensiones?</span>
 <span id="cb170-379"><a href="#cb170-379"></a></span>
-<span id="cb170-380"><a href="#cb170-380"></a><span class="ss">- </span>Cree un cuadro de datos (data frame) con una columna numérica, una columna de caracteres y una columna con factores</span>
-<span id="cb170-381"><a href="#cb170-381"></a></span>
-<span id="cb170-382"><a href="#cb170-382"></a>:::</span>
-<span id="cb170-383"><a href="#cb170-383"></a></span>
-<span id="cb170-384"><a href="#cb170-384"></a>------------------------------------------------------------------------</span>
-<span id="cb170-385"><a href="#cb170-385"></a></span>
-<span id="cb170-386"><a href="#cb170-386"></a><span class="fu">## Extraer subconjuntos usando indexación (indexing)</span></span>
-<span id="cb170-387"><a href="#cb170-387"></a></span>
-<span id="cb170-388"><a href="#cb170-388"></a>Los elementos dentro de los objetos pueden ser llamados por medio de la indexación. Para sub-conjuntar un vector simplemente llame a la posición del objeto usando corchetes:</span>
-<span id="cb170-389"><a href="#cb170-389"></a></span>
-<span id="cb170-392"><a href="#cb170-392"></a><span class="in">```{r}</span></span>
-<span id="cb170-393"><a href="#cb170-393"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">20</span>, <span class="dv">50</span>, <span class="dv">1</span>, <span class="dv">6</span>)</span>
-<span id="cb170-394"><a href="#cb170-394"></a></span>
-<span id="cb170-395"><a href="#cb170-395"></a>x[<span class="dv">1</span>]</span>
-<span id="cb170-396"><a href="#cb170-396"></a></span>
-<span id="cb170-397"><a href="#cb170-397"></a>x[<span class="dv">2</span>]</span>
-<span id="cb170-398"><a href="#cb170-398"></a></span>
-<span id="cb170-399"><a href="#cb170-399"></a>x[<span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>]</span>
-<span id="cb170-400"><a href="#cb170-400"></a></span>
-<span id="cb170-401"><a href="#cb170-401"></a>x[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)]</span>
-<span id="cb170-402"><a href="#cb170-402"></a></span>
-<span id="cb170-403"><a href="#cb170-403"></a><span class="in">```</span></span>
-<span id="cb170-404"><a href="#cb170-404"></a></span>
-<span id="cb170-405"><a href="#cb170-405"></a>&nbsp;</span>
-<span id="cb170-406"><a href="#cb170-406"></a></span>
-<span id="cb170-407"><a href="#cb170-407"></a>Los elementos se pueden eliminar de la misma manera:</span>
-<span id="cb170-408"><a href="#cb170-408"></a></span>
-<span id="cb170-411"><a href="#cb170-411"></a><span class="in">```{r}</span></span>
-<span id="cb170-412"><a href="#cb170-412"></a>x[<span class="sc">-</span><span class="dv">1</span>]</span>
-<span id="cb170-413"><a href="#cb170-413"></a></span>
-<span id="cb170-414"><a href="#cb170-414"></a>x[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)]</span>
-<span id="cb170-415"><a href="#cb170-415"></a></span>
-<span id="cb170-416"><a href="#cb170-416"></a><span class="in">```</span></span>
-<span id="cb170-417"><a href="#cb170-417"></a></span>
-<span id="cb170-418"><a href="#cb170-418"></a>&nbsp;</span>
-<span id="cb170-419"><a href="#cb170-419"></a></span>
-<span id="cb170-420"><a href="#cb170-420"></a>Las matrices y los marcos de datos requieren 2 índices <span class="in">`[fila, columna]`</span>:</span>
-<span id="cb170-421"><a href="#cb170-421"></a></span>
-<span id="cb170-424"><a href="#cb170-424"></a><span class="in">```{r}</span></span>
-<span id="cb170-425"><a href="#cb170-425"></a>m <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">11</span>, <span class="dv">12</span>, <span class="dv">13</span>), <span class="at">nrow =</span> <span class="dv">2</span>)</span>
-<span id="cb170-426"><a href="#cb170-426"></a></span>
-<span id="cb170-427"><a href="#cb170-427"></a>m[<span class="dv">1</span>, ]</span>
-<span id="cb170-428"><a href="#cb170-428"></a></span>
-<span id="cb170-429"><a href="#cb170-429"></a>m[, <span class="dv">1</span>]</span>
-<span id="cb170-430"><a href="#cb170-430"></a></span>
-<span id="cb170-431"><a href="#cb170-431"></a>m[<span class="dv">1</span>, <span class="dv">1</span>]</span>
-<span id="cb170-432"><a href="#cb170-432"></a></span>
-<span id="cb170-433"><a href="#cb170-433"></a>m[<span class="sc">-</span><span class="dv">1</span>, ]</span>
-<span id="cb170-434"><a href="#cb170-434"></a></span>
-<span id="cb170-435"><a href="#cb170-435"></a>m[, <span class="sc">-</span><span class="dv">1</span>]</span>
-<span id="cb170-436"><a href="#cb170-436"></a></span>
-<span id="cb170-437"><a href="#cb170-437"></a>m[<span class="sc">-</span><span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>]</span>
+<span id="cb170-380"><a href="#cb170-380"></a><span class="ss">-   </span>Cree un cuadro de datos (data frame) con una columna numérica, una columna de caracteres y una columna con factores</span>
+<span id="cb170-381"><a href="#cb170-381"></a>:::</span>
+<span id="cb170-382"><a href="#cb170-382"></a></span>
+<span id="cb170-383"><a href="#cb170-383"></a>------------------------------------------------------------------------</span>
+<span id="cb170-384"><a href="#cb170-384"></a></span>
+<span id="cb170-385"><a href="#cb170-385"></a><span class="fu">## Extraer subconjuntos usando indexación (indexing)</span></span>
+<span id="cb170-386"><a href="#cb170-386"></a></span>
+<span id="cb170-387"><a href="#cb170-387"></a>Los elementos dentro de los objetos pueden ser llamados por medio de la indexación. Para sub-conjuntar un vector simplemente llame a la posición del objeto usando corchetes:</span>
+<span id="cb170-388"><a href="#cb170-388"></a></span>
+<span id="cb170-391"><a href="#cb170-391"></a><span class="in">```{r}</span></span>
+<span id="cb170-392"><a href="#cb170-392"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">20</span>, <span class="dv">50</span>, <span class="dv">1</span>, <span class="dv">6</span>)</span>
+<span id="cb170-393"><a href="#cb170-393"></a></span>
+<span id="cb170-394"><a href="#cb170-394"></a>x[<span class="dv">1</span>]</span>
+<span id="cb170-395"><a href="#cb170-395"></a></span>
+<span id="cb170-396"><a href="#cb170-396"></a>x[<span class="dv">2</span>]</span>
+<span id="cb170-397"><a href="#cb170-397"></a></span>
+<span id="cb170-398"><a href="#cb170-398"></a>x[<span class="dv">2</span><span class="sc">:</span><span class="dv">3</span>]</span>
+<span id="cb170-399"><a href="#cb170-399"></a></span>
+<span id="cb170-400"><a href="#cb170-400"></a>x[<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)]</span>
+<span id="cb170-401"><a href="#cb170-401"></a></span>
+<span id="cb170-402"><a href="#cb170-402"></a><span class="in">```</span></span>
+<span id="cb170-403"><a href="#cb170-403"></a></span>
+<span id="cb170-404"><a href="#cb170-404"></a>&nbsp;</span>
+<span id="cb170-405"><a href="#cb170-405"></a></span>
+<span id="cb170-406"><a href="#cb170-406"></a>Los elementos se pueden eliminar de la misma manera:</span>
+<span id="cb170-407"><a href="#cb170-407"></a></span>
+<span id="cb170-410"><a href="#cb170-410"></a><span class="in">```{r}</span></span>
+<span id="cb170-411"><a href="#cb170-411"></a>x[<span class="sc">-</span><span class="dv">1</span>]</span>
+<span id="cb170-412"><a href="#cb170-412"></a></span>
+<span id="cb170-413"><a href="#cb170-413"></a>x[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)]</span>
+<span id="cb170-414"><a href="#cb170-414"></a></span>
+<span id="cb170-415"><a href="#cb170-415"></a><span class="in">```</span></span>
+<span id="cb170-416"><a href="#cb170-416"></a></span>
+<span id="cb170-417"><a href="#cb170-417"></a>&nbsp;</span>
+<span id="cb170-418"><a href="#cb170-418"></a></span>
+<span id="cb170-419"><a href="#cb170-419"></a>Las matrices y los marcos de datos requieren 2 índices <span class="in">`[fila, columna]`</span>:</span>
+<span id="cb170-420"><a href="#cb170-420"></a></span>
+<span id="cb170-423"><a href="#cb170-423"></a><span class="in">```{r}</span></span>
+<span id="cb170-424"><a href="#cb170-424"></a>m <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">11</span>, <span class="dv">12</span>, <span class="dv">13</span>), <span class="at">nrow =</span> <span class="dv">2</span>)</span>
+<span id="cb170-425"><a href="#cb170-425"></a></span>
+<span id="cb170-426"><a href="#cb170-426"></a>m[<span class="dv">1</span>, ]</span>
+<span id="cb170-427"><a href="#cb170-427"></a></span>
+<span id="cb170-428"><a href="#cb170-428"></a>m[, <span class="dv">1</span>]</span>
+<span id="cb170-429"><a href="#cb170-429"></a></span>
+<span id="cb170-430"><a href="#cb170-430"></a>m[<span class="dv">1</span>, <span class="dv">1</span>]</span>
+<span id="cb170-431"><a href="#cb170-431"></a></span>
+<span id="cb170-432"><a href="#cb170-432"></a>m[<span class="sc">-</span><span class="dv">1</span>, ]</span>
+<span id="cb170-433"><a href="#cb170-433"></a></span>
+<span id="cb170-434"><a href="#cb170-434"></a>m[, <span class="sc">-</span><span class="dv">1</span>]</span>
+<span id="cb170-435"><a href="#cb170-435"></a></span>
+<span id="cb170-436"><a href="#cb170-436"></a>m[<span class="sc">-</span><span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>]</span>
+<span id="cb170-437"><a href="#cb170-437"></a></span>
 <span id="cb170-438"><a href="#cb170-438"></a></span>
-<span id="cb170-439"><a href="#cb170-439"></a></span>
-<span id="cb170-440"><a href="#cb170-440"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb170-441"><a href="#cb170-441"></a>  <span class="at">family =</span> <span class="fu">c</span>(<span class="st">"Psittacidae"</span>, <span class="st">"Trochilidae"</span>, <span class="st">"Psittacidae"</span>), </span>
-<span id="cb170-442"><a href="#cb170-442"></a>  <span class="at">genus =</span> <span class="fu">c</span>(<span class="st">"Amazona"</span>, <span class="st">"Phaethornis"</span>, <span class="st">"Ara"</span>), </span>
-<span id="cb170-443"><a href="#cb170-443"></a>    <span class="at">species =</span> <span class="fu">c</span>(<span class="st">"aestiva"</span>, <span class="st">"philippii"</span>, <span class="st">"ararauna"</span>)</span>
-<span id="cb170-444"><a href="#cb170-444"></a>  )</span>
-<span id="cb170-445"><a href="#cb170-445"></a></span>
-<span id="cb170-446"><a href="#cb170-446"></a>df</span>
-<span id="cb170-447"><a href="#cb170-447"></a></span>
-<span id="cb170-448"><a href="#cb170-448"></a>df[<span class="dv">1</span>, ]</span>
-<span id="cb170-449"><a href="#cb170-449"></a></span>
-<span id="cb170-450"><a href="#cb170-450"></a>df[, <span class="dv">1</span>]</span>
-<span id="cb170-451"><a href="#cb170-451"></a></span>
-<span id="cb170-452"><a href="#cb170-452"></a>df[<span class="dv">1</span>, <span class="dv">1</span>]</span>
-<span id="cb170-453"><a href="#cb170-453"></a></span>
-<span id="cb170-454"><a href="#cb170-454"></a>df[<span class="sc">-</span><span class="dv">1</span>, ]</span>
-<span id="cb170-455"><a href="#cb170-455"></a></span>
-<span id="cb170-456"><a href="#cb170-456"></a>df[, <span class="sc">-</span><span class="dv">1</span>]</span>
-<span id="cb170-457"><a href="#cb170-457"></a></span>
-<span id="cb170-458"><a href="#cb170-458"></a>df[<span class="sc">-</span><span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>]</span>
-<span id="cb170-459"><a href="#cb170-459"></a></span>
-<span id="cb170-460"><a href="#cb170-460"></a>df[,<span class="st">"family"</span>]</span>
-<span id="cb170-461"><a href="#cb170-461"></a></span>
-<span id="cb170-462"><a href="#cb170-462"></a>df[,<span class="fu">c</span>(<span class="st">"family"</span>, <span class="st">"genus"</span>)]</span>
-<span id="cb170-463"><a href="#cb170-463"></a></span>
-<span id="cb170-464"><a href="#cb170-464"></a><span class="in">```</span></span>
-<span id="cb170-465"><a href="#cb170-465"></a></span>
-<span id="cb170-466"><a href="#cb170-466"></a>&nbsp;</span>
-<span id="cb170-467"><a href="#cb170-467"></a></span>
-<span id="cb170-468"><a href="#cb170-468"></a>Las listas requieren 1 índice entre dobles corchetes <span class="in">`[[índice]]`</span>:</span>
-<span id="cb170-469"><a href="#cb170-469"></a></span>
-<span id="cb170-472"><a href="#cb170-472"></a><span class="in">```{r}</span></span>
-<span id="cb170-473"><a href="#cb170-473"></a>l <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>),</span>
-<span id="cb170-474"><a href="#cb170-474"></a>          <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
-<span id="cb170-475"><a href="#cb170-475"></a>          <span class="fu">c</span>(<span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>))</span>
-<span id="cb170-476"><a href="#cb170-476"></a></span>
-<span id="cb170-477"><a href="#cb170-477"></a>l[[<span class="dv">1</span>]]</span>
-<span id="cb170-478"><a href="#cb170-478"></a></span>
-<span id="cb170-479"><a href="#cb170-479"></a>l[[<span class="dv">3</span>]]</span>
-<span id="cb170-480"><a href="#cb170-480"></a></span>
-<span id="cb170-481"><a href="#cb170-481"></a><span class="in">```</span></span>
-<span id="cb170-482"><a href="#cb170-482"></a></span>
-<span id="cb170-483"><a href="#cb170-483"></a>&nbsp;</span>
-<span id="cb170-484"><a href="#cb170-484"></a></span>
-<span id="cb170-485"><a href="#cb170-485"></a>Los elementos dentro de las listas también pueden ser subconjuntos en la misma cadena de código:</span>
-<span id="cb170-486"><a href="#cb170-486"></a></span>
-<span id="cb170-489"><a href="#cb170-489"></a><span class="in">```{r}</span></span>
-<span id="cb170-490"><a href="#cb170-490"></a>l[[<span class="dv">1</span>]][<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span>
-<span id="cb170-491"><a href="#cb170-491"></a></span>
-<span id="cb170-492"><a href="#cb170-492"></a>l[[<span class="dv">3</span>]][<span class="dv">2</span>]</span>
-<span id="cb170-493"><a href="#cb170-493"></a></span>
-<span id="cb170-494"><a href="#cb170-494"></a><span class="in">```</span></span>
-<span id="cb170-495"><a href="#cb170-495"></a></span>
-<span id="cb170-496"><a href="#cb170-496"></a>&nbsp;</span>
-<span id="cb170-497"><a href="#cb170-497"></a></span>
-<span id="cb170-498"><a href="#cb170-498"></a><span class="fu">## Explorar objectos</span></span>
-<span id="cb170-499"><a href="#cb170-499"></a></span>
-<span id="cb170-500"><a href="#cb170-500"></a><span class="in">```{r, eval = TRUE}</span></span>
-<span id="cb170-501"><a href="#cb170-501"></a></span>
-<span id="cb170-502"><a href="#cb170-502"></a><span class="fu">str</span>(df)</span>
-<span id="cb170-503"><a href="#cb170-503"></a></span>
-<span id="cb170-504"><a href="#cb170-504"></a><span class="fu">names</span>(df)</span>
-<span id="cb170-505"><a href="#cb170-505"></a></span>
-<span id="cb170-506"><a href="#cb170-506"></a><span class="fu">dim</span>(df)</span>
-<span id="cb170-507"><a href="#cb170-507"></a></span>
-<span id="cb170-508"><a href="#cb170-508"></a><span class="fu">nrow</span>(df)</span>
-<span id="cb170-509"><a href="#cb170-509"></a></span>
-<span id="cb170-510"><a href="#cb170-510"></a><span class="fu">ncol</span>(df)</span>
-<span id="cb170-511"><a href="#cb170-511"></a></span>
-<span id="cb170-512"><a href="#cb170-512"></a><span class="fu">head</span>(df)</span>
-<span id="cb170-513"><a href="#cb170-513"></a></span>
-<span id="cb170-514"><a href="#cb170-514"></a><span class="fu">tail</span>(df)</span>
-<span id="cb170-515"><a href="#cb170-515"></a></span>
-<span id="cb170-516"><a href="#cb170-516"></a><span class="fu">table</span>(df<span class="sc">$</span>genus)</span>
-<span id="cb170-517"><a href="#cb170-517"></a></span>
-<span id="cb170-518"><a href="#cb170-518"></a><span class="fu">class</span>(df)</span>
-<span id="cb170-519"><a href="#cb170-519"></a></span>
-<span id="cb170-520"><a href="#cb170-520"></a><span class="in">```</span></span>
-<span id="cb170-521"><a href="#cb170-521"></a></span>
-<span id="cb170-522"><a href="#cb170-522"></a><span class="in">```{r, eval = F}</span></span>
-<span id="cb170-523"><a href="#cb170-523"></a></span>
-<span id="cb170-524"><a href="#cb170-524"></a><span class="fu">View</span>(df)</span>
-<span id="cb170-525"><a href="#cb170-525"></a></span>
-<span id="cb170-526"><a href="#cb170-526"></a><span class="in">```</span></span>
-<span id="cb170-527"><a href="#cb170-527"></a></span>
-<span id="cb170-528"><a href="#cb170-528"></a>&nbsp;</span>
+<span id="cb170-439"><a href="#cb170-439"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb170-440"><a href="#cb170-440"></a>  <span class="at">family =</span> <span class="fu">c</span>(<span class="st">"Psittacidae"</span>, <span class="st">"Trochilidae"</span>, <span class="st">"Psittacidae"</span>), </span>
+<span id="cb170-441"><a href="#cb170-441"></a>  <span class="at">genus =</span> <span class="fu">c</span>(<span class="st">"Amazona"</span>, <span class="st">"Phaethornis"</span>, <span class="st">"Ara"</span>), </span>
+<span id="cb170-442"><a href="#cb170-442"></a>    <span class="at">species =</span> <span class="fu">c</span>(<span class="st">"aestiva"</span>, <span class="st">"philippii"</span>, <span class="st">"ararauna"</span>)</span>
+<span id="cb170-443"><a href="#cb170-443"></a>  )</span>
+<span id="cb170-444"><a href="#cb170-444"></a></span>
+<span id="cb170-445"><a href="#cb170-445"></a>df</span>
+<span id="cb170-446"><a href="#cb170-446"></a></span>
+<span id="cb170-447"><a href="#cb170-447"></a>df[<span class="dv">1</span>, ]</span>
+<span id="cb170-448"><a href="#cb170-448"></a></span>
+<span id="cb170-449"><a href="#cb170-449"></a>df[, <span class="dv">1</span>]</span>
+<span id="cb170-450"><a href="#cb170-450"></a></span>
+<span id="cb170-451"><a href="#cb170-451"></a>df[<span class="dv">1</span>, <span class="dv">1</span>]</span>
+<span id="cb170-452"><a href="#cb170-452"></a></span>
+<span id="cb170-453"><a href="#cb170-453"></a>df[<span class="sc">-</span><span class="dv">1</span>, ]</span>
+<span id="cb170-454"><a href="#cb170-454"></a></span>
+<span id="cb170-455"><a href="#cb170-455"></a>df[, <span class="sc">-</span><span class="dv">1</span>]</span>
+<span id="cb170-456"><a href="#cb170-456"></a></span>
+<span id="cb170-457"><a href="#cb170-457"></a>df[<span class="sc">-</span><span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>]</span>
+<span id="cb170-458"><a href="#cb170-458"></a></span>
+<span id="cb170-459"><a href="#cb170-459"></a>df[,<span class="st">"family"</span>]</span>
+<span id="cb170-460"><a href="#cb170-460"></a></span>
+<span id="cb170-461"><a href="#cb170-461"></a>df[,<span class="fu">c</span>(<span class="st">"family"</span>, <span class="st">"genus"</span>)]</span>
+<span id="cb170-462"><a href="#cb170-462"></a></span>
+<span id="cb170-463"><a href="#cb170-463"></a><span class="in">```</span></span>
+<span id="cb170-464"><a href="#cb170-464"></a></span>
+<span id="cb170-465"><a href="#cb170-465"></a>&nbsp;</span>
+<span id="cb170-466"><a href="#cb170-466"></a></span>
+<span id="cb170-467"><a href="#cb170-467"></a>Las listas requieren 1 índice entre dobles corchetes <span class="in">`[[índice]]`</span>:</span>
+<span id="cb170-468"><a href="#cb170-468"></a></span>
+<span id="cb170-471"><a href="#cb170-471"></a><span class="in">```{r}</span></span>
+<span id="cb170-472"><a href="#cb170-472"></a>l <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"b"</span>),</span>
+<span id="cb170-473"><a href="#cb170-473"></a>          <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
+<span id="cb170-474"><a href="#cb170-474"></a>          <span class="fu">c</span>(<span class="cn">FALSE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">FALSE</span>))</span>
+<span id="cb170-475"><a href="#cb170-475"></a></span>
+<span id="cb170-476"><a href="#cb170-476"></a>l[[<span class="dv">1</span>]]</span>
+<span id="cb170-477"><a href="#cb170-477"></a></span>
+<span id="cb170-478"><a href="#cb170-478"></a>l[[<span class="dv">3</span>]]</span>
+<span id="cb170-479"><a href="#cb170-479"></a></span>
+<span id="cb170-480"><a href="#cb170-480"></a><span class="in">```</span></span>
+<span id="cb170-481"><a href="#cb170-481"></a></span>
+<span id="cb170-482"><a href="#cb170-482"></a>&nbsp;</span>
+<span id="cb170-483"><a href="#cb170-483"></a></span>
+<span id="cb170-484"><a href="#cb170-484"></a>Los elementos dentro de las listas también pueden ser subconjuntos en la misma cadena de código:</span>
+<span id="cb170-485"><a href="#cb170-485"></a></span>
+<span id="cb170-488"><a href="#cb170-488"></a><span class="in">```{r}</span></span>
+<span id="cb170-489"><a href="#cb170-489"></a>l[[<span class="dv">1</span>]][<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span>
+<span id="cb170-490"><a href="#cb170-490"></a></span>
+<span id="cb170-491"><a href="#cb170-491"></a>l[[<span class="dv">3</span>]][<span class="dv">2</span>]</span>
+<span id="cb170-492"><a href="#cb170-492"></a></span>
+<span id="cb170-493"><a href="#cb170-493"></a><span class="in">```</span></span>
+<span id="cb170-494"><a href="#cb170-494"></a></span>
+<span id="cb170-495"><a href="#cb170-495"></a>&nbsp;</span>
+<span id="cb170-496"><a href="#cb170-496"></a></span>
+<span id="cb170-497"><a href="#cb170-497"></a><span class="fu">## Explorar objectos</span></span>
+<span id="cb170-498"><a href="#cb170-498"></a></span>
+<span id="cb170-499"><a href="#cb170-499"></a><span class="in">```{r, eval = TRUE}</span></span>
+<span id="cb170-500"><a href="#cb170-500"></a></span>
+<span id="cb170-501"><a href="#cb170-501"></a><span class="fu">str</span>(df)</span>
+<span id="cb170-502"><a href="#cb170-502"></a></span>
+<span id="cb170-503"><a href="#cb170-503"></a><span class="fu">names</span>(df)</span>
+<span id="cb170-504"><a href="#cb170-504"></a></span>
+<span id="cb170-505"><a href="#cb170-505"></a><span class="fu">dim</span>(df)</span>
+<span id="cb170-506"><a href="#cb170-506"></a></span>
+<span id="cb170-507"><a href="#cb170-507"></a><span class="fu">nrow</span>(df)</span>
+<span id="cb170-508"><a href="#cb170-508"></a></span>
+<span id="cb170-509"><a href="#cb170-509"></a><span class="fu">ncol</span>(df)</span>
+<span id="cb170-510"><a href="#cb170-510"></a></span>
+<span id="cb170-511"><a href="#cb170-511"></a><span class="fu">head</span>(df)</span>
+<span id="cb170-512"><a href="#cb170-512"></a></span>
+<span id="cb170-513"><a href="#cb170-513"></a><span class="fu">tail</span>(df)</span>
+<span id="cb170-514"><a href="#cb170-514"></a></span>
+<span id="cb170-515"><a href="#cb170-515"></a><span class="fu">table</span>(df<span class="sc">$</span>genus)</span>
+<span id="cb170-516"><a href="#cb170-516"></a></span>
+<span id="cb170-517"><a href="#cb170-517"></a><span class="fu">class</span>(df)</span>
+<span id="cb170-518"><a href="#cb170-518"></a></span>
+<span id="cb170-519"><a href="#cb170-519"></a><span class="in">```</span></span>
+<span id="cb170-520"><a href="#cb170-520"></a></span>
+<span id="cb170-521"><a href="#cb170-521"></a><span class="in">```{r, eval = F}</span></span>
+<span id="cb170-522"><a href="#cb170-522"></a></span>
+<span id="cb170-523"><a href="#cb170-523"></a><span class="fu">View</span>(df)</span>
+<span id="cb170-524"><a href="#cb170-524"></a></span>
+<span id="cb170-525"><a href="#cb170-525"></a><span class="in">```</span></span>
+<span id="cb170-526"><a href="#cb170-526"></a></span>
+<span id="cb170-527"><a href="#cb170-527"></a>&nbsp;</span>
+<span id="cb170-528"><a href="#cb170-528"></a></span>
 <span id="cb170-529"><a href="#cb170-529"></a></span>
-<span id="cb170-530"><a href="#cb170-530"></a>::: {.alert .alert-info}</span>
-<span id="cb170-531"><a href="#cb170-531"></a><span class="fu">## Ejercicio 2</span></span>
-<span id="cb170-532"><a href="#cb170-532"></a></span>
-<span id="cb170-533"><a href="#cb170-533"></a>&nbsp;</span>
-<span id="cb170-534"><a href="#cb170-534"></a></span>
-<span id="cb170-535"><a href="#cb170-535"></a><span class="ss">-   </span>Utilice los datos de ejemplo <span class="in">`iris`</span> para crear un subconjunto de datos con sólo las observaciones de la especie <span class="in">`setosa`</span></span>
-<span id="cb170-536"><a href="#cb170-536"></a></span>
-<span id="cb170-537"><a href="#cb170-537"></a><span class="ss">-   </span>Ahora cree un subconjunto de datos que contenga las observaciones tanto de "setosa" como de "versicolor"</span>
-<span id="cb170-538"><a href="#cb170-538"></a></span>
-<span id="cb170-539"><a href="#cb170-539"></a><span class="ss">-   </span>También con <span class="in">`iris`</span> cree un subconjunto de datos con las observaciones para las que <span class="in">`iris$Sepal.length`</span> es mayor que 6</span>
-<span id="cb170-540"><a href="#cb170-540"></a></span>
-<span id="cb170-541"><a href="#cb170-541"></a><span class="ss">-   </span>¿Cuántas observaciones tienen una longitud de sépalo superior a 6?</span>
-<span id="cb170-542"><a href="#cb170-542"></a>:::</span>
+<span id="cb170-530"><a href="#cb170-530"></a>------------------------------------------------------------------------</span>
+<span id="cb170-531"><a href="#cb170-531"></a></span>
+<span id="cb170-532"><a href="#cb170-532"></a>&nbsp;</span>
+<span id="cb170-533"><a href="#cb170-533"></a></span>
+<span id="cb170-534"><a href="#cb170-534"></a><span class="fu">## Funciones</span></span>
+<span id="cb170-535"><a href="#cb170-535"></a></span>
+<span id="cb170-536"><a href="#cb170-536"></a>Todas las funciones se crean con la función <span class="in">`function()`</span> y siguen la misma estructura:</span>
+<span id="cb170-537"><a href="#cb170-537"></a></span>
+<span id="cb170-538"><a href="#cb170-538"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"images/function.png"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"R"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"350"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"900"</span><span class="kw">/&gt;</span></span>
+<span id="cb170-539"><a href="#cb170-539"></a></span>
+<span id="cb170-540"><a href="#cb170-540"></a><span class="kw">&lt;font</span> <span class="er">size</span><span class="ot">=</span><span class="st">"2"</span><span class="kw">&gt;</span><span class="sc">\*</span> Modified from <span class="kw">&lt;i&gt;</span>Grolemund 2014<span class="kw">&lt;/i&gt;&lt;/font&gt;</span> &nbsp;</span>
+<span id="cb170-541"><a href="#cb170-541"></a></span>
+<span id="cb170-542"><a href="#cb170-542"></a>R viene con muchas funciones que puedes usar para hacer tareas sofisticadas:</span>
 <span id="cb170-543"><a href="#cb170-543"></a></span>
-<span id="cb170-544"><a href="#cb170-544"></a>&nbsp;</span>
-<span id="cb170-545"><a href="#cb170-545"></a></span>
-<span id="cb170-546"><a href="#cb170-546"></a>------------------------------------------------------------------------</span>
-<span id="cb170-547"><a href="#cb170-547"></a></span>
-<span id="cb170-548"><a href="#cb170-548"></a>&nbsp;</span>
+<span id="cb170-546"><a href="#cb170-546"></a><span class="in">```{r}</span></span>
+<span id="cb170-547"><a href="#cb170-547"></a><span class="co"># built in functions</span></span>
+<span id="cb170-548"><a href="#cb170-548"></a>bi <span class="ot">&lt;-</span> <span class="fu">builtins</span>()</span>
 <span id="cb170-549"><a href="#cb170-549"></a></span>
-<span id="cb170-550"><a href="#cb170-550"></a><span class="fu">## Funciones</span></span>
+<span id="cb170-550"><a href="#cb170-550"></a><span class="fu">length</span>(bi)</span>
 <span id="cb170-551"><a href="#cb170-551"></a></span>
-<span id="cb170-552"><a href="#cb170-552"></a>Todas las funciones se crean con la función <span class="in">`function()`</span> y siguen la misma estructura:</span>
-<span id="cb170-553"><a href="#cb170-553"></a></span>
-<span id="cb170-554"><a href="#cb170-554"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"images/function.png"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"R"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"350"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"900"</span><span class="kw">/&gt;</span></span>
-<span id="cb170-555"><a href="#cb170-555"></a></span>
-<span id="cb170-556"><a href="#cb170-556"></a><span class="kw">&lt;font</span> <span class="er">size</span><span class="ot">=</span><span class="st">"2"</span><span class="kw">&gt;</span><span class="sc">\*</span> Modified from <span class="kw">&lt;i&gt;</span>Grolemund 2014<span class="kw">&lt;/i&gt;&lt;/font&gt;</span> &nbsp;</span>
-<span id="cb170-557"><a href="#cb170-557"></a></span>
-<span id="cb170-558"><a href="#cb170-558"></a>R viene con muchas funciones que puedes usar para hacer tareas sofisticadas:</span>
-<span id="cb170-559"><a href="#cb170-559"></a></span>
-<span id="cb170-562"><a href="#cb170-562"></a><span class="in">```{r}</span></span>
-<span id="cb170-563"><a href="#cb170-563"></a><span class="co"># built in functions</span></span>
-<span id="cb170-564"><a href="#cb170-564"></a>bi <span class="ot">&lt;-</span> <span class="fu">builtins</span>()</span>
+<span id="cb170-552"><a href="#cb170-552"></a><span class="fu">set.seed</span>(<span class="dv">22</span>)</span>
+<span id="cb170-553"><a href="#cb170-553"></a><span class="fu">sample</span>(bi, <span class="dv">10</span>)</span>
+<span id="cb170-554"><a href="#cb170-554"></a></span>
+<span id="cb170-555"><a href="#cb170-555"></a><span class="in">```</span></span>
+<span id="cb170-556"><a href="#cb170-556"></a></span>
+<span id="cb170-557"><a href="#cb170-557"></a>&nbsp;</span>
+<span id="cb170-558"><a href="#cb170-558"></a></span>
+<span id="cb170-559"><a href="#cb170-559"></a>Los operadores son funciones:</span>
+<span id="cb170-560"><a href="#cb170-560"></a></span>
+<span id="cb170-563"><a href="#cb170-563"></a><span class="in">```{r}</span></span>
+<span id="cb170-564"><a href="#cb170-564"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span>
 <span id="cb170-565"><a href="#cb170-565"></a></span>
-<span id="cb170-566"><a href="#cb170-566"></a><span class="fu">length</span>(bi)</span>
-<span id="cb170-567"><a href="#cb170-567"></a></span>
-<span id="cb170-568"><a href="#cb170-568"></a><span class="fu">set.seed</span>(<span class="dv">22</span>)</span>
-<span id="cb170-569"><a href="#cb170-569"></a><span class="fu">sample</span>(bi, <span class="dv">10</span>)</span>
+<span id="cb170-566"><a href="#cb170-566"></a></span>
+<span id="cb170-567"><a href="#cb170-567"></a><span class="st">'+'</span>(<span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb170-568"><a href="#cb170-568"></a></span>
+<span id="cb170-569"><a href="#cb170-569"></a><span class="dv">2</span> <span class="sc">*</span> <span class="dv">3</span></span>
 <span id="cb170-570"><a href="#cb170-570"></a></span>
-<span id="cb170-571"><a href="#cb170-571"></a><span class="in">```</span></span>
-<span id="cb170-572"><a href="#cb170-572"></a></span>
-<span id="cb170-573"><a href="#cb170-573"></a>&nbsp;</span>
+<span id="cb170-571"><a href="#cb170-571"></a></span>
+<span id="cb170-572"><a href="#cb170-572"></a><span class="st">'*'</span>(<span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb170-573"><a href="#cb170-573"></a></span>
 <span id="cb170-574"><a href="#cb170-574"></a></span>
-<span id="cb170-575"><a href="#cb170-575"></a>Los operadores son funciones:</span>
+<span id="cb170-575"><a href="#cb170-575"></a><span class="in">```</span></span>
 <span id="cb170-576"><a href="#cb170-576"></a></span>
-<span id="cb170-579"><a href="#cb170-579"></a><span class="in">```{r}</span></span>
-<span id="cb170-580"><a href="#cb170-580"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb170-581"><a href="#cb170-581"></a></span>
+<span id="cb170-577"><a href="#cb170-577"></a>&nbsp;</span>
+<span id="cb170-578"><a href="#cb170-578"></a></span>
+<span id="cb170-579"><a href="#cb170-579"></a><span class="fu">### Operadores mas utilizados</span></span>
+<span id="cb170-580"><a href="#cb170-580"></a></span>
+<span id="cb170-581"><a href="#cb170-581"></a>Operadores aritméticos:</span>
 <span id="cb170-582"><a href="#cb170-582"></a></span>
-<span id="cb170-583"><a href="#cb170-583"></a><span class="st">'+'</span>(<span class="dv">1</span>, <span class="dv">1</span>)</span>
-<span id="cb170-584"><a href="#cb170-584"></a></span>
-<span id="cb170-585"><a href="#cb170-585"></a><span class="dv">2</span> <span class="sc">*</span> <span class="dv">3</span></span>
-<span id="cb170-586"><a href="#cb170-586"></a></span>
-<span id="cb170-587"><a href="#cb170-587"></a></span>
-<span id="cb170-588"><a href="#cb170-588"></a><span class="st">'*'</span>(<span class="dv">2</span>, <span class="dv">3</span>)</span>
-<span id="cb170-589"><a href="#cb170-589"></a></span>
+<span id="cb170-583"><a href="#cb170-583"></a><span class="in">```{r, echo=F}</span></span>
+<span id="cb170-584"><a href="#cb170-584"></a>d <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb170-585"><a href="#cb170-585"></a><span class="fu">c</span>(<span class="st">"+"</span> , <span class="st">"suma"</span>),</span>
+<span id="cb170-586"><a href="#cb170-586"></a><span class="fu">c</span>(<span class="st">"-"</span>,  <span class="st">"resta"</span>),</span>
+<span id="cb170-587"><a href="#cb170-587"></a><span class="fu">c</span>(<span class="st">"*"</span> , <span class="st">"multiplicación"</span>),</span>
+<span id="cb170-588"><a href="#cb170-588"></a><span class="fu">c</span>(<span class="st">"/"</span>,  <span class="st">"división"</span>),</span>
+<span id="cb170-589"><a href="#cb170-589"></a><span class="fu">c</span>(<span class="st">"^ or **"</span>,    <span class="st">"exponente"</span>))</span>
 <span id="cb170-590"><a href="#cb170-590"></a></span>
-<span id="cb170-591"><a href="#cb170-591"></a><span class="in">```</span></span>
-<span id="cb170-592"><a href="#cb170-592"></a></span>
-<span id="cb170-593"><a href="#cb170-593"></a>&nbsp;</span>
-<span id="cb170-594"><a href="#cb170-594"></a></span>
-<span id="cb170-595"><a href="#cb170-595"></a><span class="fu">### Operadores mas utilizados</span></span>
-<span id="cb170-596"><a href="#cb170-596"></a></span>
-<span id="cb170-597"><a href="#cb170-597"></a>Operadores aritméticos:</span>
+<span id="cb170-591"><a href="#cb170-591"></a></span>
+<span id="cb170-592"><a href="#cb170-592"></a>d <span class="ot">&lt;-</span> <span class="fu">t</span>(d)</span>
+<span id="cb170-593"><a href="#cb170-593"></a></span>
+<span id="cb170-594"><a href="#cb170-594"></a><span class="fu">colnames</span>(d) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Operador      "</span>, <span class="st">"Descrición  "</span>)</span>
+<span id="cb170-595"><a href="#cb170-595"></a></span>
+<span id="cb170-596"><a href="#cb170-596"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(d, <span class="at">row.names =</span> F, <span class="at">escape =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb170-597"><a href="#cb170-597"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">"striped"</span>, <span class="st">"hover"</span>, <span class="st">"condensed"</span>, <span class="st">"responsive"</span>), <span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">font_size =</span> <span class="dv">18</span>)</span>
 <span id="cb170-598"><a href="#cb170-598"></a></span>
-<span id="cb170-599"><a href="#cb170-599"></a><span class="in">```{r, echo=F}</span></span>
-<span id="cb170-600"><a href="#cb170-600"></a>d <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb170-601"><a href="#cb170-601"></a><span class="fu">c</span>(<span class="st">"+"</span> , <span class="st">"suma"</span>),</span>
-<span id="cb170-602"><a href="#cb170-602"></a><span class="fu">c</span>(<span class="st">"-"</span>,  <span class="st">"resta"</span>),</span>
-<span id="cb170-603"><a href="#cb170-603"></a><span class="fu">c</span>(<span class="st">"*"</span> , <span class="st">"multiplicación"</span>),</span>
-<span id="cb170-604"><a href="#cb170-604"></a><span class="fu">c</span>(<span class="st">"/"</span>,  <span class="st">"división"</span>),</span>
-<span id="cb170-605"><a href="#cb170-605"></a><span class="fu">c</span>(<span class="st">"^ or **"</span>,    <span class="st">"exponente"</span>))</span>
-<span id="cb170-606"><a href="#cb170-606"></a></span>
+<span id="cb170-599"><a href="#cb170-599"></a><span class="in">```</span></span>
+<span id="cb170-600"><a href="#cb170-600"></a></span>
+<span id="cb170-601"><a href="#cb170-601"></a>&nbsp;</span>
+<span id="cb170-602"><a href="#cb170-602"></a></span>
+<span id="cb170-605"><a href="#cb170-605"></a><span class="in">```{r}</span></span>
+<span id="cb170-606"><a href="#cb170-606"></a><span class="dv">1</span> <span class="sc">-</span> <span class="dv">2</span></span>
 <span id="cb170-607"><a href="#cb170-607"></a></span>
-<span id="cb170-608"><a href="#cb170-608"></a>d <span class="ot">&lt;-</span> <span class="fu">t</span>(d)</span>
+<span id="cb170-608"><a href="#cb170-608"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">2</span></span>
 <span id="cb170-609"><a href="#cb170-609"></a></span>
-<span id="cb170-610"><a href="#cb170-610"></a><span class="fu">colnames</span>(d) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Operador      "</span>, <span class="st">"Descrición  "</span>)</span>
+<span id="cb170-610"><a href="#cb170-610"></a><span class="dv">2</span> <span class="sc">^</span> <span class="dv">2</span></span>
 <span id="cb170-611"><a href="#cb170-611"></a></span>
-<span id="cb170-612"><a href="#cb170-612"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(d, <span class="at">row.names =</span> F, <span class="at">escape =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span></span>
-<span id="cb170-613"><a href="#cb170-613"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">"striped"</span>, <span class="st">"hover"</span>, <span class="st">"condensed"</span>, <span class="st">"responsive"</span>), <span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">font_size =</span> <span class="dv">18</span>)</span>
-<span id="cb170-614"><a href="#cb170-614"></a></span>
-<span id="cb170-615"><a href="#cb170-615"></a><span class="in">```</span></span>
-<span id="cb170-616"><a href="#cb170-616"></a></span>
-<span id="cb170-617"><a href="#cb170-617"></a>&nbsp;</span>
-<span id="cb170-618"><a href="#cb170-618"></a></span>
-<span id="cb170-621"><a href="#cb170-621"></a><span class="in">```{r}</span></span>
-<span id="cb170-622"><a href="#cb170-622"></a><span class="dv">1</span> <span class="sc">-</span> <span class="dv">2</span></span>
-<span id="cb170-623"><a href="#cb170-623"></a></span>
-<span id="cb170-624"><a href="#cb170-624"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">2</span></span>
+<span id="cb170-612"><a href="#cb170-612"></a><span class="dv">2</span> <span class="sc">**</span> <span class="dv">2</span></span>
+<span id="cb170-613"><a href="#cb170-613"></a></span>
+<span id="cb170-614"><a href="#cb170-614"></a><span class="dv">2</span><span class="sc">:</span><span class="dv">3</span> <span class="sc">%in%</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">4</span></span>
+<span id="cb170-615"><a href="#cb170-615"></a></span>
+<span id="cb170-616"><a href="#cb170-616"></a><span class="in">```</span></span>
+<span id="cb170-617"><a href="#cb170-617"></a></span>
+<span id="cb170-618"><a href="#cb170-618"></a>&nbsp;</span>
+<span id="cb170-619"><a href="#cb170-619"></a></span>
+<span id="cb170-620"><a href="#cb170-620"></a>Operadores lógicos:</span>
+<span id="cb170-621"><a href="#cb170-621"></a></span>
+<span id="cb170-622"><a href="#cb170-622"></a><span class="in">```{r, echo=F, results='asis'}</span></span>
+<span id="cb170-623"><a href="#cb170-623"></a>d <span class="ot">&lt;-</span> <span class="fu">matrix</span>(</span>
+<span id="cb170-624"><a href="#cb170-624"></a><span class="fu">c</span>(<span class="st">"&lt;"</span>, <span class="st">"menor que"</span>, <span class="st">"&lt;="</span>, <span class="st">"menor o igual que"</span>,<span class="st">"&gt;"</span>, <span class="st">"mayor que"</span>, <span class="st">"&gt;="</span>,   <span class="st">"mayor o igual que"</span>, <span class="st">"=="</span>, <span class="st">"exactamente igual que"</span>, <span class="st">"!="</span>,   <span class="st">"diferente que"</span>, <span class="st">"!x"</span>,  <span class="st">"No es x"</span>, <span class="st">"x | y"</span>, <span class="st">"   x O y"</span>, <span class="st">"x &amp; y"</span>, <span class="st">"x Y y"</span>,<span class="st">"x %in% y"</span>, <span class="st">"correspondencia"</span>), <span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb170-625"><a href="#cb170-625"></a></span>
-<span id="cb170-626"><a href="#cb170-626"></a><span class="dv">2</span> <span class="sc">^</span> <span class="dv">2</span></span>
+<span id="cb170-626"><a href="#cb170-626"></a></span>
 <span id="cb170-627"><a href="#cb170-627"></a></span>
-<span id="cb170-628"><a href="#cb170-628"></a><span class="dv">2</span> <span class="sc">**</span> <span class="dv">2</span></span>
+<span id="cb170-628"><a href="#cb170-628"></a>d <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(d)</span>
 <span id="cb170-629"><a href="#cb170-629"></a></span>
-<span id="cb170-630"><a href="#cb170-630"></a><span class="dv">2</span><span class="sc">:</span><span class="dv">3</span> <span class="sc">%in%</span> <span class="dv">2</span><span class="sc">:</span><span class="dv">4</span></span>
+<span id="cb170-630"><a href="#cb170-630"></a><span class="fu">names</span>(d) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Operador      "</span>, <span class="st">"Descrición  "</span>)</span>
 <span id="cb170-631"><a href="#cb170-631"></a></span>
-<span id="cb170-632"><a href="#cb170-632"></a><span class="in">```</span></span>
-<span id="cb170-633"><a href="#cb170-633"></a></span>
-<span id="cb170-634"><a href="#cb170-634"></a>&nbsp;</span>
-<span id="cb170-635"><a href="#cb170-635"></a></span>
-<span id="cb170-636"><a href="#cb170-636"></a>Operadores lógicos:</span>
-<span id="cb170-637"><a href="#cb170-637"></a></span>
-<span id="cb170-638"><a href="#cb170-638"></a><span class="in">```{r, echo=F, results='asis'}</span></span>
-<span id="cb170-639"><a href="#cb170-639"></a>d <span class="ot">&lt;-</span> <span class="fu">matrix</span>(</span>
-<span id="cb170-640"><a href="#cb170-640"></a><span class="fu">c</span>(<span class="st">"&lt;"</span>, <span class="st">"menor que"</span>, <span class="st">"&lt;="</span>, <span class="st">"menor o igual que"</span>,<span class="st">"&gt;"</span>, <span class="st">"mayor que"</span>, <span class="st">"&gt;="</span>,   <span class="st">"mayor o igual que"</span>, <span class="st">"=="</span>, <span class="st">"exactamente igual que"</span>, <span class="st">"!="</span>,   <span class="st">"diferente que"</span>, <span class="st">"!x"</span>,  <span class="st">"No es x"</span>, <span class="st">"x | y"</span>, <span class="st">"   x O y"</span>, <span class="st">"x &amp; y"</span>, <span class="st">"x Y y"</span>,<span class="st">"x %in% y"</span>, <span class="st">"correspondencia"</span>), <span class="at">ncol =</span> <span class="dv">2</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb170-641"><a href="#cb170-641"></a></span>
-<span id="cb170-642"><a href="#cb170-642"></a></span>
+<span id="cb170-632"><a href="#cb170-632"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(d, <span class="at">row.names =</span> F,  <span class="at">booktabs =</span> <span class="cn">TRUE</span>, <span class="at">escape =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb170-633"><a href="#cb170-633"></a> kableExtra<span class="sc">::</span><span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">"striped"</span>, <span class="st">"hover"</span>, <span class="st">"condensed"</span>, <span class="st">"responsive"</span>), <span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">font_size =</span> <span class="dv">18</span>)</span>
+<span id="cb170-634"><a href="#cb170-634"></a></span>
+<span id="cb170-635"><a href="#cb170-635"></a><span class="in">```</span></span>
+<span id="cb170-636"><a href="#cb170-636"></a></span>
+<span id="cb170-637"><a href="#cb170-637"></a>&nbsp;</span>
+<span id="cb170-638"><a href="#cb170-638"></a></span>
+<span id="cb170-641"><a href="#cb170-641"></a><span class="in">```{r}</span></span>
+<span id="cb170-642"><a href="#cb170-642"></a><span class="dv">1</span> <span class="sc">&lt;</span> <span class="dv">2</span> </span>
 <span id="cb170-643"><a href="#cb170-643"></a></span>
-<span id="cb170-644"><a href="#cb170-644"></a>d <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(d)</span>
+<span id="cb170-644"><a href="#cb170-644"></a><span class="dv">1</span> <span class="sc">&gt;</span> <span class="dv">2</span> </span>
 <span id="cb170-645"><a href="#cb170-645"></a></span>
-<span id="cb170-646"><a href="#cb170-646"></a><span class="fu">names</span>(d) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Operador      "</span>, <span class="st">"Descrición  "</span>)</span>
+<span id="cb170-646"><a href="#cb170-646"></a><span class="dv">1</span> <span class="sc">&lt;=</span> <span class="dv">2</span> </span>
 <span id="cb170-647"><a href="#cb170-647"></a></span>
-<span id="cb170-648"><a href="#cb170-648"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(d, <span class="at">row.names =</span> F,  <span class="at">booktabs =</span> <span class="cn">TRUE</span>, <span class="at">escape =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
-<span id="cb170-649"><a href="#cb170-649"></a> kableExtra<span class="sc">::</span><span class="fu">kable_styling</span>(<span class="at">bootstrap_options =</span> <span class="fu">c</span>(<span class="st">"striped"</span>, <span class="st">"hover"</span>, <span class="st">"condensed"</span>, <span class="st">"responsive"</span>), <span class="at">full_width =</span> <span class="cn">FALSE</span>, <span class="at">font_size =</span> <span class="dv">18</span>)</span>
-<span id="cb170-650"><a href="#cb170-650"></a></span>
-<span id="cb170-651"><a href="#cb170-651"></a><span class="in">```</span></span>
-<span id="cb170-652"><a href="#cb170-652"></a></span>
-<span id="cb170-653"><a href="#cb170-653"></a>&nbsp;</span>
-<span id="cb170-654"><a href="#cb170-654"></a></span>
-<span id="cb170-657"><a href="#cb170-657"></a><span class="in">```{r}</span></span>
-<span id="cb170-658"><a href="#cb170-658"></a><span class="dv">1</span> <span class="sc">&lt;</span> <span class="dv">2</span> </span>
-<span id="cb170-659"><a href="#cb170-659"></a></span>
-<span id="cb170-660"><a href="#cb170-660"></a><span class="dv">1</span> <span class="sc">&gt;</span> <span class="dv">2</span> </span>
+<span id="cb170-648"><a href="#cb170-648"></a><span class="dv">1</span> <span class="sc">==</span> <span class="dv">2</span></span>
+<span id="cb170-649"><a href="#cb170-649"></a></span>
+<span id="cb170-650"><a href="#cb170-650"></a><span class="dv">1</span> <span class="sc">!=</span> <span class="dv">2</span></span>
+<span id="cb170-651"><a href="#cb170-651"></a></span>
+<span id="cb170-652"><a href="#cb170-652"></a><span class="dv">1</span> <span class="sc">&gt;</span> <span class="dv">2</span> </span>
+<span id="cb170-653"><a href="#cb170-653"></a></span>
+<span id="cb170-654"><a href="#cb170-654"></a><span class="dv">5</span> <span class="sc">%in%</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span></span>
+<span id="cb170-655"><a href="#cb170-655"></a></span>
+<span id="cb170-656"><a href="#cb170-656"></a><span class="dv">5</span> <span class="sc">%in%</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span></span>
+<span id="cb170-657"><a href="#cb170-657"></a><span class="in">```</span></span>
+<span id="cb170-658"><a href="#cb170-658"></a></span>
+<span id="cb170-659"><a href="#cb170-659"></a>::: {.alert .alert-info}</span>
+<span id="cb170-660"><a href="#cb170-660"></a><span class="fu">## Ejercicio 2</span></span>
 <span id="cb170-661"><a href="#cb170-661"></a></span>
-<span id="cb170-662"><a href="#cb170-662"></a><span class="dv">1</span> <span class="sc">&lt;=</span> <span class="dv">2</span> </span>
+<span id="cb170-662"><a href="#cb170-662"></a>&nbsp;</span>
 <span id="cb170-663"><a href="#cb170-663"></a></span>
-<span id="cb170-664"><a href="#cb170-664"></a><span class="dv">1</span> <span class="sc">==</span> <span class="dv">2</span></span>
+<span id="cb170-664"><a href="#cb170-664"></a><span class="ss">-   </span>Utilice los datos de ejemplo <span class="in">`iris`</span> para crear un subconjunto de datos con sólo las observaciones de la especie <span class="in">`setosa`</span></span>
 <span id="cb170-665"><a href="#cb170-665"></a></span>
-<span id="cb170-666"><a href="#cb170-666"></a><span class="dv">1</span> <span class="sc">!=</span> <span class="dv">2</span></span>
+<span id="cb170-666"><a href="#cb170-666"></a><span class="ss">-   </span>Ahora cree un subconjunto de datos que contenga las observaciones tanto de "setosa" como de "versicolor"</span>
 <span id="cb170-667"><a href="#cb170-667"></a></span>
-<span id="cb170-668"><a href="#cb170-668"></a><span class="dv">1</span> <span class="sc">&gt;</span> <span class="dv">2</span> </span>
+<span id="cb170-668"><a href="#cb170-668"></a><span class="ss">-   </span>También con <span class="in">`iris`</span> cree un subconjunto de datos con las observaciones para las que <span class="in">`iris$Sepal.length`</span> es mayor que 6</span>
 <span id="cb170-669"><a href="#cb170-669"></a></span>
-<span id="cb170-670"><a href="#cb170-670"></a><span class="dv">5</span> <span class="sc">%in%</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span></span>
-<span id="cb170-671"><a href="#cb170-671"></a></span>
-<span id="cb170-672"><a href="#cb170-672"></a><span class="dv">5</span> <span class="sc">%in%</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span></span>
-<span id="cb170-673"><a href="#cb170-673"></a><span class="in">```</span></span>
+<span id="cb170-670"><a href="#cb170-670"></a><span class="ss">-   </span>¿Cuántas observaciones tienen una longitud de sépalo superior a 6?</span>
+<span id="cb170-671"><a href="#cb170-671"></a>:::</span>
+<span id="cb170-672"><a href="#cb170-672"></a></span>
+<span id="cb170-673"><a href="#cb170-673"></a>&nbsp;</span>
 <span id="cb170-674"><a href="#cb170-674"></a></span>
-<span id="cb170-675"><a href="#cb170-675"></a>&nbsp;</span>
-<span id="cb170-676"><a href="#cb170-676"></a></span>
-<span id="cb170-677"><a href="#cb170-677"></a>La mayoría de las funciones están vectorizadas:</span>
-<span id="cb170-678"><a href="#cb170-678"></a></span>
-<span id="cb170-679"><a href="#cb170-679"></a><span class="in">```{r, eval=F}</span></span>
-<span id="cb170-680"><a href="#cb170-680"></a></span>
-<span id="cb170-681"><a href="#cb170-681"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">6</span> <span class="sc">*</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span></span>
-<span id="cb170-682"><a href="#cb170-682"></a></span>
-<span id="cb170-683"><a href="#cb170-683"></a><span class="in">```</span></span>
-<span id="cb170-684"><a href="#cb170-684"></a></span>
-<span id="cb170-685"><a href="#cb170-685"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"images/vectorize.png"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"R"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"350"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"900"</span><span class="kw">/&gt;</span></span>
-<span id="cb170-686"><a href="#cb170-686"></a></span>
-<span id="cb170-687"><a href="#cb170-687"></a><span class="kw">&lt;font</span> <span class="er">size</span><span class="ot">=</span><span class="st">"2"</span><span class="kw">&gt;</span><span class="sc">\*</span> Modified from <span class="kw">&lt;i&gt;</span>Grolemund &amp; Wickham 2017<span class="kw">&lt;/i&gt;&lt;/font&gt;</span></span>
-<span id="cb170-688"><a href="#cb170-688"></a></span>
-<span id="cb170-689"><a href="#cb170-689"></a>&nbsp;</span>
-<span id="cb170-690"><a href="#cb170-690"></a></span>
-<span id="cb170-691"><a href="#cb170-691"></a><span class="in">```{r, echo=F}</span></span>
-<span id="cb170-692"><a href="#cb170-692"></a></span>
-<span id="cb170-693"><a href="#cb170-693"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">6</span> <span class="sc">*</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span></span>
-<span id="cb170-694"><a href="#cb170-694"></a><span class="in">```</span></span>
-<span id="cb170-695"><a href="#cb170-695"></a></span>
-<span id="cb170-698"><a href="#cb170-698"></a><span class="in">```{r}</span></span>
-<span id="cb170-699"><a href="#cb170-699"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">6</span> <span class="sc">-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span></span>
-<span id="cb170-700"><a href="#cb170-700"></a><span class="in">```</span></span>
-<span id="cb170-701"><a href="#cb170-701"></a></span>
-<span id="cb170-702"><a href="#cb170-702"></a>R recicla vectores de longitud desigual:</span>
-<span id="cb170-703"><a href="#cb170-703"></a></span>
-<span id="cb170-704"><a href="#cb170-704"></a><span class="in">```{r, eval=F}</span></span>
-<span id="cb170-705"><a href="#cb170-705"></a></span>
-<span id="cb170-706"><a href="#cb170-706"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">6</span> <span class="sc">*</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
-<span id="cb170-707"><a href="#cb170-707"></a></span>
-<span id="cb170-708"><a href="#cb170-708"></a><span class="in">```</span></span>
-<span id="cb170-709"><a href="#cb170-709"></a></span>
-<span id="cb170-710"><a href="#cb170-710"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"images/recycle.png"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"R"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"350"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"900"</span><span class="kw">/&gt;</span></span>
-<span id="cb170-711"><a href="#cb170-711"></a></span>
-<span id="cb170-712"><a href="#cb170-712"></a><span class="kw">&lt;font</span> <span class="er">size</span><span class="ot">=</span><span class="st">"2"</span><span class="kw">&gt;</span><span class="sc">\*</span> Modified from <span class="kw">&lt;i&gt;</span>Grolemund &amp; Wickham 2017<span class="kw">&lt;/i&gt;&lt;/font&gt;</span></span>
-<span id="cb170-713"><a href="#cb170-713"></a></span>
-<span id="cb170-714"><a href="#cb170-714"></a>&nbsp;</span>
-<span id="cb170-715"><a href="#cb170-715"></a></span>
-<span id="cb170-716"><a href="#cb170-716"></a><span class="in">```{r, echo=F}</span></span>
-<span id="cb170-717"><a href="#cb170-717"></a></span>
-<span id="cb170-718"><a href="#cb170-718"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">6</span> <span class="sc">*</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
-<span id="cb170-719"><a href="#cb170-719"></a></span>
-<span id="cb170-720"><a href="#cb170-720"></a><span class="in">```</span></span>
-<span id="cb170-721"><a href="#cb170-721"></a></span>
-<span id="cb170-724"><a href="#cb170-724"></a><span class="in">```{r}</span></span>
-<span id="cb170-725"><a href="#cb170-725"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">6</span> <span class="sc">+</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
-<span id="cb170-726"><a href="#cb170-726"></a></span>
-<span id="cb170-727"><a href="#cb170-727"></a><span class="in">```</span></span>
-<span id="cb170-728"><a href="#cb170-728"></a></span>
-<span id="cb170-729"><a href="#cb170-729"></a>&nbsp;</span>
-<span id="cb170-730"><a href="#cb170-730"></a></span>
-<span id="cb170-731"><a href="#cb170-731"></a>------------------------------------------------------------------------</span>
-<span id="cb170-732"><a href="#cb170-732"></a></span>
-<span id="cb170-733"><a href="#cb170-733"></a><span class="fu"># El estilo importa</span></span>
-<span id="cb170-734"><a href="#cb170-734"></a></span>
-<span id="cb170-735"><a href="#cb170-735"></a><span class="kw">&lt;font</span> <span class="er">size</span><span class="ot">=</span><span class="st">"2"</span><span class="kw">&gt;&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://google.github.io/styleguide/Rguide.xml"</span><span class="kw">&gt;</span>Based on google's R Style Guide<span class="kw">&lt;/a&gt;&lt;/font&gt;</span></span>
-<span id="cb170-736"><a href="#cb170-736"></a></span>
-<span id="cb170-737"><a href="#cb170-737"></a><span class="fu">## Nombres de archivos</span></span>
-<span id="cb170-738"><a href="#cb170-738"></a></span>
-<span id="cb170-739"><a href="#cb170-739"></a>Los nombres de los archivos deben terminar en .R y, por supuesto, ser auto-explicatorios:</span>
-<span id="cb170-740"><a href="#cb170-740"></a></span>
-<span id="cb170-741"><a href="#cb170-741"></a><span class="ss">-   </span>Bien: graficar_probabilidad_posterior.R</span>
-<span id="cb170-742"><a href="#cb170-742"></a><span class="ss">-   </span>Mal: graf.R</span>
-<span id="cb170-743"><a href="#cb170-743"></a></span>
-<span id="cb170-744"><a href="#cb170-744"></a><span class="fu">## Nombres de objetos</span></span>
-<span id="cb170-745"><a href="#cb170-745"></a></span>
-<span id="cb170-746"><a href="#cb170-746"></a>Variables y funciones:</span>
-<span id="cb170-747"><a href="#cb170-747"></a></span>
-<span id="cb170-748"><a href="#cb170-748"></a><span class="ss">-   </span>Minúsculas</span>
-<span id="cb170-749"><a href="#cb170-749"></a><span class="ss">-   </span>Utilice un guión bajo</span>
-<span id="cb170-750"><a href="#cb170-750"></a><span class="ss">-   </span>En general, nombres para las variables y verbos para las funciones</span>
-<span id="cb170-751"><a href="#cb170-751"></a><span class="ss">-   </span>Procure que los nombres sean concisos y significativos (no siempre es fácil)</span>
-<span id="cb170-752"><a href="#cb170-752"></a><span class="ss">-   </span>Avoid using names of existing functions of variables</span>
-<span id="cb170-753"><a href="#cb170-753"></a></span>
-<span id="cb170-754"><a href="#cb170-754"></a><span class="in">```{r, eval=F}</span></span>
-<span id="cb170-755"><a href="#cb170-755"></a></span>
-<span id="cb170-756"><a href="#cb170-756"></a>  <span class="sc">-</span> Bien<span class="sc">:</span> dia_uno<span class="sc">:</span> dia_1, <span class="fu">peso_promedio</span>(),</span>
-<span id="cb170-757"><a href="#cb170-757"></a>  </span>
-<span id="cb170-758"><a href="#cb170-758"></a>  <span class="sc">-</span> Mal<span class="sc">:</span> diauno, dia1, primer.dia_delmes, mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fu">sum</span>(x), c <span class="ot">&lt;-</span> <span class="dv">10</span></span>
-<span id="cb170-759"><a href="#cb170-759"></a><span class="in">```</span></span>
-<span id="cb170-760"><a href="#cb170-760"></a></span>
-<span id="cb170-761"><a href="#cb170-761"></a>&nbsp;</span>
-<span id="cb170-762"><a href="#cb170-762"></a></span>
-<span id="cb170-763"><a href="#cb170-763"></a><span class="fu">## Syntaxis</span></span>
-<span id="cb170-764"><a href="#cb170-764"></a></span>
-<span id="cb170-765"><a href="#cb170-765"></a><span class="fu">### Espacios</span></span>
-<span id="cb170-766"><a href="#cb170-766"></a></span>
-<span id="cb170-767"><a href="#cb170-767"></a><span class="ss">-   </span>Utilice espacios alrededor de los operadores y para los argumentos dentro de una función</span>
-<span id="cb170-768"><a href="#cb170-768"></a><span class="ss">-   </span>Ponga siempre un espacio después de una coma, y nunca antes (como en el inglés normal)</span>
-<span id="cb170-769"><a href="#cb170-769"></a><span class="ss">-   </span>Coloque un espacio antes del paréntesis izquierdo, excepto en una llamada a una función</span>
-<span id="cb170-770"><a href="#cb170-770"></a></span>
-<span id="cb170-771"><a href="#cb170-771"></a><span class="in">```{r, eval=F}</span></span>
-<span id="cb170-772"><a href="#cb170-772"></a></span>
-<span id="cb170-773"><a href="#cb170-773"></a>  <span class="sc">-</span> Bien<span class="sc">:</span> </span>
-<span id="cb170-774"><a href="#cb170-774"></a>          a <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">10</span>, <span class="at">sd =</span> <span class="dv">10</span>, <span class="at">mean =</span> <span class="dv">1</span>)</span>
-<span id="cb170-775"><a href="#cb170-775"></a>          tab.prior <span class="ot">&lt;-</span> <span class="fu">table</span>(df[df<span class="sc">$</span>dias <span class="sc">&lt;</span> <span class="dv">0</span>, <span class="st">"campaign.id"</span>])</span>
-<span id="cb170-776"><a href="#cb170-776"></a>          total <span class="ot">&lt;-</span> <span class="fu">sum</span>(x[, <span class="dv">1</span>])</span>
-<span id="cb170-777"><a href="#cb170-777"></a>          total <span class="ot">&lt;-</span> <span class="fu">sum</span>(x[<span class="dv">1</span>, ])</span>
-<span id="cb170-778"><a href="#cb170-778"></a>          <span class="cf">if</span> (debug)</span>
-<span id="cb170-779"><a href="#cb170-779"></a>          <span class="fu">mean</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
-<span id="cb170-780"><a href="#cb170-780"></a>          </span>
-<span id="cb170-781"><a href="#cb170-781"></a>  <span class="sc">-</span> Mal<span class="sc">:</span> </span>
-<span id="cb170-782"><a href="#cb170-782"></a>         a<span class="ot">&lt;-</span><span class="fu">rnorm</span>(<span class="at">n=</span><span class="dv">10</span>,<span class="at">sd=</span><span class="dv">10</span>,<span class="at">mean=</span><span class="dv">1</span>)</span>
-<span id="cb170-783"><a href="#cb170-783"></a>         tab.prior <span class="ot">&lt;-</span> <span class="fu">table</span>(df[df<span class="sc">$</span>days.from.opt<span class="sc">&lt;</span><span class="dv">0</span>, <span class="st">"campaign.id"</span>])  <span class="co"># necesita espacio alrededor de '&lt;'</span></span>
-<span id="cb170-784"><a href="#cb170-784"></a>         tab.prior <span class="ot">&lt;-</span> <span class="fu">table</span>(df[df<span class="sc">$</span>days.from.opt <span class="sc">&lt;</span> <span class="dv">0</span>,<span class="st">"campaign.id"</span>])  <span class="co"># Necesita espacio despues de la coma</span></span>
-<span id="cb170-785"><a href="#cb170-785"></a>         tab.prior<span class="ot">&lt;-</span> <span class="fu">table</span>(df[df<span class="sc">$</span>days.from.opt <span class="sc">&lt;</span> <span class="dv">0</span>, <span class="st">"campaign.id"</span>])  <span class="co"># Necesita espacio antes de &lt;-</span></span>
-<span id="cb170-786"><a href="#cb170-786"></a>         tab.prior<span class="ot">&lt;-</span><span class="fu">table</span>(df[df<span class="sc">$</span>days.from.opt <span class="sc">&lt;</span> <span class="dv">0</span>, <span class="st">"campaign.id"</span>])  <span class="co"># Necesita espacio alrededor de &lt;-</span></span>
-<span id="cb170-787"><a href="#cb170-787"></a>         total <span class="ot">&lt;-</span> <span class="fu">sum</span>(x[,<span class="dv">1</span>])  <span class="co"># Necesita espacio antes de la coma  </span></span>
-<span id="cb170-788"><a href="#cb170-788"></a>         <span class="cf">if</span>(debug) <span class="co"># Necesita espacio antes del parentesis</span></span>
-<span id="cb170-789"><a href="#cb170-789"></a>         <span class="fu">mean</span> (<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) <span class="co"># Espacio extra luego del nombre de la funcion</span></span>
-<span id="cb170-790"><a href="#cb170-790"></a></span>
-<span id="cb170-791"><a href="#cb170-791"></a><span class="in">```</span></span>
-<span id="cb170-792"><a href="#cb170-792"></a></span>
-<span id="cb170-793"><a href="#cb170-793"></a>&nbsp;</span>
-<span id="cb170-794"><a href="#cb170-794"></a></span>
-<span id="cb170-795"><a href="#cb170-795"></a><span class="fu">#### Corchetes</span></span>
-<span id="cb170-796"><a href="#cb170-796"></a></span>
-<span id="cb170-797"><a href="#cb170-797"></a><span class="ss">-   </span>La llave de apertura nunca debe ir en su propia línea</span>
-<span id="cb170-798"><a href="#cb170-798"></a><span class="ss">-   </span>La llave de cierre debe ir siempre en su propia línea</span>
-<span id="cb170-799"><a href="#cb170-799"></a><span class="ss">-   </span>Puede omitir las llaves cuando un bloque consiste en una sola declaración</span>
-<span id="cb170-800"><a href="#cb170-800"></a></span>
-<span id="cb170-801"><a href="#cb170-801"></a><span class="in">```{r eval=F}</span></span>
-<span id="cb170-802"><a href="#cb170-802"></a></span>
-<span id="cb170-803"><a href="#cb170-803"></a>  <span class="sc">-</span> Bien<span class="sc">:</span></span>
-<span id="cb170-804"><a href="#cb170-804"></a>              <span class="cf">if</span> (<span class="fu">is.null</span>(ylim)) {</span>
-<span id="cb170-805"><a href="#cb170-805"></a>              ylim <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.06</span>)</span>
-<span id="cb170-806"><a href="#cb170-806"></a>            }</span>
-<span id="cb170-807"><a href="#cb170-807"></a>                      </span>
-<span id="cb170-808"><a href="#cb170-808"></a>            <span class="cf">if</span> (<span class="fu">is.null</span>(ylim))</span>
-<span id="cb170-809"><a href="#cb170-809"></a>              ylim <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.06</span>)</span>
-<span id="cb170-810"><a href="#cb170-810"></a>          </span>
-<span id="cb170-811"><a href="#cb170-811"></a>  <span class="sc">-</span> Mal<span class="sc">:</span></span>
-<span id="cb170-812"><a href="#cb170-812"></a>            </span>
-<span id="cb170-813"><a href="#cb170-813"></a>         <span class="cf">if</span> (<span class="fu">is.null</span>(ylim)) ylim <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.06</span>)</span>
-<span id="cb170-814"><a href="#cb170-814"></a>                    </span>
-<span id="cb170-815"><a href="#cb170-815"></a>         <span class="cf">if</span> (<span class="fu">is.null</span>(ylim)) {ylim <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.06</span>)} </span>
-<span id="cb170-816"><a href="#cb170-816"></a></span>
-<span id="cb170-817"><a href="#cb170-817"></a>         <span class="cf">if</span> (<span class="fu">is.null</span>(ylim)) {</span>
-<span id="cb170-818"><a href="#cb170-818"></a>           ylim <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.06</span>)</span>
-<span id="cb170-819"><a href="#cb170-819"></a>           } </span>
-<span id="cb170-820"><a href="#cb170-820"></a><span class="in">```</span></span>
-<span id="cb170-821"><a href="#cb170-821"></a></span>
-<span id="cb170-822"><a href="#cb170-822"></a>&nbsp;</span>
-<span id="cb170-823"><a href="#cb170-823"></a></span>
-<span id="cb170-824"><a href="#cb170-824"></a><span class="fu">#### Crear objetos</span></span>
-<span id="cb170-825"><a href="#cb170-825"></a></span>
-<span id="cb170-826"><a href="#cb170-826"></a><span class="ss">-   </span>Use <span class="sc">\&lt;</span>-, no =</span>
-<span id="cb170-827"><a href="#cb170-827"></a></span>
-<span id="cb170-828"><a href="#cb170-828"></a><span class="in">```{r, eval = F}</span></span>
-<span id="cb170-829"><a href="#cb170-829"></a></span>
-<span id="cb170-830"><a href="#cb170-830"></a>  <span class="sc">-</span> GOOD<span class="sc">:</span></span>
-<span id="cb170-831"><a href="#cb170-831"></a>         x <span class="ot">&lt;-</span> <span class="dv">5</span> </span>
-<span id="cb170-832"><a href="#cb170-832"></a>          </span>
-<span id="cb170-833"><a href="#cb170-833"></a>  <span class="sc">-</span> BAD<span class="sc">:</span></span>
-<span id="cb170-834"><a href="#cb170-834"></a>         x <span class="ot">=</span> <span class="dv">5</span></span>
-<span id="cb170-835"><a href="#cb170-835"></a><span class="in">```</span></span>
-<span id="cb170-836"><a href="#cb170-836"></a></span>
-<span id="cb170-837"><a href="#cb170-837"></a>&nbsp;</span>
-<span id="cb170-838"><a href="#cb170-838"></a></span>
-<span id="cb170-839"><a href="#cb170-839"></a><span class="fu">#### Sugerencias para añadir comentarios</span></span>
-<span id="cb170-840"><a href="#cb170-840"></a></span>
-<span id="cb170-841"><a href="#cb170-841"></a><span class="ss">-   </span>Comente su código</span>
-<span id="cb170-842"><a href="#cb170-842"></a><span class="ss">-   </span>Las líneas enteras comentadas deben comenzar con <span class="sc">\#</span> y un espacio</span>
-<span id="cb170-843"><a href="#cb170-843"></a><span class="ss">-   </span>Los comentarios cortos pueden colocarse después del código precedido por dos espacios, #, y luego un espacio</span>
-<span id="cb170-844"><a href="#cb170-844"></a></span>
-<span id="cb170-845"><a href="#cb170-845"></a><span class="in">```{r, eval=F}</span></span>
-<span id="cb170-846"><a href="#cb170-846"></a></span>
-<span id="cb170-847"><a href="#cb170-847"></a><span class="co"># Create histogram of frequency of campaigns by pct budget spent.</span></span>
-<span id="cb170-848"><a href="#cb170-848"></a><span class="fu">hist</span>(df<span class="sc">$</span>pct.spent,</span>
-<span id="cb170-849"><a href="#cb170-849"></a>     <span class="at">breaks =</span> <span class="st">"scott"</span>,  <span class="co"># method for choosing number of buckets</span></span>
-<span id="cb170-850"><a href="#cb170-850"></a>     <span class="at">main   =</span> <span class="st">"Histograma: individuos por unidad de tiempo"</span>,</span>
-<span id="cb170-851"><a href="#cb170-851"></a>     <span class="at">xlab   =</span> <span class="st">"Número de individuos"</span>,</span>
-<span id="cb170-852"><a href="#cb170-852"></a>     <span class="at">ylab   =</span> <span class="st">"Frecuencia"</span>)</span>
-<span id="cb170-853"><a href="#cb170-853"></a><span class="in">```</span></span>
-<span id="cb170-854"><a href="#cb170-854"></a></span>
-<span id="cb170-855"><a href="#cb170-855"></a>&nbsp;</span>
-<span id="cb170-856"><a href="#cb170-856"></a></span>
-<span id="cb170-857"><a href="#cb170-857"></a><span class="fu">#### Disposición general y ordenación (estilo de google)</span></span>
-<span id="cb170-858"><a href="#cb170-858"></a></span>
-<span id="cb170-859"><a href="#cb170-859"></a><span class="ss">-   </span>Comentario de la declaración de derechos de autor (?)</span>
-<span id="cb170-860"><a href="#cb170-860"></a><span class="ss">-   </span>Comentario del autor</span>
-<span id="cb170-861"><a href="#cb170-861"></a><span class="ss">-   </span>Comentario de la descripción del archivo, incluyendo el propósito del programa, las entradas y las salidas</span>
-<span id="cb170-862"><a href="#cb170-862"></a><span class="ss">-   </span>declaraciones source() y library()</span>
-<span id="cb170-863"><a href="#cb170-863"></a><span class="ss">-   </span>Definiciones de funciones</span>
-<span id="cb170-864"><a href="#cb170-864"></a><span class="ss">-   </span>Sentencias ejecutadas, si procede (por ejemplo, print, plot)</span>
-<span id="cb170-865"><a href="#cb170-865"></a></span>
-<span id="cb170-866"><a href="#cb170-866"></a>------------------------------------------------------------------------</span>
-<span id="cb170-867"><a href="#cb170-867"></a></span>
-<span id="cb170-868"><a href="#cb170-868"></a>&nbsp;</span>
-<span id="cb170-869"><a href="#cb170-869"></a></span>
-<span id="cb170-870"><a href="#cb170-870"></a><span class="fu"># Documentación de R</span></span>
-<span id="cb170-871"><a href="#cb170-871"></a></span>
-<span id="cb170-872"><a href="#cb170-872"></a>La mayoría de los recursos de R están muy bien documentados. Así que **la primera fuente de ayuda a la que debe acudir cuando escriba código R es la propia documentación de R**. Todos los paquetes están documentados de la misma manera estándar. Familiarizarse con el formato puede simplificar mucho las cosas.</span>
-<span id="cb170-873"><a href="#cb170-873"></a></span>
-<span id="cb170-874"><a href="#cb170-874"></a><span class="fu">## Package documentation</span></span>
-<span id="cb170-875"><a href="#cb170-875"></a></span>
-<span id="cb170-876"><a href="#cb170-876"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"images/packagepage.png"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"R"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"900"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"800"</span> <span class="er">style</span><span class="ot">=</span><span class="st">"border:3px solid gray"</span><span class="kw">/&gt;</span></span>
-<span id="cb170-877"><a href="#cb170-877"></a></span>
-<span id="cb170-878"><a href="#cb170-878"></a>&nbsp;</span>
-<span id="cb170-879"><a href="#cb170-879"></a></span>
-<span id="cb170-880"><a href="#cb170-880"></a><span class="kw">&lt;font</span> <span class="er">size</span><span class="ot">=</span><span class="st">"5"</span><span class="kw">&gt;</span>Reference manuals<span class="kw">&lt;/font&gt;</span></span>
-<span id="cb170-881"><a href="#cb170-881"></a></span>
-<span id="cb170-882"><a href="#cb170-882"></a>Los manuales de referencia son colecciones de la documentación de todas las funciones de un paquete (sólo 1 por paquete):</span>
-<span id="cb170-883"><a href="#cb170-883"></a></span>
-<span id="cb170-884"><a href="#cb170-884"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">manual de dynaSpec</span><span class="co">](https://cloud.r-project.org/web/packages/dynaSpec/dynaSpec.pdf)</span></span>
-<span id="cb170-885"><a href="#cb170-885"></a></span>
-<span id="cb170-886"><a href="#cb170-886"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">manual de baRulho</span><span class="co">](https://cran.r-project.org/web/packages/baRulho/baRulho.pdf)</span></span>
-<span id="cb170-887"><a href="#cb170-887"></a></span>
-<span id="cb170-888"><a href="#cb170-888"></a>&nbsp;</span>
-<span id="cb170-889"><a href="#cb170-889"></a></span>
-<span id="cb170-890"><a href="#cb170-890"></a><span class="fu">## Documentación de las funciones</span></span>
-<span id="cb170-891"><a href="#cb170-891"></a></span>
-<span id="cb170-892"><a href="#cb170-892"></a>Todas las funciones (por defecto o de paquetes cargados) deben tener una documentación que siga un formato estándar:</span>
-<span id="cb170-893"><a href="#cb170-893"></a></span>
-<span id="cb170-894"><a href="#cb170-894"></a><span class="in">```{r, eval=F}</span></span>
-<span id="cb170-895"><a href="#cb170-895"></a>?mean</span>
-<span id="cb170-896"><a href="#cb170-896"></a></span>
-<span id="cb170-897"><a href="#cb170-897"></a><span class="fu">help</span>(<span class="st">"mean"</span>)</span>
-<span id="cb170-898"><a href="#cb170-898"></a></span>
-<span id="cb170-899"><a href="#cb170-899"></a><span class="in">```</span></span>
-<span id="cb170-900"><a href="#cb170-900"></a></span>
-<span id="cb170-901"><a href="#cb170-901"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"images/documentation.png"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"R"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"700"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"800"</span> <span class="er">style</span><span class="ot">=</span><span class="st">"border:3px solid gray"</span><span class="kw">/&gt;</span> &nbsp;</span>
-<span id="cb170-902"><a href="#cb170-902"></a></span>
-<span id="cb170-903"><a href="#cb170-903"></a>Esta documentación también puede mostrarse en Rstudio pulsando <span class="in">`F1`</span> cuando el cursor está en el nombre de la función</span>
-<span id="cb170-904"><a href="#cb170-904"></a></span>
-<span id="cb170-905"><a href="#cb170-905"></a>&nbsp;</span>
-<span id="cb170-906"><a href="#cb170-906"></a></span>
-<span id="cb170-907"><a href="#cb170-907"></a>Si no recuerda el nombre de la función pruebe con <span class="in">`apropos()`</span>:</span>
-<span id="cb170-908"><a href="#cb170-908"></a></span>
-<span id="cb170-911"><a href="#cb170-911"></a><span class="in">```{r}</span></span>
-<span id="cb170-912"><a href="#cb170-912"></a><span class="fu">apropos</span>(<span class="st">"mean"</span>)</span>
-<span id="cb170-913"><a href="#cb170-913"></a></span>
-<span id="cb170-914"><a href="#cb170-914"></a><span class="in">```</span></span>
-<span id="cb170-915"><a href="#cb170-915"></a></span>
-<span id="cb170-916"><a href="#cb170-916"></a>&nbsp;</span>
-<span id="cb170-917"><a href="#cb170-917"></a></span>
-<span id="cb170-918"><a href="#cb170-918"></a><span class="fu">## Viñetas (vignettes)</span></span>
-<span id="cb170-919"><a href="#cb170-919"></a></span>
-<span id="cb170-920"><a href="#cb170-920"></a>Las viñetas son documentos ilustrativos o casos de estudio que detallan el uso de un paquete (opcional, pueden ser varios por paquete).</span>
-<span id="cb170-921"><a href="#cb170-921"></a></span>
-<span id="cb170-922"><a href="#cb170-922"></a>Las viñetas se pueden llamar directamente desde R:</span>
-<span id="cb170-923"><a href="#cb170-923"></a></span>
-<span id="cb170-926"><a href="#cb170-926"></a><span class="in">```{r}</span></span>
-<span id="cb170-927"><a href="#cb170-927"></a>vgn <span class="ot">&lt;-</span> <span class="fu">browseVignettes</span>() </span>
-<span id="cb170-928"><a href="#cb170-928"></a><span class="in">```</span></span>
-<span id="cb170-929"><a href="#cb170-929"></a></span>
-<span id="cb170-930"><a href="#cb170-930"></a><span class="in">```{r, eval = F}</span></span>
-<span id="cb170-931"><a href="#cb170-931"></a><span class="fu">vignette</span>()</span>
-<span id="cb170-932"><a href="#cb170-932"></a><span class="in">```</span></span>
-<span id="cb170-933"><a href="#cb170-933"></a></span>
-<span id="cb170-934"><a href="#cb170-934"></a>También deberían aparecer en la página del paquete en CRAN.</span>
-<span id="cb170-935"><a href="#cb170-935"></a></span>
-<span id="cb170-936"><a href="#cb170-936"></a>&nbsp;</span>
-<span id="cb170-937"><a href="#cb170-937"></a></span>
-<span id="cb170-938"><a href="#cb170-938"></a><span class="fu">## Demonstraciones</span></span>
-<span id="cb170-939"><a href="#cb170-939"></a></span>
-<span id="cb170-940"><a href="#cb170-940"></a>Los paquetes también pueden incluir demostraciones de código extendidas ("demos"). Para listar las demos de un paquete ejecute <span class="in">`demo("nombre del paquete")`</span>:</span>
-<span id="cb170-941"><a href="#cb170-941"></a></span>
-<span id="cb170-942"><a href="#cb170-942"></a><span class="in">```{r, eval=F}</span></span>
-<span id="cb170-943"><a href="#cb170-943"></a><span class="fu">demo</span>(<span class="at">package=</span><span class="st">"stats"</span>)</span>
-<span id="cb170-944"><a href="#cb170-944"></a></span>
-<span id="cb170-945"><a href="#cb170-945"></a><span class="co"># call demo directly</span></span>
-<span id="cb170-946"><a href="#cb170-946"></a><span class="fu">demo</span>(<span class="st">"nlm"</span>)</span>
-<span id="cb170-947"><a href="#cb170-947"></a></span>
-<span id="cb170-948"><a href="#cb170-948"></a><span class="in">```</span></span>
-<span id="cb170-949"><a href="#cb170-949"></a></span>
-<span id="cb170-950"><a href="#cb170-950"></a>&nbsp;</span>
-<span id="cb170-951"><a href="#cb170-951"></a></span>
-<span id="cb170-952"><a href="#cb170-952"></a>::: {.alert .alert-info}</span>
-<span id="cb170-953"><a href="#cb170-953"></a><span class="fu">## Ejercicio 3</span></span>
-<span id="cb170-954"><a href="#cb170-954"></a></span>
-<span id="cb170-955"><a href="#cb170-955"></a>&nbsp;</span>
-<span id="cb170-956"><a href="#cb170-956"></a></span>
-<span id="cb170-957"><a href="#cb170-957"></a><span class="ss">-   </span>¿Qué hace la función <span class="in">`cut()`</span>?</span>
-<span id="cb170-958"><a href="#cb170-958"></a></span>
-<span id="cb170-959"><a href="#cb170-959"></a><span class="ss">-   </span>¿Para qué se utiliza el argumento <span class="in">`breaks`</span> en <span class="in">`cut()`</span>?</span>
-<span id="cb170-960"><a href="#cb170-960"></a></span>
-<span id="cb170-961"><a href="#cb170-961"></a><span class="ss">-   </span>Ejecuta las 4 primeras líneas de código de los ejemplos proporcionados en la documentación de <span class="in">`cut()`</span>.</span>
-<span id="cb170-962"><a href="#cb170-962"></a></span>
-<span id="cb170-963"><a href="#cb170-963"></a><span class="ss">-   </span>¿Cuántas viñetas tiene el paquete warbleR?</span>
-<span id="cb170-964"><a href="#cb170-964"></a>:::</span>
-<span id="cb170-965"><a href="#cb170-965"></a></span>
-<span id="cb170-966"><a href="#cb170-966"></a>&nbsp;</span>
-<span id="cb170-967"><a href="#cb170-967"></a></span>
-<span id="cb170-968"><a href="#cb170-968"></a>------------------------------------------------------------------------</span>
-<span id="cb170-969"><a href="#cb170-969"></a></span>
-<span id="cb170-970"><a href="#cb170-970"></a><span class="fu">## Referencias</span></span>
-<span id="cb170-971"><a href="#cb170-971"></a></span>
-<span id="cb170-972"><a href="#cb170-972"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Advanced R, H Wickham</span><span class="co">](http://adv-r.had.co.nz/Data-structures.html)</span></span>
-<span id="cb170-973"><a href="#cb170-973"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Google's R Style Guide</span><span class="co">](https://google.github.io/styleguide/Rguide.xml)</span>\</span>
-<span id="cb170-974"><a href="#cb170-974"></a><span class="ss">-   </span>Hands-On Programming with R (Grolemund, 2014)</span>
-<span id="cb170-975"><a href="#cb170-975"></a></span>
-<span id="cb170-976"><a href="#cb170-976"></a>------------------------------------------------------------------------</span>
-<span id="cb170-977"><a href="#cb170-977"></a></span>
-<span id="cb170-978"><a href="#cb170-978"></a><span class="kw">&lt;font</span> <span class="er">size</span><span class="ot">=</span><span class="st">"4"</span><span class="kw">&gt;</span>Información de la sesión<span class="kw">&lt;/font&gt;</span></span>
-<span id="cb170-979"><a href="#cb170-979"></a></span>
-<span id="cb170-980"><a href="#cb170-980"></a><span class="in">```{r session info, echo=F}</span></span>
-<span id="cb170-981"><a href="#cb170-981"></a></span>
-<span id="cb170-982"><a href="#cb170-982"></a><span class="fu">sessionInfo</span>()</span>
-<span id="cb170-983"><a href="#cb170-983"></a></span>
-<span id="cb170-984"><a href="#cb170-984"></a><span class="in">```</span></span>
+<span id="cb170-675"><a href="#cb170-675"></a></span>
+<span id="cb170-676"><a href="#cb170-676"></a>La mayoría de las funciones están vectorizadas:</span>
+<span id="cb170-677"><a href="#cb170-677"></a></span>
+<span id="cb170-678"><a href="#cb170-678"></a><span class="in">```{r, eval=F}</span></span>
+<span id="cb170-679"><a href="#cb170-679"></a></span>
+<span id="cb170-680"><a href="#cb170-680"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">6</span> <span class="sc">*</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span></span>
+<span id="cb170-681"><a href="#cb170-681"></a></span>
+<span id="cb170-682"><a href="#cb170-682"></a><span class="in">```</span></span>
+<span id="cb170-683"><a href="#cb170-683"></a></span>
+<span id="cb170-684"><a href="#cb170-684"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"images/vectorize.png"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"R"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"350"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"900"</span><span class="kw">/&gt;</span></span>
+<span id="cb170-685"><a href="#cb170-685"></a></span>
+<span id="cb170-686"><a href="#cb170-686"></a><span class="kw">&lt;font</span> <span class="er">size</span><span class="ot">=</span><span class="st">"2"</span><span class="kw">&gt;</span><span class="sc">\*</span> Modified from <span class="kw">&lt;i&gt;</span>Grolemund &amp; Wickham 2017<span class="kw">&lt;/i&gt;&lt;/font&gt;</span></span>
+<span id="cb170-687"><a href="#cb170-687"></a></span>
+<span id="cb170-688"><a href="#cb170-688"></a>&nbsp;</span>
+<span id="cb170-689"><a href="#cb170-689"></a></span>
+<span id="cb170-690"><a href="#cb170-690"></a><span class="in">```{r, echo=F}</span></span>
+<span id="cb170-691"><a href="#cb170-691"></a></span>
+<span id="cb170-692"><a href="#cb170-692"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">6</span> <span class="sc">*</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span></span>
+<span id="cb170-693"><a href="#cb170-693"></a><span class="in">```</span></span>
+<span id="cb170-694"><a href="#cb170-694"></a></span>
+<span id="cb170-697"><a href="#cb170-697"></a><span class="in">```{r}</span></span>
+<span id="cb170-698"><a href="#cb170-698"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">6</span> <span class="sc">-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span></span>
+<span id="cb170-699"><a href="#cb170-699"></a><span class="in">```</span></span>
+<span id="cb170-700"><a href="#cb170-700"></a></span>
+<span id="cb170-701"><a href="#cb170-701"></a>R recicla vectores de longitud desigual:</span>
+<span id="cb170-702"><a href="#cb170-702"></a></span>
+<span id="cb170-703"><a href="#cb170-703"></a><span class="in">```{r, eval=F}</span></span>
+<span id="cb170-704"><a href="#cb170-704"></a></span>
+<span id="cb170-705"><a href="#cb170-705"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">6</span> <span class="sc">*</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
+<span id="cb170-706"><a href="#cb170-706"></a></span>
+<span id="cb170-707"><a href="#cb170-707"></a><span class="in">```</span></span>
+<span id="cb170-708"><a href="#cb170-708"></a></span>
+<span id="cb170-709"><a href="#cb170-709"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"images/recycle.png"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"R"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"350"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"900"</span><span class="kw">/&gt;</span></span>
+<span id="cb170-710"><a href="#cb170-710"></a></span>
+<span id="cb170-711"><a href="#cb170-711"></a><span class="kw">&lt;font</span> <span class="er">size</span><span class="ot">=</span><span class="st">"2"</span><span class="kw">&gt;</span><span class="sc">\*</span> Modified from <span class="kw">&lt;i&gt;</span>Grolemund &amp; Wickham 2017<span class="kw">&lt;/i&gt;&lt;/font&gt;</span></span>
+<span id="cb170-712"><a href="#cb170-712"></a></span>
+<span id="cb170-713"><a href="#cb170-713"></a>&nbsp;</span>
+<span id="cb170-714"><a href="#cb170-714"></a></span>
+<span id="cb170-715"><a href="#cb170-715"></a><span class="in">```{r, echo=F}</span></span>
+<span id="cb170-716"><a href="#cb170-716"></a></span>
+<span id="cb170-717"><a href="#cb170-717"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">6</span> <span class="sc">*</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
+<span id="cb170-718"><a href="#cb170-718"></a></span>
+<span id="cb170-719"><a href="#cb170-719"></a><span class="in">```</span></span>
+<span id="cb170-720"><a href="#cb170-720"></a></span>
+<span id="cb170-723"><a href="#cb170-723"></a><span class="in">```{r}</span></span>
+<span id="cb170-724"><a href="#cb170-724"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">6</span> <span class="sc">+</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span></span>
+<span id="cb170-725"><a href="#cb170-725"></a></span>
+<span id="cb170-726"><a href="#cb170-726"></a><span class="in">```</span></span>
+<span id="cb170-727"><a href="#cb170-727"></a></span>
+<span id="cb170-728"><a href="#cb170-728"></a>&nbsp;</span>
+<span id="cb170-729"><a href="#cb170-729"></a></span>
+<span id="cb170-730"><a href="#cb170-730"></a>------------------------------------------------------------------------</span>
+<span id="cb170-731"><a href="#cb170-731"></a></span>
+<span id="cb170-732"><a href="#cb170-732"></a><span class="fu"># El estilo importa</span></span>
+<span id="cb170-733"><a href="#cb170-733"></a></span>
+<span id="cb170-734"><a href="#cb170-734"></a><span class="kw">&lt;font</span> <span class="er">size</span><span class="ot">=</span><span class="st">"2"</span><span class="kw">&gt;&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">"https://google.github.io/styleguide/Rguide.xml"</span><span class="kw">&gt;</span>Based on google's R Style Guide<span class="kw">&lt;/a&gt;&lt;/font&gt;</span></span>
+<span id="cb170-735"><a href="#cb170-735"></a></span>
+<span id="cb170-736"><a href="#cb170-736"></a><span class="fu">## Nombres de archivos</span></span>
+<span id="cb170-737"><a href="#cb170-737"></a></span>
+<span id="cb170-738"><a href="#cb170-738"></a>Los nombres de los archivos deben terminar en .R y, por supuesto, ser auto-explicatorios:</span>
+<span id="cb170-739"><a href="#cb170-739"></a></span>
+<span id="cb170-740"><a href="#cb170-740"></a><span class="ss">-   </span>Bien: graficar_probabilidad_posterior.R</span>
+<span id="cb170-741"><a href="#cb170-741"></a><span class="ss">-   </span>Mal: graf.R</span>
+<span id="cb170-742"><a href="#cb170-742"></a></span>
+<span id="cb170-743"><a href="#cb170-743"></a><span class="fu">## Nombres de objetos</span></span>
+<span id="cb170-744"><a href="#cb170-744"></a></span>
+<span id="cb170-745"><a href="#cb170-745"></a>Variables y funciones:</span>
+<span id="cb170-746"><a href="#cb170-746"></a></span>
+<span id="cb170-747"><a href="#cb170-747"></a><span class="ss">-   </span>Minúsculas</span>
+<span id="cb170-748"><a href="#cb170-748"></a><span class="ss">-   </span>Utilice un guión bajo</span>
+<span id="cb170-749"><a href="#cb170-749"></a><span class="ss">-   </span>En general, nombres para las variables y verbos para las funciones</span>
+<span id="cb170-750"><a href="#cb170-750"></a><span class="ss">-   </span>Procure que los nombres sean concisos y significativos (no siempre es fácil)</span>
+<span id="cb170-751"><a href="#cb170-751"></a><span class="ss">-   </span>Avoid using names of existing functions of variables</span>
+<span id="cb170-752"><a href="#cb170-752"></a></span>
+<span id="cb170-753"><a href="#cb170-753"></a><span class="in">```{r, eval=F}</span></span>
+<span id="cb170-754"><a href="#cb170-754"></a></span>
+<span id="cb170-755"><a href="#cb170-755"></a>  <span class="sc">-</span> Bien<span class="sc">:</span> dia_uno<span class="sc">:</span> dia_1, <span class="fu">peso_promedio</span>(),</span>
+<span id="cb170-756"><a href="#cb170-756"></a>  </span>
+<span id="cb170-757"><a href="#cb170-757"></a>  <span class="sc">-</span> Mal<span class="sc">:</span> diauno, dia1, primer.dia_delmes, mean <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fu">sum</span>(x), c <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb170-758"><a href="#cb170-758"></a><span class="in">```</span></span>
+<span id="cb170-759"><a href="#cb170-759"></a></span>
+<span id="cb170-760"><a href="#cb170-760"></a>&nbsp;</span>
+<span id="cb170-761"><a href="#cb170-761"></a></span>
+<span id="cb170-762"><a href="#cb170-762"></a><span class="fu">## Syntaxis</span></span>
+<span id="cb170-763"><a href="#cb170-763"></a></span>
+<span id="cb170-764"><a href="#cb170-764"></a><span class="fu">### Espacios</span></span>
+<span id="cb170-765"><a href="#cb170-765"></a></span>
+<span id="cb170-766"><a href="#cb170-766"></a><span class="ss">-   </span>Utilice espacios alrededor de los operadores y para los argumentos dentro de una función</span>
+<span id="cb170-767"><a href="#cb170-767"></a><span class="ss">-   </span>Ponga siempre un espacio después de una coma, y nunca antes (como en el inglés normal)</span>
+<span id="cb170-768"><a href="#cb170-768"></a><span class="ss">-   </span>Coloque un espacio antes del paréntesis izquierdo, excepto en una llamada a una función</span>
+<span id="cb170-769"><a href="#cb170-769"></a></span>
+<span id="cb170-770"><a href="#cb170-770"></a><span class="in">```{r, eval=F}</span></span>
+<span id="cb170-771"><a href="#cb170-771"></a></span>
+<span id="cb170-772"><a href="#cb170-772"></a>  <span class="sc">-</span> Bien<span class="sc">:</span> </span>
+<span id="cb170-773"><a href="#cb170-773"></a>          a <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">10</span>, <span class="at">sd =</span> <span class="dv">10</span>, <span class="at">mean =</span> <span class="dv">1</span>)</span>
+<span id="cb170-774"><a href="#cb170-774"></a>          tab.prior <span class="ot">&lt;-</span> <span class="fu">table</span>(df[df<span class="sc">$</span>dias <span class="sc">&lt;</span> <span class="dv">0</span>, <span class="st">"campaign.id"</span>])</span>
+<span id="cb170-775"><a href="#cb170-775"></a>          total <span class="ot">&lt;-</span> <span class="fu">sum</span>(x[, <span class="dv">1</span>])</span>
+<span id="cb170-776"><a href="#cb170-776"></a>          total <span class="ot">&lt;-</span> <span class="fu">sum</span>(x[<span class="dv">1</span>, ])</span>
+<span id="cb170-777"><a href="#cb170-777"></a>          <span class="cf">if</span> (debug)</span>
+<span id="cb170-778"><a href="#cb170-778"></a>          <span class="fu">mean</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb170-779"><a href="#cb170-779"></a>          </span>
+<span id="cb170-780"><a href="#cb170-780"></a>  <span class="sc">-</span> Mal<span class="sc">:</span> </span>
+<span id="cb170-781"><a href="#cb170-781"></a>         a<span class="ot">&lt;-</span><span class="fu">rnorm</span>(<span class="at">n=</span><span class="dv">10</span>,<span class="at">sd=</span><span class="dv">10</span>,<span class="at">mean=</span><span class="dv">1</span>)</span>
+<span id="cb170-782"><a href="#cb170-782"></a>         tab.prior <span class="ot">&lt;-</span> <span class="fu">table</span>(df[df<span class="sc">$</span>days.from.opt<span class="sc">&lt;</span><span class="dv">0</span>, <span class="st">"campaign.id"</span>])  <span class="co"># necesita espacio alrededor de '&lt;'</span></span>
+<span id="cb170-783"><a href="#cb170-783"></a>         tab.prior <span class="ot">&lt;-</span> <span class="fu">table</span>(df[df<span class="sc">$</span>days.from.opt <span class="sc">&lt;</span> <span class="dv">0</span>,<span class="st">"campaign.id"</span>])  <span class="co"># Necesita espacio despues de la coma</span></span>
+<span id="cb170-784"><a href="#cb170-784"></a>         tab.prior<span class="ot">&lt;-</span> <span class="fu">table</span>(df[df<span class="sc">$</span>days.from.opt <span class="sc">&lt;</span> <span class="dv">0</span>, <span class="st">"campaign.id"</span>])  <span class="co"># Necesita espacio antes de &lt;-</span></span>
+<span id="cb170-785"><a href="#cb170-785"></a>         tab.prior<span class="ot">&lt;-</span><span class="fu">table</span>(df[df<span class="sc">$</span>days.from.opt <span class="sc">&lt;</span> <span class="dv">0</span>, <span class="st">"campaign.id"</span>])  <span class="co"># Necesita espacio alrededor de &lt;-</span></span>
+<span id="cb170-786"><a href="#cb170-786"></a>         total <span class="ot">&lt;-</span> <span class="fu">sum</span>(x[,<span class="dv">1</span>])  <span class="co"># Necesita espacio antes de la coma  </span></span>
+<span id="cb170-787"><a href="#cb170-787"></a>         <span class="cf">if</span>(debug) <span class="co"># Necesita espacio antes del parentesis</span></span>
+<span id="cb170-788"><a href="#cb170-788"></a>         <span class="fu">mean</span> (<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>) <span class="co"># Espacio extra luego del nombre de la funcion</span></span>
+<span id="cb170-789"><a href="#cb170-789"></a></span>
+<span id="cb170-790"><a href="#cb170-790"></a><span class="in">```</span></span>
+<span id="cb170-791"><a href="#cb170-791"></a></span>
+<span id="cb170-792"><a href="#cb170-792"></a>&nbsp;</span>
+<span id="cb170-793"><a href="#cb170-793"></a></span>
+<span id="cb170-794"><a href="#cb170-794"></a><span class="fu">#### Corchetes</span></span>
+<span id="cb170-795"><a href="#cb170-795"></a></span>
+<span id="cb170-796"><a href="#cb170-796"></a><span class="ss">-   </span>La llave de apertura nunca debe ir en su propia línea</span>
+<span id="cb170-797"><a href="#cb170-797"></a><span class="ss">-   </span>La llave de cierre debe ir siempre en su propia línea</span>
+<span id="cb170-798"><a href="#cb170-798"></a><span class="ss">-   </span>Puede omitir las llaves cuando un bloque consiste en una sola declaración</span>
+<span id="cb170-799"><a href="#cb170-799"></a></span>
+<span id="cb170-800"><a href="#cb170-800"></a><span class="in">```{r eval=F}</span></span>
+<span id="cb170-801"><a href="#cb170-801"></a></span>
+<span id="cb170-802"><a href="#cb170-802"></a>  <span class="sc">-</span> Bien<span class="sc">:</span></span>
+<span id="cb170-803"><a href="#cb170-803"></a>              <span class="cf">if</span> (<span class="fu">is.null</span>(ylim)) {</span>
+<span id="cb170-804"><a href="#cb170-804"></a>              ylim <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.06</span>)</span>
+<span id="cb170-805"><a href="#cb170-805"></a>            }</span>
+<span id="cb170-806"><a href="#cb170-806"></a>                      </span>
+<span id="cb170-807"><a href="#cb170-807"></a>            <span class="cf">if</span> (<span class="fu">is.null</span>(ylim))</span>
+<span id="cb170-808"><a href="#cb170-808"></a>              ylim <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.06</span>)</span>
+<span id="cb170-809"><a href="#cb170-809"></a>          </span>
+<span id="cb170-810"><a href="#cb170-810"></a>  <span class="sc">-</span> Mal<span class="sc">:</span></span>
+<span id="cb170-811"><a href="#cb170-811"></a>            </span>
+<span id="cb170-812"><a href="#cb170-812"></a>         <span class="cf">if</span> (<span class="fu">is.null</span>(ylim)) ylim <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.06</span>)</span>
+<span id="cb170-813"><a href="#cb170-813"></a>                    </span>
+<span id="cb170-814"><a href="#cb170-814"></a>         <span class="cf">if</span> (<span class="fu">is.null</span>(ylim)) {ylim <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.06</span>)} </span>
+<span id="cb170-815"><a href="#cb170-815"></a></span>
+<span id="cb170-816"><a href="#cb170-816"></a>         <span class="cf">if</span> (<span class="fu">is.null</span>(ylim)) {</span>
+<span id="cb170-817"><a href="#cb170-817"></a>           ylim <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.06</span>)</span>
+<span id="cb170-818"><a href="#cb170-818"></a>           } </span>
+<span id="cb170-819"><a href="#cb170-819"></a><span class="in">```</span></span>
+<span id="cb170-820"><a href="#cb170-820"></a></span>
+<span id="cb170-821"><a href="#cb170-821"></a>&nbsp;</span>
+<span id="cb170-822"><a href="#cb170-822"></a></span>
+<span id="cb170-823"><a href="#cb170-823"></a><span class="fu">#### Crear objetos</span></span>
+<span id="cb170-824"><a href="#cb170-824"></a></span>
+<span id="cb170-825"><a href="#cb170-825"></a><span class="ss">-   </span>Use <span class="sc">\&lt;</span>-, no =</span>
+<span id="cb170-826"><a href="#cb170-826"></a></span>
+<span id="cb170-827"><a href="#cb170-827"></a><span class="in">```{r, eval = F}</span></span>
+<span id="cb170-828"><a href="#cb170-828"></a></span>
+<span id="cb170-829"><a href="#cb170-829"></a>  <span class="sc">-</span> GOOD<span class="sc">:</span></span>
+<span id="cb170-830"><a href="#cb170-830"></a>         x <span class="ot">&lt;-</span> <span class="dv">5</span> </span>
+<span id="cb170-831"><a href="#cb170-831"></a>          </span>
+<span id="cb170-832"><a href="#cb170-832"></a>  <span class="sc">-</span> BAD<span class="sc">:</span></span>
+<span id="cb170-833"><a href="#cb170-833"></a>         x <span class="ot">=</span> <span class="dv">5</span></span>
+<span id="cb170-834"><a href="#cb170-834"></a><span class="in">```</span></span>
+<span id="cb170-835"><a href="#cb170-835"></a></span>
+<span id="cb170-836"><a href="#cb170-836"></a>&nbsp;</span>
+<span id="cb170-837"><a href="#cb170-837"></a></span>
+<span id="cb170-838"><a href="#cb170-838"></a><span class="fu">#### Sugerencias para añadir comentarios</span></span>
+<span id="cb170-839"><a href="#cb170-839"></a></span>
+<span id="cb170-840"><a href="#cb170-840"></a><span class="ss">-   </span>Comente su código</span>
+<span id="cb170-841"><a href="#cb170-841"></a><span class="ss">-   </span>Las líneas enteras comentadas deben comenzar con <span class="sc">\#</span> y un espacio</span>
+<span id="cb170-842"><a href="#cb170-842"></a><span class="ss">-   </span>Los comentarios cortos pueden colocarse después del código precedido por dos espacios, #, y luego un espacio</span>
+<span id="cb170-843"><a href="#cb170-843"></a></span>
+<span id="cb170-844"><a href="#cb170-844"></a><span class="in">```{r, eval=F}</span></span>
+<span id="cb170-845"><a href="#cb170-845"></a></span>
+<span id="cb170-846"><a href="#cb170-846"></a><span class="co"># Create histogram of frequency of campaigns by pct budget spent.</span></span>
+<span id="cb170-847"><a href="#cb170-847"></a><span class="fu">hist</span>(df<span class="sc">$</span>pct.spent,</span>
+<span id="cb170-848"><a href="#cb170-848"></a>     <span class="at">breaks =</span> <span class="st">"scott"</span>,  <span class="co"># method for choosing number of buckets</span></span>
+<span id="cb170-849"><a href="#cb170-849"></a>     <span class="at">main   =</span> <span class="st">"Histograma: individuos por unidad de tiempo"</span>,</span>
+<span id="cb170-850"><a href="#cb170-850"></a>     <span class="at">xlab   =</span> <span class="st">"Número de individuos"</span>,</span>
+<span id="cb170-851"><a href="#cb170-851"></a>     <span class="at">ylab   =</span> <span class="st">"Frecuencia"</span>)</span>
+<span id="cb170-852"><a href="#cb170-852"></a><span class="in">```</span></span>
+<span id="cb170-853"><a href="#cb170-853"></a></span>
+<span id="cb170-854"><a href="#cb170-854"></a>&nbsp;</span>
+<span id="cb170-855"><a href="#cb170-855"></a></span>
+<span id="cb170-856"><a href="#cb170-856"></a><span class="fu">#### Disposición general y ordenación (estilo de google)</span></span>
+<span id="cb170-857"><a href="#cb170-857"></a></span>
+<span id="cb170-858"><a href="#cb170-858"></a><span class="ss">-   </span>Comentario de la declaración de derechos de autor (?)</span>
+<span id="cb170-859"><a href="#cb170-859"></a><span class="ss">-   </span>Comentario del autor</span>
+<span id="cb170-860"><a href="#cb170-860"></a><span class="ss">-   </span>Comentario de la descripción del archivo, incluyendo el propósito del programa, las entradas y las salidas</span>
+<span id="cb170-861"><a href="#cb170-861"></a><span class="ss">-   </span>declaraciones source() y library()</span>
+<span id="cb170-862"><a href="#cb170-862"></a><span class="ss">-   </span>Definiciones de funciones</span>
+<span id="cb170-863"><a href="#cb170-863"></a><span class="ss">-   </span>Sentencias ejecutadas, si procede (por ejemplo, print, plot)</span>
+<span id="cb170-864"><a href="#cb170-864"></a></span>
+<span id="cb170-865"><a href="#cb170-865"></a>------------------------------------------------------------------------</span>
+<span id="cb170-866"><a href="#cb170-866"></a></span>
+<span id="cb170-867"><a href="#cb170-867"></a>&nbsp;</span>
+<span id="cb170-868"><a href="#cb170-868"></a></span>
+<span id="cb170-869"><a href="#cb170-869"></a><span class="fu"># Documentación de R</span></span>
+<span id="cb170-870"><a href="#cb170-870"></a></span>
+<span id="cb170-871"><a href="#cb170-871"></a>La mayoría de los recursos de R están muy bien documentados. Así que **la primera fuente de ayuda a la que debe acudir cuando escriba código R es la propia documentación de R**. Todos los paquetes están documentados de la misma manera estándar. Familiarizarse con el formato puede simplificar mucho las cosas.</span>
+<span id="cb170-872"><a href="#cb170-872"></a></span>
+<span id="cb170-873"><a href="#cb170-873"></a><span class="fu">## Package documentation</span></span>
+<span id="cb170-874"><a href="#cb170-874"></a></span>
+<span id="cb170-875"><a href="#cb170-875"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"images/packagepage.png"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"R"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"900"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"800"</span> <span class="er">style</span><span class="ot">=</span><span class="st">"border:3px solid gray"</span><span class="kw">/&gt;</span></span>
+<span id="cb170-876"><a href="#cb170-876"></a></span>
+<span id="cb170-877"><a href="#cb170-877"></a>&nbsp;</span>
+<span id="cb170-878"><a href="#cb170-878"></a></span>
+<span id="cb170-879"><a href="#cb170-879"></a><span class="kw">&lt;font</span> <span class="er">size</span><span class="ot">=</span><span class="st">"5"</span><span class="kw">&gt;</span>Reference manuals<span class="kw">&lt;/font&gt;</span></span>
+<span id="cb170-880"><a href="#cb170-880"></a></span>
+<span id="cb170-881"><a href="#cb170-881"></a>Los manuales de referencia son colecciones de la documentación de todas las funciones de un paquete (sólo 1 por paquete):</span>
+<span id="cb170-882"><a href="#cb170-882"></a></span>
+<span id="cb170-883"><a href="#cb170-883"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">manual de dynaSpec</span><span class="co">](https://cloud.r-project.org/web/packages/dynaSpec/dynaSpec.pdf)</span></span>
+<span id="cb170-884"><a href="#cb170-884"></a></span>
+<span id="cb170-885"><a href="#cb170-885"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">manual de baRulho</span><span class="co">](https://cran.r-project.org/web/packages/baRulho/baRulho.pdf)</span></span>
+<span id="cb170-886"><a href="#cb170-886"></a></span>
+<span id="cb170-887"><a href="#cb170-887"></a>&nbsp;</span>
+<span id="cb170-888"><a href="#cb170-888"></a></span>
+<span id="cb170-889"><a href="#cb170-889"></a><span class="fu">## Documentación de las funciones</span></span>
+<span id="cb170-890"><a href="#cb170-890"></a></span>
+<span id="cb170-891"><a href="#cb170-891"></a>Todas las funciones (por defecto o de paquetes cargados) deben tener una documentación que siga un formato estándar:</span>
+<span id="cb170-892"><a href="#cb170-892"></a></span>
+<span id="cb170-893"><a href="#cb170-893"></a><span class="in">```{r, eval=F}</span></span>
+<span id="cb170-894"><a href="#cb170-894"></a>?mean</span>
+<span id="cb170-895"><a href="#cb170-895"></a></span>
+<span id="cb170-896"><a href="#cb170-896"></a><span class="fu">help</span>(<span class="st">"mean"</span>)</span>
+<span id="cb170-897"><a href="#cb170-897"></a></span>
+<span id="cb170-898"><a href="#cb170-898"></a><span class="in">```</span></span>
+<span id="cb170-899"><a href="#cb170-899"></a></span>
+<span id="cb170-900"><a href="#cb170-900"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"images/documentation.png"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"R"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"700"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"800"</span> <span class="er">style</span><span class="ot">=</span><span class="st">"border:3px solid gray"</span><span class="kw">/&gt;</span> &nbsp;</span>
+<span id="cb170-901"><a href="#cb170-901"></a></span>
+<span id="cb170-902"><a href="#cb170-902"></a>Esta documentación también puede mostrarse en Rstudio pulsando <span class="in">`F1`</span> cuando el cursor está en el nombre de la función</span>
+<span id="cb170-903"><a href="#cb170-903"></a></span>
+<span id="cb170-904"><a href="#cb170-904"></a>&nbsp;</span>
+<span id="cb170-905"><a href="#cb170-905"></a></span>
+<span id="cb170-906"><a href="#cb170-906"></a>Si no recuerda el nombre de la función pruebe con <span class="in">`apropos()`</span>:</span>
+<span id="cb170-907"><a href="#cb170-907"></a></span>
+<span id="cb170-910"><a href="#cb170-910"></a><span class="in">```{r}</span></span>
+<span id="cb170-911"><a href="#cb170-911"></a><span class="fu">apropos</span>(<span class="st">"mean"</span>)</span>
+<span id="cb170-912"><a href="#cb170-912"></a></span>
+<span id="cb170-913"><a href="#cb170-913"></a><span class="in">```</span></span>
+<span id="cb170-914"><a href="#cb170-914"></a></span>
+<span id="cb170-915"><a href="#cb170-915"></a>&nbsp;</span>
+<span id="cb170-916"><a href="#cb170-916"></a></span>
+<span id="cb170-917"><a href="#cb170-917"></a><span class="fu">## Viñetas (vignettes)</span></span>
+<span id="cb170-918"><a href="#cb170-918"></a></span>
+<span id="cb170-919"><a href="#cb170-919"></a>Las viñetas son documentos ilustrativos o casos de estudio que detallan el uso de un paquete (opcional, pueden ser varios por paquete).</span>
+<span id="cb170-920"><a href="#cb170-920"></a></span>
+<span id="cb170-921"><a href="#cb170-921"></a>Las viñetas se pueden llamar directamente desde R:</span>
+<span id="cb170-922"><a href="#cb170-922"></a></span>
+<span id="cb170-925"><a href="#cb170-925"></a><span class="in">```{r}</span></span>
+<span id="cb170-926"><a href="#cb170-926"></a>vgn <span class="ot">&lt;-</span> <span class="fu">browseVignettes</span>() </span>
+<span id="cb170-927"><a href="#cb170-927"></a><span class="in">```</span></span>
+<span id="cb170-928"><a href="#cb170-928"></a></span>
+<span id="cb170-929"><a href="#cb170-929"></a><span class="in">```{r, eval = F}</span></span>
+<span id="cb170-930"><a href="#cb170-930"></a><span class="fu">vignette</span>()</span>
+<span id="cb170-931"><a href="#cb170-931"></a><span class="in">```</span></span>
+<span id="cb170-932"><a href="#cb170-932"></a></span>
+<span id="cb170-933"><a href="#cb170-933"></a>También deberían aparecer en la página del paquete en CRAN.</span>
+<span id="cb170-934"><a href="#cb170-934"></a></span>
+<span id="cb170-935"><a href="#cb170-935"></a>&nbsp;</span>
+<span id="cb170-936"><a href="#cb170-936"></a></span>
+<span id="cb170-937"><a href="#cb170-937"></a><span class="fu">## Demonstraciones</span></span>
+<span id="cb170-938"><a href="#cb170-938"></a></span>
+<span id="cb170-939"><a href="#cb170-939"></a>Los paquetes también pueden incluir demostraciones de código extendidas ("demos"). Para listar las demos de un paquete ejecute <span class="in">`demo("nombre del paquete")`</span>:</span>
+<span id="cb170-940"><a href="#cb170-940"></a></span>
+<span id="cb170-941"><a href="#cb170-941"></a><span class="in">```{r, eval=F}</span></span>
+<span id="cb170-942"><a href="#cb170-942"></a><span class="fu">demo</span>(<span class="at">package=</span><span class="st">"stats"</span>)</span>
+<span id="cb170-943"><a href="#cb170-943"></a></span>
+<span id="cb170-944"><a href="#cb170-944"></a><span class="co"># call demo directly</span></span>
+<span id="cb170-945"><a href="#cb170-945"></a><span class="fu">demo</span>(<span class="st">"nlm"</span>)</span>
+<span id="cb170-946"><a href="#cb170-946"></a></span>
+<span id="cb170-947"><a href="#cb170-947"></a><span class="in">```</span></span>
+<span id="cb170-948"><a href="#cb170-948"></a></span>
+<span id="cb170-949"><a href="#cb170-949"></a>&nbsp;</span>
+<span id="cb170-950"><a href="#cb170-950"></a></span>
+<span id="cb170-951"><a href="#cb170-951"></a>::: {.alert .alert-info}</span>
+<span id="cb170-952"><a href="#cb170-952"></a><span class="fu">## Ejercicio 3</span></span>
+<span id="cb170-953"><a href="#cb170-953"></a></span>
+<span id="cb170-954"><a href="#cb170-954"></a>&nbsp;</span>
+<span id="cb170-955"><a href="#cb170-955"></a></span>
+<span id="cb170-956"><a href="#cb170-956"></a><span class="ss">-   </span>¿Qué hace la función <span class="in">`cut()`</span>?</span>
+<span id="cb170-957"><a href="#cb170-957"></a></span>
+<span id="cb170-958"><a href="#cb170-958"></a><span class="ss">-   </span>¿Para qué se utiliza el argumento <span class="in">`breaks`</span> en <span class="in">`cut()`</span>?</span>
+<span id="cb170-959"><a href="#cb170-959"></a></span>
+<span id="cb170-960"><a href="#cb170-960"></a><span class="ss">-   </span>Ejecuta las 4 primeras líneas de código de los ejemplos proporcionados en la documentación de <span class="in">`cut()`</span>.</span>
+<span id="cb170-961"><a href="#cb170-961"></a></span>
+<span id="cb170-962"><a href="#cb170-962"></a><span class="ss">-   </span>¿Cuántas viñetas tiene el paquete warbleR?</span>
+<span id="cb170-963"><a href="#cb170-963"></a>:::</span>
+<span id="cb170-964"><a href="#cb170-964"></a></span>
+<span id="cb170-965"><a href="#cb170-965"></a>&nbsp;</span>
+<span id="cb170-966"><a href="#cb170-966"></a></span>
+<span id="cb170-967"><a href="#cb170-967"></a>------------------------------------------------------------------------</span>
+<span id="cb170-968"><a href="#cb170-968"></a></span>
+<span id="cb170-969"><a href="#cb170-969"></a><span class="fu">## Referencias</span></span>
+<span id="cb170-970"><a href="#cb170-970"></a></span>
+<span id="cb170-971"><a href="#cb170-971"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Advanced R, H Wickham</span><span class="co">](http://adv-r.had.co.nz/Data-structures.html)</span></span>
+<span id="cb170-972"><a href="#cb170-972"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">Google's R Style Guide</span><span class="co">](https://google.github.io/styleguide/Rguide.xml)</span>\</span>
+<span id="cb170-973"><a href="#cb170-973"></a><span class="ss">-   </span>Hands-On Programming with R (Grolemund, 2014)</span>
+<span id="cb170-974"><a href="#cb170-974"></a></span>
+<span id="cb170-975"><a href="#cb170-975"></a>------------------------------------------------------------------------</span>
+<span id="cb170-976"><a href="#cb170-976"></a></span>
+<span id="cb170-977"><a href="#cb170-977"></a><span class="kw">&lt;font</span> <span class="er">size</span><span class="ot">=</span><span class="st">"4"</span><span class="kw">&gt;</span>Información de la sesión<span class="kw">&lt;/font&gt;</span></span>
+<span id="cb170-978"><a href="#cb170-978"></a></span>
+<span id="cb170-979"><a href="#cb170-979"></a><span class="in">```{r session info, echo=F}</span></span>
+<span id="cb170-980"><a href="#cb170-980"></a></span>
+<span id="cb170-981"><a href="#cb170-981"></a><span class="fu">sessionInfo</span>()</span>
+<span id="cb170-982"><a href="#cb170-982"></a></span>
+<span id="cb170-983"><a href="#cb170-983"></a><span class="in">```</span></span>
 </code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

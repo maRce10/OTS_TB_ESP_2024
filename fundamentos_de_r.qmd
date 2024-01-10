@@ -360,16 +360,15 @@ m <-
 
 -   Cree un vector de caracteres con los nombres de las estaciones que se visitarán durante el curso
 
--  Añada al vector de punto anterior un NA
+-   Añada al vector de punto anterior un NA
 
--  Cree una matriz numérica con 3 columnas y 3 filas
+-   Cree una matriz numérica con 3 columnas y 3 filas
 
--  Cree una matriz de caracteres con 4 columnas y 3 filas
+-   Cree una matriz de caracteres con 4 columnas y 3 filas
 
-- ¿Qué tipo de objeto es 'iris' y cuales son sus dimensiones?
+-   ¿Qué tipo de objeto es 'iris' y cuales son sus dimensiones?
 
-- Cree un cuadro de datos (data frame) con una columna numérica, una columna de caracteres y una columna con factores
-
+-   Cree un cuadro de datos (data frame) con una columna numérica, una columna de caracteres y una columna con factores
 :::
 
 ------------------------------------------------------------------------
@@ -514,21 +513,6 @@ View(df)
 
  
 
-::: {.alert .alert-info}
-## Ejercicio 2
-
- 
-
--   Utilice los datos de ejemplo `iris` para crear un subconjunto de datos con sólo las observaciones de la especie `setosa`
-
--   Ahora cree un subconjunto de datos que contenga las observaciones tanto de "setosa" como de "versicolor"
-
--   También con `iris` cree un subconjunto de datos con las observaciones para las que `iris$Sepal.length` es mayor que 6
-
--   ¿Cuántas observaciones tienen una longitud de sépalo superior a 6?
-:::
-
- 
 
 ------------------------------------------------------------------------
 
@@ -654,7 +638,22 @@ knitr::kable(d, row.names = F,  booktabs = TRUE, escape = TRUE) |>
 5 %in% 1:4
 ```
 
+::: {.alert .alert-info}
+## Ejercicio 2
+
  
+
+-   Utilice los datos de ejemplo `iris` para crear un subconjunto de datos con sólo las observaciones de la especie `setosa`
+
+-   Ahora cree un subconjunto de datos que contenga las observaciones tanto de "setosa" como de "versicolor"
+
+-   También con `iris` cree un subconjunto de datos con las observaciones para las que `iris$Sepal.length` es mayor que 6
+
+-   ¿Cuántas observaciones tienen una longitud de sépalo superior a 6?
+:::
+
+ 
+
 
 La mayoría de las funciones están vectorizadas:
 
