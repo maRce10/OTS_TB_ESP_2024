@@ -42,7 +42,8 @@ load_packages(
     "MASS",
     "lmerTest",
     "sjPlot",
-    "car"
+    "car",
+    github = "maRce10/sketchy"
   )
 )
 ```

@@ -222,9 +222,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-16"><a href="#cb2-16"></a>    <span class="st">"MASS"</span>,</span>
 <span id="cb2-17"><a href="#cb2-17"></a>    <span class="st">"lmerTest"</span>,</span>
 <span id="cb2-18"><a href="#cb2-18"></a>    <span class="st">"sjPlot"</span>,</span>
-<span id="cb2-19"><a href="#cb2-19"></a>    <span class="st">"car"</span></span>
-<span id="cb2-20"><a href="#cb2-20"></a>  )</span>
-<span id="cb2-21"><a href="#cb2-21"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-19"><a href="#cb2-19"></a>    <span class="st">"car"</span>,</span>
+<span id="cb2-20"><a href="#cb2-20"></a>    <span class="at">github =</span> <span class="st">"maRce10/sketchy"</span></span>
+<span id="cb2-21"><a href="#cb2-21"></a>  )</span>
+<span id="cb2-22"><a href="#cb2-22"></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="6" type="1">
@@ -594,32 +595,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb4-43"><a href="#cb4-43"></a>    <span class="st">"MASS"</span>,</span>
 <span id="cb4-44"><a href="#cb4-44"></a>    <span class="st">"lmerTest"</span>,</span>
 <span id="cb4-45"><a href="#cb4-45"></a>    <span class="st">"sjPlot"</span>,</span>
-<span id="cb4-46"><a href="#cb4-46"></a>    <span class="st">"car"</span></span>
-<span id="cb4-47"><a href="#cb4-47"></a>  )</span>
-<span id="cb4-48"><a href="#cb4-48"></a>)</span>
-<span id="cb4-49"><a href="#cb4-49"></a><span class="in">```</span></span>
-<span id="cb4-50"><a href="#cb4-50"></a></span>
-<span id="cb4-51"><a href="#cb4-51"></a>6)  Creá un proyecto para el taller corriendo este código:</span>
-<span id="cb4-52"><a href="#cb4-52"></a></span>
-<span id="cb4-53"><a href="#cb4-53"></a><span class="in">```{r, eval = FALSE}</span></span>
-<span id="cb4-54"><a href="#cb4-54"></a></span>
-<span id="cb4-55"><a href="#cb4-55"></a><span class="fu">library</span>(sketchy)</span>
-<span id="cb4-56"><a href="#cb4-56"></a></span>
-<span id="cb4-57"><a href="#cb4-57"></a><span class="fu">make_compendium</span>(</span>
-<span id="cb4-58"><a href="#cb4-58"></a>  <span class="at">name =</span> <span class="st">"r_avanzado"</span>,</span>
-<span id="cb4-59"><a href="#cb4-59"></a>  <span class="at">path =</span> <span class="st">"DIRECTORIO_DONDE_HACER_EL_PROYECTO"</span>,</span>
-<span id="cb4-60"><a href="#cb4-60"></a>  <span class="at">Rproj =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb4-61"><a href="#cb4-61"></a>  <span class="at">readme =</span> <span class="cn">TRUE</span></span>
-<span id="cb4-62"><a href="#cb4-62"></a>)</span>
-<span id="cb4-63"><a href="#cb4-63"></a><span class="in">```</span></span>
-<span id="cb4-64"><a href="#cb4-64"></a></span>
-<span id="cb4-65"><a href="#cb4-65"></a>*(en realidad este es tambien un [compendio de investigación](https://marce10.github.io/ciencia_reproducible/compendios_de_investigacion.html))*</span>
-<span id="cb4-66"><a href="#cb4-66"></a></span>
-<span id="cb4-67"><a href="#cb4-67"></a>Abrí el proyecto en Rstudio:</span>
-<span id="cb4-68"><a href="#cb4-68"></a></span>
-<span id="cb4-69"><a href="#cb4-69"></a><span class="al">![](./images/abrir_proyecto.png)</span>{width="80%"}</span>
-<span id="cb4-70"><a href="#cb4-70"></a></span>
-<span id="cb4-71"><a href="#cb4-71"></a>Este proyecto debe usarse cada vez que se trabaja código del taller <span class="in">`r emo::ji("v")`</span></span>
+<span id="cb4-46"><a href="#cb4-46"></a>    <span class="st">"car"</span>,</span>
+<span id="cb4-47"><a href="#cb4-47"></a>    <span class="at">github =</span> <span class="st">"maRce10/sketchy"</span></span>
+<span id="cb4-48"><a href="#cb4-48"></a>  )</span>
+<span id="cb4-49"><a href="#cb4-49"></a>)</span>
+<span id="cb4-50"><a href="#cb4-50"></a><span class="in">```</span></span>
+<span id="cb4-51"><a href="#cb4-51"></a></span>
+<span id="cb4-52"><a href="#cb4-52"></a>6)  Creá un proyecto para el taller corriendo este código:</span>
+<span id="cb4-53"><a href="#cb4-53"></a></span>
+<span id="cb4-54"><a href="#cb4-54"></a><span class="in">```{r, eval = FALSE}</span></span>
+<span id="cb4-55"><a href="#cb4-55"></a></span>
+<span id="cb4-56"><a href="#cb4-56"></a><span class="fu">library</span>(sketchy)</span>
+<span id="cb4-57"><a href="#cb4-57"></a></span>
+<span id="cb4-58"><a href="#cb4-58"></a><span class="fu">make_compendium</span>(</span>
+<span id="cb4-59"><a href="#cb4-59"></a>  <span class="at">name =</span> <span class="st">"r_avanzado"</span>,</span>
+<span id="cb4-60"><a href="#cb4-60"></a>  <span class="at">path =</span> <span class="st">"DIRECTORIO_DONDE_HACER_EL_PROYECTO"</span>,</span>
+<span id="cb4-61"><a href="#cb4-61"></a>  <span class="at">Rproj =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb4-62"><a href="#cb4-62"></a>  <span class="at">readme =</span> <span class="cn">TRUE</span></span>
+<span id="cb4-63"><a href="#cb4-63"></a>)</span>
+<span id="cb4-64"><a href="#cb4-64"></a><span class="in">```</span></span>
+<span id="cb4-65"><a href="#cb4-65"></a></span>
+<span id="cb4-66"><a href="#cb4-66"></a>*(en realidad este es tambien un [compendio de investigación](https://marce10.github.io/ciencia_reproducible/compendios_de_investigacion.html))*</span>
+<span id="cb4-67"><a href="#cb4-67"></a></span>
+<span id="cb4-68"><a href="#cb4-68"></a>Abrí el proyecto en Rstudio:</span>
+<span id="cb4-69"><a href="#cb4-69"></a></span>
+<span id="cb4-70"><a href="#cb4-70"></a><span class="al">![](./images/abrir_proyecto.png)</span>{width="80%"}</span>
+<span id="cb4-71"><a href="#cb4-71"></a></span>
+<span id="cb4-72"><a href="#cb4-72"></a>Este proyecto debe usarse cada vez que se trabaja código del taller <span class="in">`r emo::ji("v")`</span></span>
 </code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
