@@ -7,14 +7,14 @@ toc: False
 knitr::opts_chunk$set(eval = FALSE)
 ```
 
-1)  Instalá R en la computadora que utilizarás durante el taller (https://cran.r-project.org/). Probablemente ya lo tenés instalado, pero intentá actualizarlo si tenés una versión de R \< 4.0.0. Podés encontrar qué versión de R tenés ejecutando esto en la consola de R:
+1)  Instalá R en la computadora que utilizarás durante el taller ([https://cran.r-project.org/](https://cran.r-project.org/)). Probablemente ya lo tenés instalado, pero intentá actualizarlo si tenés una versión de R \< 4.0.0. Podés encontrar qué versión de R tenés ejecutando esto en la consola de R:
 
 ```{r}
 
 version$version.string
 ```
 
-2)  Instalá la interfaz de RStudio (https://www.rstudio.com/products/rstudio/download/, elejí la versión gratuita).
+2)  Instalá la interfaz de RStudio ([https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/), elejí la versión gratuita).
 
 3)  Abrí RStudio y seleccioná la pestaña "Tools" y luego "Global options" (última opción). Seleccioná la opción "Code", luego seleccioná la casilla de "Soft wrap".
 
