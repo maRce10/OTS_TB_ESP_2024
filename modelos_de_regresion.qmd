@@ -2,7 +2,6 @@
 title: <font size="7"><b>Modelos de regresión</b></font>
 ---
 
-
 ```{r,echo=FALSE,message=FALSE}
 
 options("digits"=5)
@@ -132,7 +131,7 @@ Podemos explorar el resultado graficando un histograma:
 ```{r}
 
 # crear histograma
-ggplot(data = data.frame(unif_var), mapping = aes(x = unif_var)) + geom_histogram() 
+ggplot(data = data.frame(unif_var), mapping = aes(x = unif_var)) + geom_histogram()
 
 ```
 

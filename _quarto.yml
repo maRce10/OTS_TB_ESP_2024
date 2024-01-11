@@ -42,7 +42,7 @@ toc-depth: 2
 toc-location: left
 toc-title: Contenidos
 number-sections: true
-code-line-numbers: true
+code-line-numbers: false
 highlight-style: pygments
 code-overflow: wrap
 code-copy: true
