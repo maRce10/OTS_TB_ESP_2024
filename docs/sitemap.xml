@@ -2,38 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://marce10.github.io/R_avanzado_2023/reportes_dinamicos.html</loc>
-    <lastmod>2024-01-11T03:00:15.261Z</lastmod>
+    <lastmod>2024-01-11T17:12:21.362Z</lastmod>
   </url>
   <url>
-    <loc>https://marce10.github.io/R_avanzado_2023/ggplot2.html</loc>
-    <lastmod>2024-01-11T02:59:40.265Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/R_avanzado_2023/preparacion_curso.html</loc>
-    <lastmod>2024-01-11T02:59:18.077Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/R_avanzado_2023/estadistica_tradicional_regresion.html</loc>
-    <lastmod>2024-01-11T02:59:15.685Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/R_avanzado_2023/index.html</loc>
-    <lastmod>2024-01-11T02:59:12.565Z</lastmod>
-  </url>
-  <url>
-    <loc>https://marce10.github.io/R_avanzado_2023/instructor.html</loc>
-    <lastmod>2024-01-11T02:59:16.081Z</lastmod>
+    <loc>https://marce10.github.io/R_avanzado_2023/importar_datos.html</loc>
+    <lastmod>2024-01-11T17:11:49.592Z</lastmod>
   </url>
   <url>
     <loc>https://marce10.github.io/R_avanzado_2023/fundamentos_de_r.html</loc>
-    <lastmod>2024-01-11T02:59:22.561Z</lastmod>
+    <lastmod>2024-01-11T17:11:24.199Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marce10.github.io/R_avanzado_2023/instructor.html</loc>
+    <lastmod>2024-01-11T17:11:17.454Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marce10.github.io/R_avanzado_2023/index.html</loc>
+    <lastmod>2024-01-11T17:11:14.006Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marce10.github.io/R_avanzado_2023/estadistica_tradicional_regresion.html</loc>
+    <lastmod>2024-01-11T17:11:17.074Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marce10.github.io/R_avanzado_2023/preparacion_curso.html</loc>
+    <lastmod>2024-01-11T17:11:19.558Z</lastmod>
+  </url>
+  <url>
+    <loc>https://marce10.github.io/R_avanzado_2023/ggplot2.html</loc>
+    <lastmod>2024-01-11T17:11:42.020Z</lastmod>
   </url>
   <url>
     <loc>https://marce10.github.io/R_avanzado_2023/funciones.html</loc>
-    <lastmod>2024-01-11T02:59:44.545Z</lastmod>
+    <lastmod>2024-01-11T17:11:53.461Z</lastmod>
   </url>
   <url>
     <loc>https://marce10.github.io/R_avanzado_2023/modelos_de_regresion.html</loc>
-    <lastmod>2024-01-11T04:01:06.576Z</lastmod>
+    <lastmod>2024-01-11T17:12:16.602Z</lastmod>
   </url>
 </urlset>

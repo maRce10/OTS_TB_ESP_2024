@@ -1956,7 +1956,7 @@ knitr::include_graphics("./images/butterflies.png")
 
  
 
--   Intente correr un modelo `lm()` (con una distribución gaussiana), compare los resultados y compruebe los residuos (`plot_model(model_name, type = "diag")`)
+-   Intente correr el modelo anterior `lm()` (con una distribución gaussiana), compare los resultados y compruebe los residuos (`plot_model(model_name, type = "diag")`)
 :::
 
  
