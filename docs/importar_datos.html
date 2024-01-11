@@ -306,7 +306,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><code>R</code> can suggest and auto-complete the folder names by pressing “tab” when within quotes:</p></li>
 </ul>
 <p>&nbsp;</p>
-<p><img src="suggest_folder.gif" alt="Color spectro" height="150" width="550"></p>
+<p><img src="./images/suggest_folder.gif" alt="Color spectro" height="150" width="550"></p>
 <p>&nbsp;</p>
 <p><font size="5">Setting the working directory in windows</font></p>
 <p>In windows it should be something like this:</p>
@@ -376,7 +376,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </details>
 </div>
 <p>&nbsp;</p>
-<p><img src="input_data.png" alt="Color spectro" height="500" width="750"></p>
+<p><img src="./images/input_data.png" alt="Color spectro" height="500" width="750"></p>
 <p>&nbsp;</p>
 <p><font size="5">Reading <i>.txt</i> files</font></p>
 <p><em>.txt</em> files can be read using <code>read.table</code>. Let’s first download a freely available data set in <em>.txt</em> format:</p>
@@ -386,10 +386,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># set working directory</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"PUT THE FOLDER LOCATION WHERE YOU WANT TO SAVE THE FILE HERE"</span>)</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">"http://esapubs.org/archive/ecol/E090/184/PanTHERIA_1-0_WR93_Aug2008.txt"</span>, <span class="at">destfile =</span> <span class="st">"pantheria_mammals_data.txt"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">"https://raw.githubusercontent.com/maRce10/OTS_TB_ESP_2024/master/pantheria_mammals_data.txt"</span>, <span class="at">destfile =</span> <span class="st">"pantheria_mammals_data.txt"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p><em>You can also manually download the file from <a href="http://esapubs.org/archive/ecol/E090/184/PanTHERIA_1-0_WR93_Aug2008.txt">here</a></em></p>
+<p><em>You can also manually download the file from <a href="https://raw.githubusercontent.com/maRce10/OTS_TB_ESP_2024/master/pantheria_mammals_data.txt">here</a></em></p>
 <p>&nbsp;</p>
 <p>The file can be input into <code>R</code> as follows:</p>
 <div class="cell">
@@ -1432,7 +1432,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Each value must have its own cell</p></li>
 </ol>
 <p>This figure shows the rules visually:</p>
-<p><img src="tidy-1.png" alt="tidy data" height="500" width="750"> <font size="2">* Modified from <i>R for Data Science</i></font> &nbsp;</p>
+<p><img src="./images/tidy-1.png" alt="tidy data" height="500" width="750"> <font size="2">* Modified from <i>R for Data Science</i></font> &nbsp;</p>
 <p>These three rules are interrelated because it’s impossible to only satisfy two of the three. That interrelationship leads to an even simpler set of practical instructions:</p>
 <ol type="1">
 <li><p>Put each data set in a data frame</p></li>
@@ -1561,7 +1561,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>We can visualize this formatting as follows:</p>
-<p><img src="gather.png" alt="gather data" height="500" width="850"> <font size="2">* Modified from <i>R for Data Science</i></font> &nbsp;</p>
+<p><img src="./images/gather.png" alt="gather data" height="500" width="850"> <font size="2">* Modified from <i>R for Data Science</i></font> &nbsp;</p>
 <p><code>gather()</code> can also be used to tidy <code>table4b</code>. The only difference is the variable stored in the cell values:</p>
 <div class="cell">
 <details open="">
@@ -1924,7 +1924,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>&nbsp;</p>
 <p>which can be visualized as follows:</p>
-<p><img src="spreading.png" alt="spreading data" height="500" width="850"> <font size="2">* Modified from <i>R for Data Science</i></font> &nbsp;</p>
+<p><img src="./images/spreading.png" alt="spreading data" height="500" width="850"> <font size="2">* Modified from <i>R for Data Science</i></font> &nbsp;</p>
 <p><code>spread()</code> and <code>gather()</code> are complementary functions. <code>gather()</code> makes wide tables narrower and longer; <code>spread()</code> makes long tables shorter and wider.</p>
 <p>&nbsp;</p>
 <div class="alert alert-info">
@@ -2005,7 +2005,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Visually it does something like this:</p>
-<p><img src="separate.png" alt="separate data" height="500" width="850"> <font size="2">* Modified from <i>R for Data Science</i></font></p>
+<p><img src="./images/separate.png" alt="separate data" height="500" width="850"> <font size="2">* Modified from <i>R for Data Science</i></font></p>
 <p>&nbsp;</p>
 <p>The <em>rate</em> column contains both <em>cases</em> and <em>population</em> variables, and we need to split it into two variables. <code>separate()</code> takes the name of the column to separate, and the names of the new columns to be created:</p>
 <div class="cell">
@@ -2310,7 +2310,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="unite" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="unite"><span class="header-section-number">3.5</span> Unite</h2>
 <p><code>unite()</code> is the inverse of <code>separate()</code>: combining multiple columns into a single column:</p>
-<p><img src="unite.png" alt="unite data" height="500" width="850"> <font size="2">* Modified from <i>R for Data Science</i></font></p>
+<p><img src="./images/unite.png" alt="unite data" height="500" width="850"> <font size="2">* Modified from <i>R for Data Science</i></font></p>
 <p>&nbsp;</p>
 <p>However, you will need it much less frequently than <code>separate()</code>.</p>
 <p>We can use <code>unite()</code> to rejoin the <em>century</em> and <em>year</em> columns that we created above:</p>
@@ -2864,7 +2864,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb46-120"><a href="#cb46-120" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb46-121"><a href="#cb46-121" aria-hidden="true" tabindex="-1"></a> <span class="dv">&amp;nbsp;</span> </span>
 <span id="cb46-122"><a href="#cb46-122" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb46-123"><a href="#cb46-123" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"suggest_folder.gif"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"Color spectro"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"150"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"550"</span><span class="kw">&gt;</span></span>
+<span id="cb46-123"><a href="#cb46-123" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"./images/suggest_folder.gif"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"Color spectro"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"150"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"550"</span><span class="kw">&gt;</span></span>
 <span id="cb46-124"><a href="#cb46-124" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb46-125"><a href="#cb46-125" aria-hidden="true" tabindex="-1"></a><span class="dv">&amp;nbsp;</span></span>
 <span id="cb46-126"><a href="#cb46-126" aria-hidden="true" tabindex="-1"></a></span>
@@ -2942,7 +2942,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb46-200"><a href="#cb46-200" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb46-201"><a href="#cb46-201" aria-hidden="true" tabindex="-1"></a><span class="dv">&amp;nbsp;</span></span>
 <span id="cb46-202"><a href="#cb46-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-203"><a href="#cb46-203" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"input_data.png"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"Color spectro"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"500"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"750"</span><span class="kw">&gt;</span></span>
+<span id="cb46-203"><a href="#cb46-203" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"./images/input_data.png"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"Color spectro"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"500"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"750"</span><span class="kw">&gt;</span></span>
 <span id="cb46-204"><a href="#cb46-204" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb46-205"><a href="#cb46-205" aria-hidden="true" tabindex="-1"></a><span class="dv">&amp;nbsp;</span></span>
 <span id="cb46-206"><a href="#cb46-206" aria-hidden="true" tabindex="-1"></a></span>
@@ -2955,10 +2955,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb46-213"><a href="#cb46-213" aria-hidden="true" tabindex="-1"></a><span class="co"># set working directory</span></span>
 <span id="cb46-214"><a href="#cb46-214" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"PUT THE FOLDER LOCATION WHERE YOU WANT TO SAVE THE FILE HERE"</span>)</span>
 <span id="cb46-215"><a href="#cb46-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-216"><a href="#cb46-216" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">"http://esapubs.org/archive/ecol/E090/184/PanTHERIA_1-0_WR93_Aug2008.txt"</span>, <span class="at">destfile =</span> <span class="st">"pantheria_mammals_data.txt"</span>)</span>
+<span id="cb46-216"><a href="#cb46-216" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">"https://raw.githubusercontent.com/maRce10/OTS_TB_ESP_2024/master/pantheria_mammals_data.txt"</span>, <span class="at">destfile =</span> <span class="st">"pantheria_mammals_data.txt"</span>)</span>
 <span id="cb46-217"><a href="#cb46-217" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb46-218"><a href="#cb46-218" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb46-219"><a href="#cb46-219" aria-hidden="true" tabindex="-1"></a>*You can also manually download the file from [here](http://esapubs.org/archive/ecol/E090/184/PanTHERIA_1-0_WR93_Aug2008.txt)*</span>
+<span id="cb46-219"><a href="#cb46-219" aria-hidden="true" tabindex="-1"></a>*You can also manually download the file from [here](https://raw.githubusercontent.com/maRce10/OTS_TB_ESP_2024/master/pantheria_mammals_data.txt)*</span>
 <span id="cb46-220"><a href="#cb46-220" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb46-221"><a href="#cb46-221" aria-hidden="true" tabindex="-1"></a><span class="dv">&amp;nbsp;</span></span>
 <span id="cb46-222"><a href="#cb46-222" aria-hidden="true" tabindex="-1"></a></span>
@@ -3318,7 +3318,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb46-576"><a href="#cb46-576" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb46-577"><a href="#cb46-577" aria-hidden="true" tabindex="-1"></a>This figure shows the rules visually:</span>
 <span id="cb46-578"><a href="#cb46-578" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-579"><a href="#cb46-579" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"tidy-1.png"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"tidy data"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"500"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"750"</span><span class="kw">&gt;</span></span>
+<span id="cb46-579"><a href="#cb46-579" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"./images/tidy-1.png"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"tidy data"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"500"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"750"</span><span class="kw">&gt;</span></span>
 <span id="cb46-580"><a href="#cb46-580" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;font</span> <span class="er">size</span><span class="ot">=</span><span class="st">"2"</span><span class="kw">&gt;</span>* Modified from <span class="kw">&lt;i&gt;</span>R for Data Science<span class="kw">&lt;/i&gt;&lt;/font&gt;</span></span>
 <span id="cb46-581"><a href="#cb46-581" aria-hidden="true" tabindex="-1"></a><span class="dv">&amp;nbsp;</span></span>
 <span id="cb46-582"><a href="#cb46-582" aria-hidden="true" tabindex="-1"></a></span>
@@ -3403,7 +3403,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb46-661"><a href="#cb46-661" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb46-662"><a href="#cb46-662" aria-hidden="true" tabindex="-1"></a>We can visualize this formatting as follows:</span>
 <span id="cb46-663"><a href="#cb46-663" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-664"><a href="#cb46-664" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"gather.png"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"gather data"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"500"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"850"</span><span class="kw">&gt;</span></span>
+<span id="cb46-664"><a href="#cb46-664" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"./images/gather.png"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"gather data"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"500"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"850"</span><span class="kw">&gt;</span></span>
 <span id="cb46-665"><a href="#cb46-665" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;font</span> <span class="er">size</span><span class="ot">=</span><span class="st">"2"</span><span class="kw">&gt;</span>* Modified from <span class="kw">&lt;i&gt;</span>R for Data Science<span class="kw">&lt;/i&gt;&lt;/font&gt;</span></span>
 <span id="cb46-666"><a href="#cb46-666" aria-hidden="true" tabindex="-1"></a><span class="dv">&amp;nbsp;</span></span>
 <span id="cb46-667"><a href="#cb46-667" aria-hidden="true" tabindex="-1"></a></span>
@@ -3518,7 +3518,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb46-776"><a href="#cb46-776" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb46-777"><a href="#cb46-777" aria-hidden="true" tabindex="-1"></a>which can be visualized as follows:</span>
 <span id="cb46-778"><a href="#cb46-778" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-779"><a href="#cb46-779" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"spreading.png"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"spreading data"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"500"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"850"</span><span class="kw">&gt;</span></span>
+<span id="cb46-779"><a href="#cb46-779" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"./images/spreading.png"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"spreading data"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"500"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"850"</span><span class="kw">&gt;</span></span>
 <span id="cb46-780"><a href="#cb46-780" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;font</span> <span class="er">size</span><span class="ot">=</span><span class="st">"2"</span><span class="kw">&gt;</span>* Modified from <span class="kw">&lt;i&gt;</span>R for Data Science<span class="kw">&lt;/i&gt;&lt;/font&gt;</span></span>
 <span id="cb46-781"><a href="#cb46-781" aria-hidden="true" tabindex="-1"></a><span class="dv">&amp;nbsp;</span></span>
 <span id="cb46-782"><a href="#cb46-782" aria-hidden="true" tabindex="-1"></a></span>
@@ -3573,7 +3573,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb46-833"><a href="#cb46-833" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb46-834"><a href="#cb46-834" aria-hidden="true" tabindex="-1"></a>Visually it does something like this:</span>
 <span id="cb46-835"><a href="#cb46-835" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-836"><a href="#cb46-836" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"separate.png"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"separate data"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"500"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"850"</span><span class="kw">&gt;</span></span>
+<span id="cb46-836"><a href="#cb46-836" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"./images/separate.png"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"separate data"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"500"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"850"</span><span class="kw">&gt;</span></span>
 <span id="cb46-837"><a href="#cb46-837" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;font</span> <span class="er">size</span><span class="ot">=</span><span class="st">"2"</span><span class="kw">&gt;</span>* Modified from <span class="kw">&lt;i&gt;</span>R for Data Science<span class="kw">&lt;/i&gt;&lt;/font&gt;</span></span>
 <span id="cb46-838"><a href="#cb46-838" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb46-839"><a href="#cb46-839" aria-hidden="true" tabindex="-1"></a><span class="dv">&amp;nbsp;</span></span>
@@ -3675,7 +3675,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb46-935"><a href="#cb46-935" aria-hidden="true" tabindex="-1"></a><span class="in">`unite()`</span> is the inverse of <span class="in">`separate()`</span>: combining multiple columns into a single column:</span>
 <span id="cb46-936"><a href="#cb46-936" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb46-937"><a href="#cb46-937" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb46-938"><a href="#cb46-938" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"unite.png"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"unite data"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"500"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"850"</span><span class="kw">&gt;</span></span>
+<span id="cb46-938"><a href="#cb46-938" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">"./images/unite.png"</span> <span class="er">alt</span><span class="ot">=</span><span class="st">"unite data"</span> <span class="er">height</span><span class="ot">=</span><span class="st">"500"</span> <span class="er">width</span><span class="ot">=</span><span class="st">"850"</span><span class="kw">&gt;</span></span>
 <span id="cb46-939"><a href="#cb46-939" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;font</span> <span class="er">size</span><span class="ot">=</span><span class="st">"2"</span><span class="kw">&gt;</span>* Modified from <span class="kw">&lt;i&gt;</span>R for Data Science<span class="kw">&lt;/i&gt;&lt;/font&gt;</span></span>
 <span id="cb46-940"><a href="#cb46-940" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb46-941"><a href="#cb46-941" aria-hidden="true" tabindex="-1"></a><span class="dv">&amp;nbsp;</span></span>

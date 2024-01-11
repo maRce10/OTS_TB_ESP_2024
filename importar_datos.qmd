@@ -120,7 +120,7 @@ Some basic tips for setting the working directory:
 
  &nbsp; 
  
-<img src="suggest_folder.gif" alt="Color spectro" height="150" width="550">
+<img src="./images/suggest_folder.gif" alt="Color spectro" height="150" width="550">
 
 &nbsp;
 
@@ -198,7 +198,7 @@ The most commonly used function to import data in `R` is `read.table`. The docum
 ```
 &nbsp;
 
-<img src="input_data.png" alt="Color spectro" height="500" width="750">
+<img src="./images/input_data.png" alt="Color spectro" height="500" width="750">
 
 &nbsp;
 
@@ -211,10 +211,10 @@ The most commonly used function to import data in `R` is `read.table`. The docum
 # set working directory
 setwd("PUT THE FOLDER LOCATION WHERE YOU WANT TO SAVE THE FILE HERE")
 
-download.file("http://esapubs.org/archive/ecol/E090/184/PanTHERIA_1-0_WR93_Aug2008.txt", destfile = "pantheria_mammals_data.txt")
+download.file("https://raw.githubusercontent.com/maRce10/OTS_TB_ESP_2024/master/pantheria_mammals_data.txt", destfile = "pantheria_mammals_data.txt")
 
 ```
-*You can also manually download the file from [here](http://esapubs.org/archive/ecol/E090/184/PanTHERIA_1-0_WR93_Aug2008.txt)*
+*You can also manually download the file from [here](https://raw.githubusercontent.com/maRce10/OTS_TB_ESP_2024/master/pantheria_mammals_data.txt)*
 
 &nbsp;
 
@@ -574,7 +574,7 @@ There are three interrelated rules to make a data set tidy:
 
 This figure shows the rules visually:
 
-<img src="tidy-1.png" alt="tidy data" height="500" width="750">
+<img src="./images/tidy-1.png" alt="tidy data" height="500" width="750">
 <font size="2">* Modified from <i>R for Data Science</i></font>
 &nbsp;
 
@@ -659,7 +659,7 @@ knitr::kable(g1, row.names = F, escape = FALSE) %>%
 
 We can visualize this formatting as follows:
 
-<img src="gather.png" alt="gather data" height="500" width="850">
+<img src="./images/gather.png" alt="gather data" height="500" width="850">
 <font size="2">* Modified from <i>R for Data Science</i></font>
 &nbsp;
 
@@ -774,7 +774,7 @@ knitr::kable(sp1, row.names = F, escape = FALSE) %>%
 
 which can be visualized as follows:
 
-<img src="spreading.png" alt="spreading data" height="500" width="850">
+<img src="./images/spreading.png" alt="spreading data" height="500" width="850">
 <font size="2">* Modified from <i>R for Data Science</i></font>
 &nbsp;
 
@@ -830,7 +830,7 @@ knitr::kable(table3, row.names = F, escape = FALSE) %>%
 
 Visually it does something like this:
 
-<img src="separate.png" alt="separate data" height="500" width="850">
+<img src="./images/separate.png" alt="separate data" height="500" width="850">
 <font size="2">* Modified from <i>R for Data Science</i></font>
 
 &nbsp;
@@ -932,7 +932,7 @@ str(g6)
 `unite()` is the inverse of `separate()`: combining multiple columns into a single column:
 
 
-<img src="unite.png" alt="unite data" height="500" width="850">
+<img src="./images/unite.png" alt="unite data" height="500" width="850">
 <font size="2">* Modified from <i>R for Data Science</i></font>
 
 &nbsp;
