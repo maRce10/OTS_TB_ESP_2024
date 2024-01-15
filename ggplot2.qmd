@@ -1,30 +1,8 @@
 ---
 title: <font size="7"><b>Gráficos con ggplot2</b></font>
-toc: true
-toc-depth: 2
-toc-location: left
-number-sections: true
-highlight-style: pygments
-format:
-  html:
-    df-print: kable
-    code-fold: show
-    code-tools: true
-    css: styles.css
-    link-external-icon: false
-    link-external-newwindow: true  
 ---
 
-```{=html}
-<style>
-body
-  { counter-reset: source-line 0; }
-pre.numberSource code
-  { counter-reset: none; }
-</style>
-```
 ```{r,echo=FALSE,message=FALSE}
-
 options("digits" = 5)
 options("digits.secs" = 3)
 
@@ -55,7 +33,6 @@ theme_set(theme_classic(base_size = 20))
 ```
 
 ```{r functions and data, eval=T, echo=F}
-
 hylaeformis_data <- read.csv(
   paste0("https://raw.githubusercontent.com/maRce10/", "r_avanzado_2023/master/data/hylaeformis_data.csv")
 )
@@ -119,7 +96,6 @@ La sintaxis más habitual incluye los datos dentro de la llamada "ggplot" y una 
 Primero instala/carga el paquete:
 
 ```{r, eval=FALSE}
-
 # install
 install.packages("ggplot2")
 
@@ -134,7 +110,6 @@ library(ggplot2)
 Utilicemos el conjunto de datos "iris" para crear gráficos de dispersión:
 
 ```{r}
-
 ggplot(data = iris, mapping = aes(x = Sepal.Length, y = Petal.Length)) +
   geom_point()
 ```
@@ -150,7 +125,6 @@ This plot is defined by 3 components: 1. "data"- iris 1. "aes" - Sepal.length vs
 También podemos añadir otros atributos estéticos como el color, la forma y el tamaño. Estos atributos se pueden incluir dentro de `aes()`:
 
 ```{r}
-
 # color by species
 ggplot(
   data = iris,
@@ -176,7 +150,6 @@ ggplot(
 Tenga en cuenta que los argumentos estéticos también pueden incluirse en la capa "geom":
 
 ```{r}
-
 ggplot(
   data = iris,
   mapping = aes(x = Sepal.Length, y = Petal.Length)
@@ -189,7 +162,6 @@ ggplot(
 También podemos incluir un valor fijo:
 
 ```{r}
-
 ggplot(
   data = iris,
   mapping = aes(x = Sepal.Length, y = Petal.Length)
@@ -214,7 +186,6 @@ Algunos atributos funcionan mejor con algunos tipos de datos:
 Utilizando el conjunto de datos "hylaeformis":
 
 ```{r,  eval=F, echo=T}
-
 # lear desde el sitio del taller
 hylaeformis_data <- read.csv(
   paste0("https://raw.githubusercontent.com/maRce10/", "r_avanzado_2023/master/data/hylaeformis_data.csv")
@@ -233,7 +204,6 @@ head(hylaeformis_data, 20)
 1.1 Crear un gráfico de dispersión de duración ("duration") vs frecuencia promedio ("meanfreq")
 
 ```{r, eval = FALSE, echo = FALSE}
-
 ggplot(
   data = hylaeformis_data,
   mapping = aes(x = duration, y = meanfreq)
@@ -246,7 +216,6 @@ ggplot(
 1.2 Añadir un atributo estético para mostrar un color diferente para cada localidad
 
 ```{r, eval = FALSE, echo = FALSE}
-
 ggplot(
   data = hylaeformis_data,
   mapping = aes(x = duration, y = meanfreq)
@@ -259,7 +228,6 @@ ggplot(
 1.3 Añade otro atributo estético para mostrar el rango de frecuencia dominante ("dfrange") como tamaño los símbolos
 
 ```{r, eval = FALSE, echo = FALSE}
-
 ggplot(
   data = hylaeformis_data,
   mapping = aes(x = duration, y = meanfreq)
@@ -279,7 +247,6 @@ ggplot(
 -   2 tipos: "grid" & "wrap"
 
 ```{r}
-
 ggplot(iris, aes(Sepal.Length, Petal.Length)) +
   geom_point() +
   facet_wrap(~Species)
@@ -321,7 +288,6 @@ ggplot(iris, aes(Sepal.Length, Petal.Length)) +
 Tenga en cuenta que también podemos guardar el componente básico como un objeto **R** y añadir otros componentes más adelante en el código:
 
 ```{r, fig.height=8}
-
 p <- ggplot(iris, aes(Sepal.Length, Petal.Length)) +
   geom_point()
 
@@ -343,7 +309,6 @@ p + facet_wrap(~Species, scales = "free_x", nrow = 3)
 Las líneas de regresión de mejor ajuste pueden añadirse con `geom_smooth()`:
 
 ```{r, fig.height=8}
-
 # con CI
 ggplot(iris, aes(Sepal.Length, Petal.Length)) +
   geom_point() +
@@ -369,7 +334,6 @@ Utilizando el conjunto de datos de ejemplo "msleep":
 2.1 Crear un gráfico de dispersión de peso corporal ("bodywt") frente a peso cerebral ("brainwt")
 
 ```{r, eval = FALSE, echo = FALSE}
-
 data(msleep)
 ggplot(
   data = msleep,
@@ -383,7 +347,6 @@ ggplot(
 2.2 Añadir orden ("order") como estética del color
 
 ```{r, eval = FALSE, echo = FALSE}
-
 ggplot(
   data = msleep,
   mapping = aes(x = bodywt, y = brainwt, color = order)
@@ -396,7 +359,6 @@ ggplot(
 2.3 Añadir un componente "faceta" para dividir los gráficos por orden utilizando escalas libres
 
 ```{r, eval = FALSE, echo = FALSE}
-
 ggplot(
   data = msleep,
   mapping = aes(x = bodywt, y = brainwt)
@@ -410,7 +372,6 @@ ggplot(
 2.4 Elimine los órdenes con menos de 4 especies en el conjunto de datos y haga un gráfico similar al 2.3
 
 ```{r, eval = FALSE, echo = FALSE}
-
 tab <- table(msleep$order)
 
 ms2 <- msleep[msleep$order %in% names(tab)[tab >= 5], ]
@@ -429,7 +390,6 @@ ggplot(
 2.5 Añadir una línea de mejor ajuste a cada gráfico del panel
 
 ```{r, eval = FALSE, echo = FALSE}
-
 ggplot(data = msleep[msleep$order %in% names(tab)[tab > 3], ], mapping = aes(x = bodywt, y = brainwt)) +
   geom_point() +
   geom_smooth() +
@@ -444,7 +404,6 @@ ggplot(data = msleep[msleep$order %in% names(tab)[tab > 3], ], mapping = aes(x =
 De nuevo, sólo se necesita un nuevo componente "geom" para crear un boxplot:
 
 ```{r}
-
 ggplot(iris, aes(Species, Petal.Length)) +
   geom_boxplot()
 ```
@@ -452,7 +411,6 @@ ggplot(iris, aes(Species, Petal.Length)) +
 Una alternativa interesante son los gráficos de violines:
 
 ```{r}
-
 ggplot(iris, aes(Species, Petal.Length)) +
   geom_violin()
 ```
@@ -464,7 +422,6 @@ ggplot(iris, aes(Species, Petal.Length)) +
 Lo mismo ocurre con los histrogramas y los gráficos de frecuencias:
 
 ```{r}
-
 ggplot(iris, aes(Petal.Length)) +
   geom_histogram()
 
@@ -481,7 +438,6 @@ ggplot(iris, aes(Petal.Length)) +
 Podemos controlar la anchura de las barras:
 
 ```{r}
-
 ggplot(iris, aes(Petal.Length)) +
   geom_histogram(binwidth = 1, fill = adjustcolor("red2", alpha.f = 0.3))
 ```
@@ -491,7 +447,6 @@ ggplot(iris, aes(Petal.Length)) +
 Y compara la distribución de los distintos grupos dentro del mismo histograma:
 
 ```{r}
-
 ggplot(iris, aes(Petal.Length, fill = Species)) +
   geom_histogram(binwidth = 0.4)
 ```
@@ -503,7 +458,6 @@ ggplot(iris, aes(Petal.Length, fill = Species)) +
 Muestran la distribución de variables discretas (categóricas):
 
 ```{r}
-
 tab <- table(msleep$order)
 
 df <-
@@ -516,7 +470,6 @@ ggplot(df, aes(Var1, Freq)) +
  
 
 ```{r, eval=F, echo=F}
-
 # Calcular el promedio del # de reclutas por estación
 df2 <- aggregate(RECRUITS ~ SEASON, df, mean)
 names(df2) <- c("season", "rec")
@@ -750,7 +703,6 @@ Además de las funciones básicas (por ejemplo, componentes) descritas anteriorm
 ggplot2 viene con algunos temas por defecto que se pueden aplicar fácilmente para modificar el aspecto de nuestros gráficos:
 
 ```{r}
-
 p <- ggplot(iris, aes(Sepal.Length, Petal.Length)) +
   geom_point()
 
@@ -772,7 +724,6 @@ La mayoría de los temas difieren en el uso de cuadrículas, líneas de borde y 
 Los límites de los ejes pueden modificarse como sigue:
 
 ```{r}
-
 ggplot(iris, aes(Sepal.Length, Petal.Length)) +
   geom_point() +
   xlim(c(0, 10))
@@ -788,7 +739,6 @@ ggplot(iris, aes(Sepal.Length, Petal.Length, col = Species)) +
 Los ejes también pueden transformarse:
 
 ```{r}
-
 ggplot(iris, aes(Sepal.Length, Petal.Length, col = Species)) +
   geom_point() +
   scale_x_continuous(trans = "log") +
@@ -800,7 +750,6 @@ ggplot(iris, aes(Sepal.Length, Petal.Length, col = Species)) +
 o invertidos:
 
 ```{r}
-
 ggplot(iris, aes(Sepal.Length, Petal.Length, col = Species)) +
   geom_point() +
   scale_y_reverse()
@@ -811,7 +760,6 @@ ggplot(iris, aes(Sepal.Length, Petal.Length, col = Species)) +
 Los ggplots pueden exportarse como archivos de imagen utilizando la función `ggsave`:
 
 ```{r}
-
 ggplot(
   data = msleep[msleep$order %in% names(tab)[tab > 5], ],
   mapping = aes(x = bodywt, y = brainwt)
@@ -832,7 +780,6 @@ El tipo de archivo de imagen se identificará por la extensión en el nombre del
 Personalización adicional del eje:
 
 ```{r}
-
 # Log2 scaling of the y axis (with visually-equal spacing)
 require(scales)
 
@@ -894,7 +841,6 @@ p2 + annotation_logticks(sides = "trbl")
 Se pueden generar muchos otros tipos de gráficos. Aquí muestro un ejemplo de gráficos de contorno y de "mapa de calor":
 
 ```{r}
-
 head(faithful)
 
 ggplot(faithfuld, aes(eruptions, waiting)) +
@@ -933,6 +879,5 @@ Consulte la [CRAN Graphics Task View](http://cran.r-project.org/web/views/Graphi
 <font size="4">Información de la sesión</font>
 
 ```{r session info, echo=F}
-
 sessionInfo()
 ```

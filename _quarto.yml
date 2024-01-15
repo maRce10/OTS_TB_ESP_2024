@@ -30,7 +30,7 @@ website:
           href: ggplot2.qmd
         - text: "Reportes dinámicos"
           href: reportes_dinamicos.qmd
-        - text: "Importar datos a R"
+        - text: "Importar y exportar datos de R"
           href: importar_datos.qmd
       - text: "Preparación para el taller"
         href: preparacion_curso.qmd

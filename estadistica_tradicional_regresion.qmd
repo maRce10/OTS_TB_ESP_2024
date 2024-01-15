@@ -2,17 +2,7 @@
 title: <font size="7"><b>Modelos estádisticos tradicionales como regresiones</b></font>
 ---
 
-```{=html}
-<style>
-body
-  { counter-reset: source-line 0; }
-pre.numberSource code
-  { counter-reset: none; }
-</style>
-```
-
 ```{r,echo=FALSE,message=FALSE}
-
 options("digits" = 5)
 options("digits.secs" = 3)
 
@@ -33,7 +23,6 @@ knitr::opts_chunk$set(
  
 
 ```{r, echo = FALSE, message=FALSE}
-
 library(knitr)
 library(ggplot2)
 library(viridis)
@@ -67,7 +56,6 @@ La prueba evalúa si la media de una variable continua es diferente de 0. Es equ
 &nbsp; 
 
 ```{r}
-
 # number of observations
 n <- 50
 
@@ -88,7 +76,6 @@ y <- rnorm(n = n, mean = 1)
 Pongamos juntos los resultados de ambas pruebas para compararlos más de cerca:
 
 ```{r, echo = FALSE}
-
 df <- data.frame(
   model = c("t-test", "lm"),
   estimate = c(t$estimate, lm_t$coefficients[1]),
@@ -115,7 +102,6 @@ Una prueba t pareada evalúa si la diferencia de promedios entre dos variables n
 El modelo lineal correspondiente es el mismo que el de la prueba t de una muestra, pero la variable de entrada es la diferencia entre las dos variables (y1 - y2):
 
 ```{r}
-
 set.seed(123)
 
 # sample size
@@ -142,7 +128,6 @@ lm_paired_t
 ```
 
 ```{r, echo = FALSE}
-
 df <- data.frame(
   model = c("paired t-test", "lm"),
   estimate = c(paired_t$estimate, lm_paired_t$coefficients[1]),
@@ -164,7 +149,6 @@ También llamada prueba t independiente. Evalúa si los promedios de las dos var
 <center><font size = 6>$y = \beta_0 + \beta_1 * x1 \qquad \mathcal{H}_0: \beta_1 = 0$</font></center>
 
 ```{r}
-
 # set seed
 set.seed(123)
 
@@ -195,7 +179,6 @@ lm_indep_t
 ```
 
 ```{r, echo = FALSE}
-
 df <- data.frame(
   model = c("2 means t-test", "lm"),
   estimate = c(indep_t$estimate[2] - indep_t$estimate[1], lm_indep_t$coefficients[2, 1]),
@@ -222,7 +205,6 @@ Se trata de un **modelo de regresión múltiple**. La variable categórica se co
 Un conjunto de datos con una variable categórica de 3 niveles puede simularse así:
 
 ```{r}
-
 # set seed
 set.seed(123)
 
@@ -245,7 +227,6 @@ head(xy_data_cat2)
 ```
 
 ```{r, print_df = "default"}
-
 # ANOVA function
 anv_1w <- anova(aov(formula = y1 ~ x1, data = xy_data_cat2))
 
@@ -259,7 +240,6 @@ lm_anv_1w
 
 
 ```{r, echo = FALSE}
-
 df <- data.frame(
   model = c("1 way anova", "lm"),
   "F statistic" = c(anv_1w$`F value`[1], lm_anv_1w$fstatistic[1]),
@@ -277,7 +257,6 @@ df
 Esta prueba busca la asociación entre dos variables categóricas basándose en la co-ocurrencia de las categorías, medidas como recuentos. Esto es lo que es una tabla de contingencia: recuentos de todas las combinaciones de categorías entre dos variables. Por ejemplo, las muertes por edad de los pasajeros del Titanic:
 
 ```{r}
-
 # Contingency table
 # modified from https://lindeloev.github.io/tests-as-linear/
 mood_data <- matrix(
@@ -298,7 +277,6 @@ $log(y_i) = log(N) + log(\alpha_i) + log(\beta_j) + log(\alpha_i\beta_j)$
 Los coeficientes de regresión son $A_i$ y $B_i$. $\alpha_i$ y $\beta_j$ son las proporciones de recuentos para los dos niveles de la variable categórica binaria (uno para cada uno de los niveles de la segunda variable categórica). Afortunadamente, existe una implementación de este modelo en el paquete R 'MASS' que simplifica la codificación:
 
 ```{r}
-
 # Built-in chi-square. It requires matrix format.
 chi_mod <- chisq.test(mood_data)
 
@@ -315,7 +293,6 @@ log_lm_mod
 
 
 ```{r, echo = FALSE}
-
 summ_log_lm <- summary(log_lm_mod)
 
 df <- data.frame(
@@ -333,7 +310,6 @@ df
 Sólo presentaremos un ejemplo de prueba "no paramétrica". No obstante, este único ejemplo debería bastar para demostrar la lógica que subyace a los procedimientos "no paramétricos". La mayoría de las pruebas "no paramétricas" se basan en un sencillo truco de transformación de datos: la transformación de rango de las respuestas. Las transformaciones de rango convierten los valores en un índice según su posición cuando se ordenan por magnitud:
 
 ```{r}
-
 # simulate variable
 set.seed(123)
 y <- round(rnorm(n = 5), 2)
@@ -352,7 +328,6 @@ rank_y
 También conocida como prueba de Mann-Whitney, es la alternativa no paramétrica a la prueba t de dos promedios: 
 
 ```{r}
-
 # set seed
 set.seed(123)
 
@@ -380,7 +355,6 @@ summary(wicx_lm_mod)
 ```
 
 ```{r, echo = FALSE}
-
 summ_wicx_lm_mod <- summary(wicx_lm_mod)
 
 df <- data.frame(
@@ -408,6 +382,5 @@ df
 <font size="4">Información de la sesión</font>
 
 ```{r session info, echo=F}
-
 sessionInfo()
 ```

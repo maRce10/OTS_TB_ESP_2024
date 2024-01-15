@@ -35,7 +35,6 @@ Este taller pretende profundizar en los elementos de programación computacional
 -   Las líneas de código estan numeradas. Podemos usar esos números para referirnos a códigos específicos en los manuales. Los bloques de código también incluyen un botón que permite copiar el código:
 
 ```{r, out.width = "100%", echo = FALSE, fig.align= "center"}
-
 knitr::include_graphics("./images/chunk.png")
 ```
 

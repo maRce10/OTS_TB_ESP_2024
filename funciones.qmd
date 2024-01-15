@@ -18,16 +18,7 @@ format:
     link-external-newwindow: true  
 ---
 
-```{=html}
-<style>
-body
-  { counter-reset: source-line 0; }
-pre.numberSource code
-  { counter-reset: none; }
-</style>
-```
 ```{r,echo=FALSE,message=FALSE}
-
 options("digits" = 5)
 options("digits.secs" = 3)
 
@@ -69,7 +60,6 @@ knitr::opts_chunk$set(
 Todas las funciones son creadas iguales ... mediante la función `function()` y siguen la misma estructura:
 
 ```{r, echo=FALSE,out.width="100%", fig.align='center'}
-
 knitr::include_graphics("./images/funcion.png")
 ```
 
@@ -80,7 +70,6 @@ knitr::include_graphics("./images/funcion.png")
 Podemos observar la estructura de funciones ya cargadas en nuestro entorno de `R`. Para ver el código simplemente corra al nombre de la función en `R` (sin el paréntesis). Por ejemplo, el código de la función `sd()` se puede mostrar de la siguiente manera:
 
 ```{r, eval = T}
-
 sd
 ```
 
@@ -93,7 +82,6 @@ En `Rstudio`, el código también se puede mostrar usando *F2* cuando el cursor 
 Además, podemos diseccionar las funciones en sus elementos básicos:
 
 ```{r}
-
 # cuerpo
 body(sd)
 
@@ -123,7 +111,6 @@ environment(sum)
 Las funciones son en sí mismas un tipo específico de objeto:
 
 ```{r, eval = T}
-
 class(sd)
 ```
 
@@ -132,7 +119,6 @@ class(sd)
 Los operadores son funciones:
 
 ```{r}
-
 1 + 1
 
 
@@ -151,7 +137,6 @@ Los operadores son funciones:
 ## Nombre
 
 ```{r, echo=FALSE,out.width="100%", fig.align='center'}
-
 knitr::include_graphics("./images/nombre.png")
 ```
 
@@ -195,7 +180,6 @@ La sintaxis `namespace::function` también se puede usar para llamar a funciones
 Las funciones pueden ser anónimas:
 
 ```{r}
-
 (function(x) x^10)(1:5)
 ```
 
@@ -214,7 +198,6 @@ lapply(l, function(x) x^10)
 ## Argumentos
 
 ```{r, echo=FALSE,out.width="100%", fig.align='center'}
-
 knitr::include_graphics("./images/argumentos.png")
 ```
 
@@ -223,7 +206,6 @@ knitr::include_graphics("./images/argumentos.png")
 Permiten a los usuarios ingresar objetos en la función. Los argumentos pueden o no tener valores predeterminados. Cuando los argumentos tienen valores predeterminados, no es necesario proporcionarlos:
 
 ```{r eval = T}
-
 f1 <- function(x, y = 2) x + y
 
 f1(1)
@@ -234,7 +216,6 @@ f1(1)
 Por supuesto, se pueden modificar:
 
 ```{r eval = T}
-
 f1(3, 4)
 ```
 
@@ -243,7 +224,6 @@ f1(3, 4)
 Los argumentos sin valor predeterminado deben ser proporcionados:
 
 ```{r error = T}
-
 f1()
 ```
 
@@ -252,7 +232,6 @@ f1()
 Si todos los argumentos tienen un valor predeterminado, se puede invocar la función sin proporcionar ningún argumento:
 
 ```{r eval = T}
-
 f1 <- function(x = -2, y = 2) x + y
 
 f1()
@@ -263,7 +242,6 @@ f1()
 Ese es el caso de `dev.off()` y `Sys.time()`:
 
 ```{r eval = T}
-
 Sys.time()
 ```
 
@@ -272,7 +250,6 @@ Sys.time()
 Los argumentos pueden especificarse implícitamente por posición o por nombres incompletos:
 
 ```{r}
-
 f2 <- function(a1, b1, b2) {
   list(a1 = a1, b1 = b1, b2 = b2)
 }
@@ -298,7 +275,6 @@ str(f2(1, a = 2, b1 = 3))
 Sin embargo, esto no funciona si los nombres son ambiguos:
 
 ```{r, error=T}
-
 f2(b = 1, 2, a = 3)
 ```
 
@@ -347,7 +323,6 @@ mean(v1, na.rm = TRUE)
 ## Cuerpo
 
 ```{r, echo=FALSE,out.width="100%", fig.align='center'}
-
 knitr::include_graphics("./images/cuerpo.png")
 ```
 
@@ -368,7 +343,6 @@ El cuerpo de la función puede tomar el mismo tipo de código utilizado en cualq
 Cuando se realizan varios cálculos, debemos incluir una *declaración de retorno* (return statement), que define explícitamente la salida de la función. Esto se hace usando la función `return()`:
 
 ```{r}
-
 # sin "return statement"
 f1 <- function(x, y) {
   z1 <- 2 * x + y
@@ -432,7 +406,6 @@ Es más seguro usar `return()`.
 Cuando una función realiza varias tareas, podemos usar una lista para juntar los diferentes objetos. Esto es particularmente útil cuando se generan objetos de diferentes clases (por ejemplo, vectores y listas):
 
 ```{r}
-
 f4 <- function(x, y) {
   # 1 elemento
   z1 <- x + y
@@ -472,7 +445,6 @@ f4(10, 5)[[3]]
 Por supuesto, también podemos guardar el resultado como un objeto y acceder a cada elemento mediante la indexación:
 
 ```{r}
-
 # elemento 1
 out <- f4(10, 5)
 
@@ -510,7 +482,6 @@ out[[2]]
 Son argumentos que pueden tomar solo dos valores: `TRUE` o `FALSE`. Estos argumentos permiten modificar el comportamiento de la función de forma binaria: si es `TRUE` llevaría a cabo la tarea 1 y si es `FALSE` llevaría a cabo la tarea 2. Internamente (i.e. en el cuerpo de las función) estas funciones implican el uso del operador `if`, algunas veces incluyendo su contra-parte `else`. Estos operadores son parte fundamental de la programación y se usan para definir que acción ejecutar con base en una evaluación lógica:
 
 ```{r}
-
 # creemos el objeto a con valor 2
 a <- 2
 
@@ -558,7 +529,6 @@ mean_sum <- function(x, y, prom = FALSE) {
 Note que este tipo de argumentos deben tener un valor predeterminado. Podemos probar la función de la siguiente forma:
 
 ```{r}
-
 mean_sum(x = 2, y = 3)
 ```
 
@@ -618,7 +588,6 @@ exists("lg_sqr")
  
 
 ```{r}
-
 x <- 7
 sqr <- x * x
 lg_sqr <- log(x)
@@ -635,7 +604,6 @@ exists("lg_sqr")
 Se pueden invocar funciones desde archivos de `R` externos sin estar definidas en el código actual con la función `source()`. En este ejemplo creamos la función `fnctn_X`:
 
 ```{r}
-
 fnctn_X <- function(sq_mt, vctr) {
   # trasponer matriz y calcular est dev
   stp1 <- t(sq_mt)
@@ -654,7 +622,6 @@ fnctn_X(sq_mt = cbind(c(1, 2), c(3, 4)), vctr = c(2, 3))
 Guarde el código anterior en un archivo `R` llamado 'function_X.R'. Ahora la función se puede cargar usando `source()`:
 
 ```{r, eval = F}
-
 # removamosla del ambiente
 rm(fnctn_X)
 
@@ -666,7 +633,6 @@ fnctn_X(sq_mt = cbind(c(1, 2), c(3, 4)), vctr = c(2, 3))
 ```
 
 ```{r, eval=T, echo=F}
-
 fnctn_X(sq_mt = cbind(c(1, 2), c(3, 4)), vctr = c(2, 3))
 ```
 
@@ -675,7 +641,6 @@ fnctn_X(sq_mt = cbind(c(1, 2), c(3, 4)), vctr = c(2, 3))
 Además, este código se puede compartir fácilmente. Se puede enviar por correo electrónico o publicar en línea. Incluso se puede cargar desde repositorios en línea:
 
 ```{r, error=T}
-
 # remover objetos
 rm(list = ls())
 
@@ -763,6 +728,5 @@ Esto ya debería ser obvio a este punto.
 <font size="4">Información de la sesión</font>
 
 ```{r session info, echo=F}
-
 sessionInfo()
 ```

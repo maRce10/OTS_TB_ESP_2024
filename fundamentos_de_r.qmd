@@ -2,14 +2,7 @@
 title: <font size="7"><b>Elementos básicos del lenguaje R</b></font>
 ---
 
-```{=html}
-<style>
-body
-  { counter-reset: source-line 0; }
-pre.numberSource code
-  { counter-reset: none; }
-</style>
-```
+
 ```{r,echo=FALSE,message=FALSE}
 
 options("digits"=5)
@@ -17,13 +10,11 @@ options("digits.secs"=3)
 
 # options to customize chunk outputs
 knitr::opts_chunk$set(
-  class.source = "numberLines lineAnchors", # for code line numbers
   message = FALSE
  )
 
 ```
 
-<!-- skyblue box -->
 
 ::: {.alert .alert-info}
 # Objetivo del manual {.unnumbered .unlisted}
@@ -513,7 +504,6 @@ View(df)
 
  
 
-
 ------------------------------------------------------------------------
 
  
@@ -653,7 +643,6 @@ knitr::kable(d, row.names = F,  booktabs = TRUE, escape = TRUE) |>
 :::
 
  
-
 
 La mayoría de las funciones están vectorizadas:
 

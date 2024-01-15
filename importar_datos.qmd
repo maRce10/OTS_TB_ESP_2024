@@ -1,11 +1,10 @@
 ---
-title: <font size="7"><b>Importar datos en R</b></font>
+title: <font size="7"><b>Importar y exportar datos en R</b></font>
 ---
 
 ```{r,echo=FALSE,message=FALSE}
-
-options("digits"=5)
-options("digits.secs"=3)
+options("digits" = 5)
+options("digits.secs" = 3)
 
 library(knitr)
 library(ggplot2)
@@ -14,184 +13,170 @@ library(RColorBrewer)
 library(kableExtra)
 theme_set(theme_classic(base_size = 50))
 
-cols <- brewer.pal(10,"Spectral")
-
+cols <- brewer.pal(10, "Spectral")
 ```
 
 ```{r, echo = TRUE, message=FALSE}
-  
-  sketchy::load_packages(c(
-    "RColorBrewer",
-    "ggplot2",
-    "readxl",
-    "tidyr",
-    "dplyr"
-  ))
-
+sketchy::load_packages(c(
+  "RColorBrewer",
+  "ggplot2",
+  "readxl",
+  "tidyr",
+  "dplyr"
+))
 ```
 
  
 
 
-
 ::: {.alert .alert-info}
-### Objetives
+
+### Objetivos del manual {.unnumbered .unlisted}
 
 &nbsp;
 
--   Understand the logic used by ggplot2 to structure graphs
+- Familiarizarse con las funciones principales para importar y exportar datos
 
--   Get familiar with its basic functions and types layer
+- Conocer buenas prácticas para el manejo de datos que faciliten su uso en `R`
 
 :::
 
 &nbsp;  
 
 ::: {.alert .alert-warning}
-# Before importing data
+# Antes de importar datos
 
-There are a few habits for data entry that will make it easier to import data correctly into `R`:
+Existen algunos hábitos para ingresar datos que facilitarán la correcta importación de datos en `R`:
 
-  - Reserve the first row for the header
+  - Reservar la primera fila para la cabecera
   
-  - Reserve the first column to the sampling unit
+  - Reserve la primera columna a la unidad de muestreo
   
-  - Use "_", "." or "-" instead of empty spaces (e.g. "Cornell_University")
+  - Utilice "_", "." o "-" en lugar de espacios vacíos (por ejemplo, "Cornell_University")
   
-  - Use short names
+  - Utilice nombres cortos
   
-  - Avoid using uncommon symbols such as ?, $,%, ^, &, *, (, ),-,#, ?,,,<,>, /, |, \, [ ,] ,{, and }
+  - Evite utilizar símbolos poco comunes como ?, $,%, ^, &, *, (, ),-,#, ?,,,<,>, /, |, \, [ ,] ,{, y }
   
-  - Be consistent when referring to the same things (i.e. write them always in the same way)
+  - Sea consistente al referirse a las mismas cosas (es decir, escríbalas siempre de la misma manera)
   
-  - Delete any extra comments outside the data set columns
+  - Elimine cualquier comentario adicional fuera de las columnas del conjunto de datos
   
-  - Indicate missing values with NA (or at least empty spaces)
+  - Indique los valores que faltan con `NA` (o al menos con espacios vacíos)
   
-  - Don't even think about color-coding your data in excel
+  - Ni se le ocurra codificar los datos por colores en Excel
+  
+  - No fusione celdas
 
 :::
 
 &nbsp;
  
-# Importing data
+# Importar datos
 
-Importing data into `R` is a crucial and apparently simple step. However, given the diversity of data formats and operating systems, as well as the many possible sources of error, inputting data in `R` is not always that straightforward. Most issues are related with:
+La importación de datos en `R` es un paso crucial y aparentemente sencillo. Sin embargo, dada la diversidad de formatos de datos y sistemas operativos, así como las numerosas fuentes de error posibles, la introducción de datos en `R` no siempre es tan sencilla. La mayoría de los problemas están relacionados con
 
-  - Telling `R` in which directory the file is found
+  - Decirle a `R` en qué directorio se encuentra el archivo
   
-  - Telling `R` how the data is encoded (e.g. comma-separated, fixed width, etc)
+  - Decirle a `R` cómo están codificados los datos (por ejemplo, separados por comas, anchura fija, etc.).
   
-  - Handling empty cells and uncommon characters
+  - Manejo de celdas vacías y caracteres poco comunes
 
 &nbsp;
 
-## Setting the working directory
+## Establecer el directorio de trabajo
 
-To read data in R you need to specify the working directory. It can be set with the function `setwd()`. The way you do this depends on the operating system (windows, mac, Linux). The folder directory syntax follows the nested structure of the folders. For instance:
+Para leer datos en R es necesario especificar el directorio de trabajo. Se puede establecer con la función `setwd()`. La forma de hacerlo depende del sistema operativo (windows, mac, Linux). La sintaxis del directorio sigue la estructura anidada de las carpetas. Por ejemplo:
 
 ```{r, eval=F, echo=T}
-
 setwd("/home/m/Desktop/")
-
 ```
 
-... sets the working directory in the folder "Desktop", which is found within "m", which is found within "home". 
+... establece el directorio de trabajo en la carpeta "Desktop", que se encuentra dentro de "m", que se encuentra dentro de "home". 
 
-&nbsp;
+..;
 
-Some basic tips for setting the working directory:
+Algunos consejos básicos para establecer el directorio de trabajo:
 
-  - Make sure the location is quoted
+  - Asegúrese de que la ubicación está entre comillas
 
-  - Make sure you have forward-slash (/) between folder names (although double backward-slashes seem to work in windows)
+  - Asegúrese de que hay una barra diagonal (/) entre los nombres de las carpetas (aunque las barras diagonales dobles parecen funcionar en Windows).
 
-  - Do not include any file name in the folder directory name
+  - No incluya ningún nombre de archivo en el nombre del directorio de la carpeta.
   
-  - To find the location you can look at the properties of a file in that folder and copy it
+  - Para encontrar la ubicación, puede consultar las propiedades de un archivo de esa carpeta y copiarlo.
 
-  - The path to the folder should be quoted ("")
+  - La ruta a la carpeta debe ir entre comillas ("")
  
-  - The name matches exactly (better to copy/paste)
+  - El nombre debe coincidir exactamente (mejor copiar/pegar)
   
-  - Use `list.files()` to check which files are in the working directory
+  - Utilice `list.files()` para comprobar qué archivos están en el directorio de trabajo
   
-   - `R` can suggest and auto-complete the folder names by pressing "tab" when within quotes:
+   - `R` puede sugerir y autocompletar los nombres de las carpetas pulsando "tab" cuando están entre comillas:
 
  &nbsp; 
  
-<img src="./images/suggest_folder.gif" alt="Color spectro" height="150" width="550">
+<img src="./images/suggest_folder.gif" alt="Espectro de color" height="150" width="550">
 
 &nbsp;
 
-<font size="5">Setting the working directory in windows</font> 
+### Establecer el directorio de trabajo en windows 
 
-In windows it should be something like this:
+En windows debería ser algo como esto:
 ```{r,eval=FALSE}
-
 setwd("C:/location")
-
 ```
 
-You can also do this (only on windows!):
+También pueden hacerlo manualmente (¡solo en windows!):
 ```{r,eval=FALSE}
-
 setwd(choose.dir())
-
 ```
 &nbsp;
-That should pop-up a window where you can choose the location. However, this should only be used to figure out the correct way to write the directory location, not as part of the script itself.
+
+Debería aparecer una ventana en la que puede elegir la ubicación. Sin embargo, esto sólo se debe utilizar para averiguar la forma correcta de escribir la ubicación del directorio, no como parte de la propia secuencia de comandos.
 
 
 &nbsp;
 
-<font size="5">Setting the working directory in OSX (mac)</font> 
+### Establecer el directorio de trabajo en macOS
 
-For mac setting the working directory should be something like this:
+Para mac establecer el directorio de trabajo debe ser algo como esto:
 
 ```{r,eval=FALSE}
-
 setwd("/Users/yourname/..")
-
 ```
 
-do not include whatever you have before "users" (like macintosh... )
+no incluya lo que tenga antes de "usuarios" (como en windows)
 
 &nbsp;
 
-<font size="5">Setting the working directory in Linux</font> 
+### Establecer el directorio de trabajo en Linux
 
-Similar to the code used in OSX:
+Similar al código usado en OSX:
 ```{r, eval = F}
-
 setwd("/home/m/Desktop/")
-
 ```
 &nbsp;
 
-The "~" (tilde) can also be used to skip the "home" and "user" folder in Linux:
+La "~" (virgulilla) también puede utilizarse para omitir la carpeta "home" y "user" en Linux:
 ```{r, eval = F}
-
 setwd("~/Desktop/")
-
 ```
 &nbsp;
 
-The current working directory can be checked as follows:
+El directorio de trabajo actual se puede comprobar de la siguiente manera:
 ```{r, eval = T}
-
 getwd()
-
 ```
 &nbsp;
 
-## Reading data
+## Lectura de datos
 
-Any file can be read in `R`. It's just a matter of letting `R` know in which format is the file encoded (e.g. what conventions were followed when generating the file). The most common formats to store/exchange data sets as the ones we usually handle in biological sciences are  *txt*, *csv* and *xls/xlsx*.
+Cualquier archivo puede ser leído en `R`. Sólo es cuestión de hacer saber a `R` en qué formato está codificado el archivo (por ejemplo, qué convenciones se siguieron al generarlo). Los formatos más comunes para almacenar/intercambiar conjuntos de datos como los que solemos manejar en ciencias biológicas son *txt*, *csv* y *xls/xlsx*.
 
 &nbsp;
 
-The most commonly used function to import data in `R` is `read.table`. The documentation of this function actually includes all the default functions for inputting data:
+La función más utilizada para importar datos en `R` es `read.table`. De hecho, la documentación de esta función incluye todas las funciones por defecto para introducir datos:
 
 ```{r}
 ?read.table
@@ -202,201 +187,178 @@ The most commonly used function to import data in `R` is `read.table`. The docum
 
 &nbsp;
 
-<font size="5">Reading <i>.txt</i> files</font> 
+## Leer archivos _.txt_
 
-*.txt* files can be read using `read.table`. Let's first download a freely available data set in *.txt* format:
+Los archivos *.txt* pueden leerse con `read.table`. Descarguemos primero un conjunto de datos de libre acceso en formato *.txt*:
 
 ```{r, eval = F, echo= T}
+# definir el directorio de trabajo
+setwd("INGRESE LA DIRECCION DE LA CARPETA DONDE ESTAN LOS DATOS")
 
-# set working directory
-setwd("PUT THE FOLDER LOCATION WHERE YOU WANT TO SAVE THE FILE HERE")
-
-download.file("https://raw.githubusercontent.com/maRce10/OTS_TB_ESP_2024/master/pantheria_mammals_data.txt", destfile = "pantheria_mammals_data.txt")
-
+download.file(
+  "https://raw.githubusercontent.com/maRce10/OTS_TB_ESP_2024/master/pantheria_mammals_data.txt",
+  destfile = "pantheria_mammals_data.txt"
+)
 ```
 *You can also manually download the file from [here](https://raw.githubusercontent.com/maRce10/OTS_TB_ESP_2024/master/pantheria_mammals_data.txt)*
 
 &nbsp;
 
-The file can be input into `R` as follows:
+El archivo puede introducirse en `R` de la siguiente forma:
 
 ```{r, eval = F, echo= T}
-
-# read file
-pntr_dt <- read.table("pantheria_mammals_data.txt", stringsAsFactors = FALSE, sep = "\t", header = TRUE)
-
+# leer datos
+datos_pantheria <- read.table("pantheria_mammals_data.txt", stringsAsFactors = FALSE, sep = "\t", header = TRUE)
 ```
 
 
 ```{r, eval = T, echo= F}
-
-# read file
-pntr_dt <- read.table("pantheria_mammals_data.txt", stringsAsFactors = FALSE, sep = "\t", header = TRUE)
-
-
+# leer datos
+datos_pantheria <-
+  read.table(
+    "pantheria_mammals_data.txt",
+    stringsAsFactors = FALSE,
+    sep = "\t",
+    header = TRUE
+  )
 ```
 
 ```{r, eval = F, echo= T}
-
-# check structure
-head(pntr_dt)
-
+# explorar estructura
+head(datos_pantheria)
 ```
 
 ```{r, eval = T, echo= F}
-
 # check structure
-knitr::kable(pntr_dt[1:6, 1:6], row.names = F, escape = FALSE) %>%
+knitr::kable(datos_pantheria[1:6, ], row.names = F, escape = FALSE) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
-
-knitr::kable(pntr_dt[1:6, 7:10], row.names = F, escape = FALSE) %>%
-  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
-
 ```
 &nbsp;
 
-The file name is quoted and contains the file extension.
+El nombre del archivo está entre comillas y contiene la extensión del archivo.
 
 &nbsp;
 
-Note that the value -999 is used to define empty cells. We can read this values as *NAs* while importing the data using the 'na.strings' argument:
+Tenga en cuenta que el valor -999 se utiliza para definir celdas vacías. Podemos leer estos valores como *NAs* al importar los datos utilizando el argumento 'na.strings':
 
 ```{r, eval = F, echo= T}
+# leer datos
+datos_pantheria <-
+  read.table(
+    "pantheria_mammals_data.txt",
+    sep = "\t",
+    header = TRUE,
+    na.strings = "-999"
+  )
 
-# read file
-pntr_dt <- read.table("pantheria_mammals_data.txt", sep = "\t", header = TRUE, na.strings = "-999")
-
-# check structure
-head(pntr_dt)
-
+# explorar estructura
+head(datos_pantheria)
 ```
 
 ```{r, eval = T, echo= F}
-
 # read file
-pntr_dt <- read.table("pantheria_mammals_data.txt", stringsAsFactors = FALSE, sep = "\t", header = TRUE, na.strings = "-999")
+datos_pantheria <- read.table("pantheria_mammals_data.txt", stringsAsFactors = FALSE, sep = "\t", header = TRUE, na.strings = "-999")
 
 
 # check structure
-knitr::kable(pntr_dt[1:6, 1:6], row.names = F, escape = FALSE) %>%
+knitr::kable(datos_pantheria[1:6, ], row.names = F, escape = FALSE) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
-
-knitr::kable(pntr_dt[1:6, 7:10], row.names = F, escape = FALSE) %>%
-  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
-
 ```
 &nbsp;
 
-<font size="5">Reading <i>.csv</i> files</font> 
+## Leer archivos _.csv_
 
-Again, we can download an example file online:
+De nuevo, podemos descargar un archivo de ejemplo en línea:
 
 ```{r, eval = F, echo= T}
+# bajar datos en zip
+download.file(
+  "https://www.birds.cornell.edu/clementschecklist/wp-content/uploads/2023/12/Clements-v2023-October-2023-csv.zip",
+  destfile = "clements_bird_list.zip"
+)
 
-download.file("http://www.birds.cornell.edu/clementschecklist/wp-content/uploads/2013/03/eBird_Taxonomy_v2017_18Aug2017.csv", destfile = "clements_bird_list.csv")
+# extraer zip
+unzip("clements_bird_list.zip", files = "Clements-v2023-October-2023.csv")
 
-clm_lst <- read.csv("clements_bird_list.csv", stringsAsFactors = FALSE)
+# leer datos
+clm_lst <-
+  read.csv("Clements-v2023-October-2023.csv", stringsAsFactors = FALSE)
 
 head(clm_lst)
-
 ```
 
 
 ```{r, eval = T, echo= F}
-
-clm_lst <- read.csv("clements_bird_list.csv", stringsAsFactors = FALSE)
+clm_lst <- read.csv("Clements-v2023-October-2023.csv", stringsAsFactors = FALSE)
 
 # check structure
-knitr::kable(clm_lst[1:6, 1:5], row.names = F, escape = FALSE) %>%
+knitr::kable(clm_lst[1:6, ], row.names = F, escape = FALSE) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
-
-knitr::kable(clm_lst[1:6, 6:9], row.names = F, escape = FALSE) %>%
-  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
-
 ```
 
-You can also manually download the file from [here](http://www.birds.cornell.edu/clementschecklist/wp-content/uploads/2013/03/eBird_Taxonomy_v2017_18Aug2017.csv)
+También puede descargar manualmente el archivo desde [aquí](https://www.birds.cornell.edu/clementschecklist/wp-content/uploads/2023/12/Clements-v2023-October-2023-csv.zip)
 
 &nbsp;
 
 
-As in the previous example, we can tell `R` how to identify empty cells using the 'na.strings' argument:
+Como en el ejemplo anterior, podemos decirle a `R` cómo identificar las celdas vacías utilizando el argumento `na.strings`:
 
 ```{r, eval = F, echo= T}
-
-clm_lst <- read.csv("clements_bird_list.csv", stringsAsFactors = FALSE, na.strings = "")
+clm_lst <-
+  read.csv(
+    "Clements-v2023-October-2023.csv",
+    stringsAsFactors = FALSE,
+    na.strings = ""
+  )
 
 head(clm_lst)
-
 ```
 
 
 ```{r, eval = T, echo= F}
-
-clm_lst <- read.csv("clements_bird_list.csv", stringsAsFactors = FALSE, na.strings = "")
+clm_lst <- read.csv("Clements-v2023-October-2023.csv", stringsAsFactors = FALSE, na.strings = "")
 
 # check structure
-knitr::kable(clm_lst[1:6, 1:5], row.names = F, escape = FALSE) %>%
+knitr::kable(clm_lst[1:6, ], row.names = F, escape = FALSE) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
-
-knitr::kable(clm_lst[1:6, 6:9], row.names = F, escape = FALSE) %>%
-  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
-
 ```
 &nbsp;
 
-## Reading excel files
+## Leer archivos de Excel
 
-Most researchers enter data into excel spreadsheets. So it would be pretty handy to read the data directly from there. To read *xls* and *xlsx* files we need to install the package "readxl" (there are other packages that can be used but they all work similarly):
+La mayoría de los investigadores introducen los datos en hojas de cálculo Excel. Así que sería bastante práctico leer los datos directamente desde ahí. Para leer archivos *xls* y *xlsx* necesitamos instalar el paquete "readxl" (hay otros paquetes que se pueden utilizar pero todos funcionan de forma similar):
 
 ```{r,eval=FALSE}
-
 install.packages(pkgs = "readxl")
 
-```
-&nbsp;
-
-And load it: 
-
-```{r, eval=F}
-
 library(readxl)
-
 ```
 &nbsp;
 
-As we did above, download an example file from an online repository. In this case is the same Clements bird taxonomy list in *xlsx* format:
+Como hicimos anteriormente, descargue un archivo de ejemplo de un repositorio en línea. En este caso es la misma lista de taxonomía de aves de Clements en formato *xlsx*:
 
 ```{r, eval = F, echo= T}
-
-download.file("http://www.birds.cornell.edu/clementschecklist/wp-content/uploads/2017/08/eBird_Taxonomy_v2017_18Aug2017.xlsx", destfile = "clements_bird_list.xlsx")
-
+download.file("https://www.birds.cornell.edu/clementschecklist/wp-content/uploads/2023/10/Clements-v2023-October-2023.xlsx", destfile = "clements_bird_list.xlsx")
 ```
-You can also manually download the file from [here](http://www.birds.cornell.edu/clementschecklist/wp-content/uploads/2017/08/eBird_Taxonomy_v2017_18Aug2017.xlsx)
+También puede descargar manualmente el archivo desde [aquí](http://www.birds.cornell.edu/clementschecklist/wp-content/uploads/2017/08/eBird_Taxonomy_v2017_18Aug2017.xlsx)
 
 &nbsp;
 
-Now we can use the function `read_excel()` to read the file: 
+Ahora podemos utilizar la función `read_excel()` para leer el archivo: 
 
 ```{r, eval = F, echo= T}
-
-# read file
+# leer archivo
 clm_lst2 <- read_excel("clements_bird_list.xlsx", sheet = 1)
 
 head(clm_lst2)
 ```
 
 ```{r, eval = T, echo= F}
-
 clm_lst2 <- read_excel("clements_bird_list.xlsx", sheet = 1)
 
 # check structure
-knitr::kable(clm_lst2[1:6, 1:5], row.names = F, escape = FALSE) %>%
+knitr::kable(clm_lst2[1:6, ], row.names = F, escape = FALSE) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
-
-knitr::kable(clm_lst2[1:6, 6:9], row.names = F, escape = FALSE) %>%
-  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
-
 ```
 &nbsp;
 
@@ -404,75 +366,54 @@ You need to specify the file name (including extension) and the excel sheet (tab
 
 &nbsp;
 
+::: {.alert .alert-info}
 
-<div class="alert alert-info">
+### Ejercicio 1 
 
-<font size="5">Exercise 1</font> 
+Todas las funciones predeterminadas para introducir datos en `R` tienen una contrapartida para exportar el mismo tipo de datos. Los nombres de estas otras funciones son similares a los de las de lectura de datos, aunque suelen empezar por "write" o "save".
 
-All default functions to input data into `R` have a counterpart to export the same type of data. The names of these other functions are similar to the ones for reading data, although they typically start with "write" or "save".
+1.1 ¿Cuáles son los nombres de las funciones por defecto para exportar los formatos de datos que hemos utilizado anteriormente? (pista: prueba `apropos` para comprobar qué funciones están disponibles) 
 
-</br>
+1.2 Exportar los datos de mamíferos como archivo *.csv*. 
 
-1.1 What are the names of the default functions for exporting the data formats we used above? (hint: try `apropos` to check which functions are available) 
+1.3 Vuelva a exportar los datos de mamíferos, esta vez excluyendo los nombres de las filas
 
-</br>
+1.4 Leer el archivo *.csv* con `read.table`.
 
-1.2 Export the mammals data as a *.csv* file 
+1.5 ¿Qué otros paquetes pueden importar archivos excel en `R`?
 
-</br>
+1.6 ¿Se puede exportar un archivo excel o añadir datos a un archivo excel existente desde `R`? 
 
-1.3 Export the mammals data again, this time excluding the row names
+1.7 Utilizando el archivo "clements_bird_list.csv", ¿cómo le diría a `R` que leyera tanto "Rheiformes" como "Ostriches" como celdas vacías (sin dejar de leer las celdas vacías como celdas vacías)? 
 
-</br>
-
-1.4 Read the *.csv* file using `read.table`
-
-</br>
-
-1.5 What other packages can import excel files into `R`?
-
-</br>
-
-1.6 Can you export an excel file or add data to an existing excel file from `R`? 
-
-</br> 
-
-1.7 Using the "clements_bird_list.csv" file, how would you tell `R` to read both "Rheiformes" and "Ostriches" as empty cells (while still reading empty cells as empty cells)? 
-
-</div>
-
+:::
 
 ```{r, eval = F, echo= F}
-
 # 1.4
 clm_lst3 <- read.table("clements_bird_list.csv", stringsAsFactors = FALSE, header = TRUE, sep = ",", fill = T)
 
 # 1.7
-clm_lst <- read.csv("clements_bird_list.csv", stringsAsFactors = FALSE, na.strings = c("",  "Rheiformes", "Ostriches"))
+clm_lst <- read.csv("clements_bird_list.csv", stringsAsFactors = FALSE, na.strings = c("", "Rheiformes", "Ostriches"))
 
 # check structure
-knitr::kable(clm_lst[1:6, 1:5], row.names = F, escape = FALSE) %>%
+knitr::kable(clm_lst[1:6, ], row.names = F, escape = FALSE) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
-
-knitr::kable(clm_lst[1:6, 6:9], row.names = F, escape = FALSE) %>%
-  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
-
 ```
 
 ---
 
-# Formatting data
+# Formato de los datos
 
-This section deals with organizing your data in a way that simplify its handling, exploration and analysis. As you can probably guess, the more consistent things are done, the more predictable they become. This also applies to data. If data is organized with the same logic, you can expect the same type of manipulations and analyses to be applicable on different data sets. Organizing the data is a key  (but usually neglected) aspect of the data analysis workflow. When data is properly organized you will spend much less time on formatting and more time on the actual analytic questions.
+Esta sección trata de la organización de los datos de forma que se simplifique su manejo, exploración y análisis. Como probablemente puedas adivinar, cuanto más consistentes se hacen las cosas, más predecibles se vuelven. Esto también se aplica a los datos. Si los datos se organizan con la misma lógica, cabe esperar que el mismo tipo de manipulaciones y análisis sean aplicables a distintos conjuntos de datos. La organización de los datos es un aspecto clave (pero normalmente descuidado) del flujo de trabajo del análisis de datos. Cuando los datos están bien organizados, se dedica mucho menos tiempo a formatearlos y más a las cuestiones analíticas reales.
 
-When possible, we will run the data formatting examples using both the 'tidyr' package and the base `R` functions.
+Cuando sea posible, ejecutaremos los ejemplos de formateo de datos utilizando tanto el paquete 'tidyr' como las funciones base de `R`.
 
-## Tidy data
+## Datos compactos
 
-"Tidy data" is a logic for organizing data sets in a consistent and intuitive way. To run some of the code below you will need the 'tidyr' and 'dplyr' packages, which can be installed/loaded as follows: 
+Datos compactos ("tidy data") es una lógica para organizar conjuntos de datos de forma coherente e intuitiva. Para ejecutar parte del código de abajo necesitarás los paquetes 'tidyr' y 'dplyr', que se pueden instalar/cargar de la siguiente manera: 
+
 
 ```{r,eval=FALSE}
-
 install.packages(pkgs = "tidyr")
 
 install.packages(pkgs = "dplyr")
@@ -480,199 +421,171 @@ install.packages(pkgs = "dplyr")
 library(tidyr)
 
 library(dplyr)
-
 ```
 &nbsp;
 
-The same data can be represented in many ways. In the example below each data set shows exactly the same values of four variables *country*, *year*, *population*, and *cases*, but in each data set values are organized in a different way. The data shows the number of tuberculosis cases in Afghanistan, Brazil, and China between 1999 and 2000:
+Los mismos datos pueden representarse de muchas maneras. En el ejemplo siguiente, cada conjunto de datos muestra exactamente los mismos valores de cuatro variables *país*, *año*, *población* y *casos*, pero en cada conjunto de datos los valores están organizados de forma diferente. Los datos muestran el número de casos de tuberculosis en Afganistán, Brasil y China entre 1999 y 2000:
 
 ```{r, eval=F, echo=T}
-
 as.data.frame(table1)
-
 ```
 
 ```{r, eval=T, echo=F}
-
 # check structure
 knitr::kable(table1, row.names = F, escape = FALSE) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
-
 ```
 
 
 ```{r, eval=F, echo=T}
-
 as.data.frame(table2)
-
 ```
 
 ```{r, eval=T, echo=F}
-
 # check structure
 knitr::kable(table2, row.names = F, escape = FALSE) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
-
 ```
 
 ```{r, eval=F, echo=T}
-
 as.data.frame(table3)
-
 ```
 
 ```{r, eval=T, echo=F}
-
-
 # check structure
 knitr::kable(table3, row.names = F, escape = FALSE) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
-
 ```
 
-Or even spread across 2 different data sets:
+O incluso repartidos en 2 conjuntos de datos diferentes:
 
 ```{r, eval=F, echo=T}
-
 as.data.frame(table4a)
-
 ```
 
 ```{r, eval=T, echo=F}
-
 # check structure
 knitr::kable(table4a, row.names = F, escape = FALSE) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
-
 ```
 
 
 ```{r, eval=F, echo=T}
-
 as.data.frame(table4b)
-
 ```
 
 ```{r, eval=T, echo=F}
-
 # check structure
 knitr::kable(table4b, row.names = F, escape = FALSE) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
-
 ```
 &nbsp;
 
-All these data sets contained the same underlying data. However, they are not equally easy to use.
+Todos estos conjuntos de datos contenían los mismos datos subyacentes. Sin embargo, no son igual de fáciles de utilizar.
 
-There are three interrelated rules to make a data set tidy:
+Existen tres reglas interrelacionadas para ordenar un conjunto de datos:
 
-1. Each variable must have its own column
+1. Cada variable debe tener su propia columna
 
 1. Each observation must have its own row
 
-1. Each value must have its own cell
+1. Cada valor debe tener su propia celda
 
-This figure shows the rules visually:
+Esta figura muestra las reglas visualmente:
 
 <img src="./images/tidy-1.png" alt="tidy data" height="500" width="750">
 <font size="2">* Modified from <i>R for Data Science</i></font>
 &nbsp;
 
-These three rules are interrelated because it's impossible to only satisfy two of the three. That interrelationship leads to an even simpler set of practical instructions:
+Estas tres reglas están interrelacionadas porque es imposible satisfacer sólo dos de las tres. Esa interrelación conduce a un conjunto aún más sencillo de instrucciones prácticas:
 
-1.  Put each data set in a data frame
+1.  Ponga cada conjunto de datos en un marco de datos
 
-1.  Put each variable in a column
+1.  Ponga cada variable en una columna
 
 &nbsp;
 
-In the example above, only `table1` is tidy. It's the only representation where each column is a variable. There are two main advantages of formatting the data in this way:
+En el ejemplo anterior, sólo la `tabla1` está ordenada. Es la única representación en la que cada columna es una variable. Formatear los datos de esta manera tiene dos ventajas principales:
 
-1. If you have a consistent data structure, it's easier to learn the tools that work with it because they have an underlying uniformity
+1. Si tienes una estructura de datos consistente, es más fácil aprender las herramientas que trabajan con ella porque tienen una uniformidad subyacente
     
-1. Placing variables in columns fits well `R`'s vectorized nature. As we have seen, built-in `R` functions work with vectors of values. That makes transforming tidy data feel particularly natural
+1. Colocar las variables en columnas se ajusta bien a la naturaleza vectorial de `R`. Como hemos visto, las funciones incorporadas en `R` trabajan con vectores de valores. Esto hace que la transformación de datos ordenados resulte especialmente natural.
+
 
 &nbsp;
 
-<div class="alert alert-info">
+::: {.alert .alert-info}
 
-<font size="5">Exercise 2</font> 
+### Ejercicio 2
 
-</br>
 
-2.1 Describe how the variables and observations are organized in each of the sample data frames
+2.1 Describa cómo están organizadas las variables y observaciones en cada uno de los marcos de datos de muestreo
 
-</br>
+2.2 Calcule la tasa de casos por 10000 personas para "tabla1", "tabla2" y "tabla4a"/"tabla4b". 
 
-2.2 Calculate the rate of cases per 10000 people for "table1", "table2" and "table4a"/"table4b" 
-
-</div>
+:::
 
 ---
 
-## Gathering data
+## Recopilación de datos
 
-A common problem is a data set where some of the column names are not names of variables, but values of a variable. Take "table4a": the column names 1999 and 2000 represent values of the year variable, and each row represents two observations, not one:
+Un problema habitual es un conjunto de datos en el que algunos de los nombres de las columnas no son nombres de variables, sino valores de una variable. Tomemos "tabla4a": los nombres de las columnas 1999 y 2000 representan valores de la variable año, y cada fila representa dos observaciones, no una:
 
 ```{r, eval=F, echo=T}
-
 as.data.frame(table4a)
-
 ```
 
 ```{r, eval=T, echo=F}
-
 # check structure
 knitr::kable(table4a, row.names = F, escape = FALSE) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
-
 ```
 &nbsp;
 
-To tidy a data set like this, we need to __gather__ those columns into a new pair of variables. To do this we need three parameters:
+Para ordenar un conjunto de datos como éste, necesitamos __reunir__ esas columnas en un nuevo par de variables. Para ello necesitamos tres parámetros:
 
-* The set of columns that represent values, not variables. In this example, 
-  those are the columns `1999` and `2000`
+* El conjunto de columnas que representan valores, no variables. En este ejemplo, 
+  son las columnas `1999` y `2000`.
 
-* The name of the variable whose values form the column names. In the 'tidyr' syntax that is called  the `key`, which in this case is `year`
+* El nombre de la variable cuyos valores forman los nombres de las columnas. En la sintaxis 'tidyr' se llama `key`, que en este caso es `year`.
 
-* The name of the variable whose values are spread over the cells. In the 'tidyr' syntax that is called that `value`, which in this case is the number of `cases`
+* El nombre de la variable cuyos valores se reparten por las celdas. En la sintaxis 'tidyr' que se llama que `value`, que en este caso es el número de `cases`
   
   
-These parameters can be used to create a tidy data set using the function `gather()`:
+Estos parámetros se pueden utilizar para crear un conjunto de datos ordenados utilizando la función `gather()`:
 
 ```{r, eval=F, echo=T}
-
 gather(table4a, key = "year", value = "cases", `1999`, `2000`)
-
 ```
 
 ```{r, eval=T, echo=F}
-
 g1 <- gather(table4a, key = "year", value = "cases", `1999`, `2000`)
 
 # check structure
 knitr::kable(g1, row.names = F, escape = FALSE) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
-
 ```
 
-We can visualize this formatting as follows:
+Podemos visualizar este formato de la siguiente manera:
 
 <img src="./images/gather.png" alt="gather data" height="500" width="850">
 <font size="2">* Modified from <i>R for Data Science</i></font>
 &nbsp;
 
- `gather()` can also be used to tidy `table4b`. The only difference is the variable stored in the cell values:
+ `gather()` también se puede utilizar para ordenar `table4b`. La única diferencia es la variable almacenada en los valores de las celdas:
 
 ```{r, eval=F, echo=T}
-
-gather(data = table4b, key = "year", value = "population", `1999`, `2000`)
-
+gather(
+  data = table4b,
+  key = "year",
+  value = "population",
+  `1999`,
+  `2000`
+)
 ```
 
 ```{r, eval=T, echo=F}
-g2 <- gather(data = table4b, key = "year", value = "population",`1999`, `2000`)
+g2 <- gather(data = table4b, key = "year", value = "population", `1999`, `2000`)
 
 # check structure
 knitr::kable(g2, row.names = F, escape = FALSE) %>%
@@ -680,23 +593,26 @@ knitr::kable(g2, row.names = F, escape = FALSE) %>%
 ```
 &nbsp;
 
-To combine the tidied versions of `table4a` and `table4b` into a single data frame (or 'tibble'), we can either  use `dplyr::left_join()` or `merge()` from base `R`:
+Para combinar las versiones ordenadas de las tablas `table4a` y `table4b` en un único marco de datos (o 'tibble'), podemos utilizar `dplyr::left_join()` o `merge()` de la base `R`:
 
 ```{r, eval=F, echo=T}
+tidy4a <-
+  gather(table4a, key = "year", value = "cases", `1999`, `2000`)
 
-tidy4a <- gather(table4a, key = "year", value = "cases", `1999`, `2000`)
+tidy4b <-
+  gather(table4b, key = "year", value = "population", `1999`, `2000`)
 
-tidy4b <- gather(table4b, key = "year", value = "population", `1999`, `2000`)
-
-left_join(x = tidy4a, y = tidy4b, by = c("country", "year"))
-
+left_join(
+  x = tidy4a,
+  y = tidy4b,
+  by = c("country", "year")
+)
 ```
 
 ```{r, eval=T, echo=F}
-
 tidy4a <- gather(table4a, `1999`, `2000`, key = "year", value = "cases")
 
-tidy4b <- gather(table4b,`1999`, `2000`, key = "year", value = "population")
+tidy4b <- gather(table4b, `1999`, `2000`, key = "year", value = "population")
 
 g3 <- left_join(x = tidy4a, y = tidy4b, by = c("country", "year"))
 
@@ -707,13 +623,14 @@ knitr::kable(g3, row.names = F, escape = FALSE) %>%
 &nbsp;
 
 ```{r, eval=F, echo=T}
-
-merge(x = tidy4a, y =  tidy4b, by = c("country", "year"))
-
+merge(
+  x = tidy4a,
+  y = tidy4b,
+  by = c("country", "year")
+)
 ```
 
 ```{r, eval=T, echo=F}
-
 g4 <- merge(tidy4a, tidy4b)
 
 # check structure
@@ -723,148 +640,138 @@ knitr::kable(g4, row.names = F, escape = FALSE) %>%
 &nbsp;
 
 
-## Spreading
+## Expandir (spreading)
 
-Spreading is the opposite of gathering. You use it when an observation is scattered across multiple rows. For example, in `table2` an observation is a country in a year, but each observation is spread across two rows:
+El expandir es lo contrario de la agrupación. Se utiliza cuando una observación está dispersa en varias filas. Por ejemplo, en la `tabla2` una observación es un país en un año, pero cada observación está dispersa en dos filas:
 
 ```{r, eval=F, echo=T}
-
 table2
-
 ```
 
 ```{r, eval=T, echo=F}
-
 # check structure
 knitr::kable(table2, row.names = F, escape = FALSE) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
-
 ```
 &nbsp;
 
 
-To tidy this data set up, we only need two parameters:
+Para ordenar este conjunto de datos, sólo necesitamos dos parámetros:
 
-* The column that contains variable names, the `key` column. Here, it's 
+* La columna que contiene los nombres de las variables, la columna `key`. Aquí, es 
   `type`.
 
-* The column that contains values forms multiple variables, the `value`
-  column. Here it's `count`.
+* La columna que contiene los valores de las variables múltiples, la columna `value`.
+  la columna `value`. Aquí es `count`.
 
 &nbsp;
 
-To do this we can use `spread()`:
+Para hacer esto podemos usar `spread()`:
 
 ```{r, eval=F, echo=T}
-
 spread(table2, key = "type", value = "count")
-
 ```
 
 ```{r, eval=T, echo=F}
-
 sp1 <- spread(table2, key = "type", value = "count")
 
 # check structure
 knitr::kable(sp1, row.names = F, escape = FALSE) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
-
 ```
 &nbsp;
 
-which can be visualized as follows:
+que puede visualizarse de la siguiente manera:
 
 <img src="./images/spreading.png" alt="spreading data" height="500" width="850">
 <font size="2">* Modified from <i>R for Data Science</i></font>
 &nbsp;
 
-`spread()` and `gather()` are complementary functions. `gather()` makes wide tables narrower and longer; `spread()` makes long tables shorter and wider.
+`spread()` y `gather()` son funciones complementarias. `gather()` hace las tablas anchas más estrechas y largas; `spread()` hace las tablas largas más cortas y anchas.
 
 &nbsp;
 
-<div class="alert alert-info">
 
-<font size="5">Exercise 3</font> 
+::: {.alert .alert-info}
 
-</br>
+### Ejercicio 3
 
-3.1 Tidy up the following data set on tree height for 2 species:
+3.1 Ordena el siguiente conjunto de datos sobre la altura de los árboles de 2 especies:
 
 ```{r}
-
-plnt_sz <- data.frame(forest = c("old_growth", "disturbed"), 
-                      Species_1 = c(154, 160), 
-                      Species_2 = c(120, 113))
-
+plnt_sz <- data.frame(
+  forest = c("old_growth", "disturbed"),
+  Species_1 = c(154, 160),
+  Species_2 = c(120, 113)
+)
 ```
 
-</div>
+:::
 
 &nbsp;
 
 ---
 
-<font size="5">Separating and uniting</font>  
+## Separar y unir
 
-So far we have fixed "table2" and "table4", but not "table3". "table3" has a different problem: we have one column (*rate*) that contains two variables (*cases and *population*). This can be fixed using the `separate()` function . We will also look at its complement`unite()`, which is used when a single variable is spread across multiple columns.
+Hasta ahora hemos arreglado "tabla2" y "tabla4", pero no "tabla3". La "tabla3" tiene un problema diferente: tenemos una columna (*tasa*) que contiene dos variables (*casos* y *población*). Esto puede solucionarse con la función `separate()` . También veremos su complemento `unite()`, que se utiliza cuando una sola variable está repartida en varias columnas.
 
 &nbsp;
 
-## Separate
+### Separar
 
-`separate()` pulls apart one column into multiple columns, by splitting wherever a separator character appears. Take `table3`:
+La función `separate()` separa una columna en varias columnas, dividiéndolas donde aparezca un carácter separador. Por ejemplo, `table3`:
 
 ```{r, eval=F, echo=T}
-
 as.data.frame(table3)
-
 ```
 
 ```{r, eval=T, echo=F}
-
 # check structure
 knitr::kable(table3, row.names = F, escape = FALSE) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
-
 ```
 
-Visually it does something like this:
+Visualmente hace algo así:
 
 <img src="./images/separate.png" alt="separate data" height="500" width="850">
 <font size="2">* Modified from <i>R for Data Science</i></font>
 
 &nbsp;
 
-The *rate* column contains both *cases* and *population* variables, and we need to split it into two variables. `separate()` takes the name of the column to separate, and the names of the new columns to be created: 
+La columna *tasa* contiene las variables *casos* y *población*, y necesitamos separarla en dos variables. `separate()` toma el nombre de la columna a separar, y los nombres de las nuevas columnas a crear: 
 
 ```{r, eval=F, echo=T} 
-
-separate(data = table3, col =  rate, into = c("cases", "population"))
-
+separate(
+  data = table3,
+  col = rate,
+  into = c("cases", "population")
+)
 ```
 
 ```{r, eval=T, echo=F}
-
-g5 <- separate(data = table3, col =  rate, into = c("cases", "population"))
+g5 <- separate(data = table3, col = rate, into = c("cases", "population"))
 
 knitr::kable(g5, row.names = F, escape = FALSE) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
-
 ```
 
-By default, `separate()` will split based on any non-alphanumeric character (i.e. a character that isn't a number or letter). In the code above, `separate()` split the values of *rate* at the forward slash characters. This can be explicitly stated (to avoid any errors):
+De forma predeterminada, `separate()` dividirá basándose en cualquier carácter no alfanumérico (es decir, un carácter que no sea un número o una letra). En el código anterior, `separate()` divide los valores de *rate* en los caracteres de la barra diagonal. Esto puede indicarse explícitamente (para evitar errores):
 
 ```{r eval = FALSE}
+tb3 <-
+  separate(
+    data = table3,
+    col = rate,
+    into = c("cases", "population"),
+    sep = "/"
+  )
 
-tb3 <- separate(data = table3, col = rate,  into = c("cases", "population"), sep = "/")
-
-tb3 
-
+tb3
 ```
 
 ```{r, eval=T, echo=F}
-
-g6 <- separate(data = table3, col = rate,  into = c("cases", "population"), sep = "/")
+g6 <- separate(data = table3, col = rate, into = c("cases", "population"), sep = "/")
 
 knitr::kable(g6, row.names = F, escape = FALSE) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
@@ -873,49 +780,61 @@ str(g6)
 ```
 &nbsp;
 
-Note that the *case* and *population* are character columns. By default `separate()` leaves the type of the new columns as in the original one. In this case this is not ideal as those really are numbers. We can ask `separate()` to try and convert to better types using `convert = TRUE`:
+Tenga en cuenta que *case* y *population* son columnas de caracteres. Por defecto `separate()` deja el tipo de las nuevas columnas como en la original. En este caso esto no es lo ideal ya que realmente son números. Podemos pedir a `separate()` que intente convertir a tipos mejores usando `convert = TRUE`:
 
 ```{r, eval=T, echo=T}
-
-tb3 <- separate(data = table3, col = rate, into = c("cases", "population"), convert = TRUE)
+tb3 <-
+  separate(
+    data = table3,
+    col = rate,
+    into = c("cases", "population"),
+    convert = TRUE
+  )
 
 str(tb3)
 ```
 &nbsp;
 
-You can also pass a vector of integers to `sep`, which will be interpreted as positions to split at. Positive values start at 1 on the far-left of the strings; negative value start at -1 on the far-right of the strings. When using integers to separate strings, the length of `sep` should be one less than the number of names in `into`. 
-You can use this to separate the last two digits of each year:
+También puede pasar un vector de enteros a `sep`, que serán interpretados como posiciones en las que dividir. Los valores positivos comienzan en 1 en el extremo izquierdo de las cadenas; los valores negativos comienzan en -1 en el extremo derecho de las cadenas. Cuando se usan enteros para separar cadenas, la longitud de `sep` debe ser uno menos que el número de nombres en `into`. 
+Puede utilizarlo para separar los dos últimos dígitos de cada año:
 
 ```{r, eval=F}
-
-separate(data = table3, col = year, into = c("century", "year"), 
-         sep = 2)
-
+separate(
+  data = table3,
+  col = year,
+  into = c("century", "year"),
+  sep = 2
+)
 ```
 
 ```{r, eval=T, echo=F}
-
 g8 <- separate(data = table3, col = year, into = c("century", "year"), sep = 2)
 
 knitr::kable(g8, row.names = F, escape = FALSE) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
-
 ```
 
-Separating columns can also be done with base `R`, although it takes a bit more coding:
+La separación de columnas también se puede hacer con la base `R`, aunque requiere un poco más de codificación:
 
 ```{r eval = FALSE}
+table3$cases <-
+  sapply(table3$rate, function(x) {
+    try(strsplit(x, "/")[[1]][1])
+  },
+  USE.NAMES = FALSE
+  )
 
-table3$cases <- sapply(table3$rate, function(x) try(strsplit(x, "/")[[1]][1]), USE.NAMES = FALSE)
+table3$population <-
+  sapply(table3$rate, function(x) {
+    try(strsplit(x, "/")[[1]][2])
+  },
+  USE.NAMES = FALSE
+  )
 
-table3$population <- sapply(table3$rate, function(x) try(strsplit(x, "/")[[1]][2]), USE.NAMES = FALSE)
-
-tb3 
-
+tb3
 ```
 
 ```{r, eval=T, echo=F}
-
 table3$cases <- sapply(table3$rate, function(x) try(strsplit(x, "/")[[1]][1]), USE.NAMES = FALSE)
 
 table3$population <- sapply(table3$rate, function(x) try(strsplit(x, "/")[[1]][2]), USE.NAMES = FALSE)
@@ -927,9 +846,9 @@ str(g6)
 ```
 &nbsp;
 
-## Unite
+## Unir
 
-`unite()` is the inverse of `separate()`: combining multiple columns into a single column:
+`unite()` es la inversa de `separate()`: combinar varias columnas en una sola:
 
 
 <img src="./images/unite.png" alt="unite data" height="500" width="850">
@@ -937,44 +856,94 @@ str(g6)
 
 &nbsp;
 
-However, you will need it much less frequently than `separate()`. 
+Sin embargo, la necesitará con mucha menos frecuencia que `separate()`. 
 
-We can use `unite()` to rejoin the *century* and *year* columns that we created above:
+Podemos utilizar `unite()` para volver a unir las columnas *century* y *year* que creamos anteriormente:
 
 ```{r, eval=F}
 unite(data = table5, col = "new", "century", "year")
 ```
 
 ```{r, eval=T, echo=F}
-
 g9 <- unite(data = table5, col = "new", "century", "year")
 
 knitr::kable(g9, row.names = F, escape = FALSE) %>%
   kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), full_width = FALSE, font_size = 14)
-
 ```
 
-In this function we can also use the `sep` argument (although in this example it was not specified).
+En esta función también podemos utilizar el argumento `sep` (aunque en este ejemplo no se ha especificado).
 
 
 &nbsp;
 
-<div class="alert alert-info">
+::: {.alert .alert-info}
 
-<font size="5">Exercise 3</font> 
-
+### Ejercicio 4
 </br>
 
-3.1 Unite *century* and *year* in "table5" using base `R` (hint: `paste()`)
+4.1 Una *century* y *year* de la "tabla5" usando `R` básico (pista: `paste()`)
 
-</br>
+::: 
 
-</div>
+
+# Exportar datos
+
+Probablemente el formato mas común para exportar datos de `R` es *.csv*. La función `write.csv` permite guardar cuadros de datos (data frame) o matrices (u otros objetos que se puedan convertir en un cuadro de datos), como archivos .csv. Por ejemplo, podemos guardar el cuadro de datos `iris` de esta forma:
+
+```{r, eval = FALSE}
+write.csv(x = iris, file = "iris.csv")
+```
+
+
+Esta función incluye el número de fila como una columna de forma predeterminada. Esto puede hacer que, cuando leemos y guardamos varias veces los datos, se acumulen las columnas con el número de fila. Por tanto es conveniente excluir los números de fila cuando se guardan estos archivos. Esto lo podemos hacer usando el argumento `row.names` de esta forma:
+
+```{r, eval = FALSE}
+write.csv(
+  x = iris,
+  file = "iris.csv",
+  row.names = FALSE
+)
+```
+
+También puede ser útil guardar el archivo en un directorio diferente al directorio de trabajo actual, sin tener que cambiarlo con `setwd()`. Esto lo podemos hacer incluyendo la función `file.path()` así:
+
+```{r, eval = FALSE}
+write.csv(
+  x = iris,
+  file = file.path("RUTA_AL_DIRECTORIO", "iris.csv"),
+  row.names = FALSE
+)
+```
+
+
+Archivos *.txt* pueden ser creados con la función `write.table`: 
+
+```{r, eval=FALSE}
+write.table(
+  x = iris,
+  file = file.path("RUTA_AL_DIRECTORIO", "iris.txt"),
+  row.names = FALSE,
+  sep = "\t"
+)
+```
+Note el argumento `sep = "\t"` que indica que las columnas estarán separadas por tabulaciones.
+
+Por último, también podemos usar la función `write_xlsx` del paquete `writexl` para guardar archivos en el formato de microsoft *.xlsx*:
+
+```{r, eval=FALSE}
+install.packages("writexl")
+
+library(writexl)
+
+write_xlsx(x = iris, path = "iris.xlsx")
+```
+
+&nbsp;
 
 ----
 
 
-## References
+## Referencias
 
   - Clements, J. F., T. S. Schulenberg, M. J. Iliff, D. Roberson, T. A. Fredericks, B. L. Sullivan, and C. L. Wood. 2017. *The eBird/Clements checklist of birds of the world: v2016*.
   
@@ -986,10 +955,8 @@ In this function we can also use the `sep` argument (although in this example it
 
 ------------------------------------------------------------------------
 
-<font size="4">Información de la sesión</font>
+## Información de la sesión  {.unnumbered .unlisted}
 
 ```{r session info, echo=F}
-
 sessionInfo()
-
 ```

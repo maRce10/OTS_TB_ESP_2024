@@ -3,14 +3,12 @@ toc: False
 ---
 
 ```{r, echo= FALSE}
-
 knitr::opts_chunk$set(eval = FALSE)
 ```
 
 1)  Instalá R en la computadora que utilizarás durante el taller ([https://cran.r-project.org/](https://cran.r-project.org/)). Probablemente ya lo tenés instalado, pero intentá actualizarlo si tenés una versión de R \< 4.0.0. Podés encontrar qué versión de R tenés ejecutando esto en la consola de R:
 
 ```{r}
-
 version$version.string
 ```
 
@@ -23,7 +21,6 @@ version$version.string
 5)  Ahora en la consola de R en Rstudio ejecutá el siguiente código para instalar los paquetes que estaremos usando durante el taller:
 
 ```{r, eval = FALSE}
-
 # cargar funcion del paquete "sketchy"
 source(
   paste0(
@@ -51,7 +48,6 @@ load_packages(
 6)  Creá un proyecto para el taller corriendo este código:
 
 ```{r, eval = FALSE}
-
 library(sketchy)
 
 make_compendium(

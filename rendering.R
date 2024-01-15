@@ -1,13 +1,5 @@
 ## packages to install for site
-# cargar funcion del paquete "sketchy"
-source(
-  paste0(
-    "https://raw.githubusercontent.com/maRce10/",
-    "sketchy/main/R/load_packages.R"
-  )
-)
-
-# instalar/ cargar paquetes
+library(sketchy)
 load_packages(
   packages = c(
     "remotes",
@@ -21,9 +13,16 @@ load_packages(
     "MASS",
     "lmerTest",
     "sjPlot",
-    "car"
+    "car",
+    "writexl",
+    "readxl",
+    "tidyr",
+    "dplyr"
   )
 )
+
+# install.packages("quarto")
+styler::style_dir(filetype = "qmd")
 
 # render site
 quarto::quarto_render()
