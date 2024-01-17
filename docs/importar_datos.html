@@ -231,7 +231,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Fecha de publicación</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">14 de enero de 2024</p>
+      <p class="date">17 de enero de 2024</p>
     </div>
   </div>
   
@@ -2858,7 +2858,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code>tibble [6 × 4] (S3: tbl_df/tbl/data.frame)
  $ country   : chr [1:6] "Afghanistan" "Afghanistan" "Brazil" "Brazil" ...
- $ year      : int [1:6] 1999 2000 1999 2000 1999 2000
+ $ year      : num [1:6] 1999 2000 1999 2000 1999 ...
  $ cases     : chr [1:6] "745" "2666" "37737" "80488" ...
  $ population: chr [1:6] "19987071" "20595360" "172006362" "174504898" ...</code></pre>
 </div>
@@ -2881,7 +2881,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code>tibble [6 × 4] (S3: tbl_df/tbl/data.frame)
  $ country   : chr [1:6] "Afghanistan" "Afghanistan" "Brazil" "Brazil" ...
- $ year      : int [1:6] 1999 2000 1999 2000 1999 2000
+ $ year      : num [1:6] 1999 2000 1999 2000 1999 ...
  $ cases     : int [1:6] 745 2666 37737 80488 212258 213766
  $ population: int [1:6] 19987071 20595360 172006362 174504898 1272915272 1280428583</code></pre>
 </div>
@@ -3041,7 +3041,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code>tibble [6 × 4] (S3: tbl_df/tbl/data.frame)
  $ country   : chr [1:6] "Afghanistan" "Afghanistan" "Brazil" "Brazil" ...
- $ year      : int [1:6] 1999 2000 1999 2000 1999 2000
+ $ year      : num [1:6] 1999 2000 1999 2000 1999 ...
  $ cases     : chr [1:6] "745" "2666" "37737" "80488" ...
  $ population: chr [1:6] "19987071" "20595360" "172006362" "174504898" ...</code></pre>
 </div>
@@ -3191,12 +3191,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="unnumbered unlisted anchored" data-anchor-id="información-de-la-sesión">Información de la sesión</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>R version 4.1.2 (2021-11-01)
+<pre><code>R version 4.3.2 (2023-10-31)
 Platform: x86_64-pc-linux-gnu (64-bit)
 Running under: Ubuntu 22.04.2 LTS
 
 Matrix products: default
-BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.10.0
+BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.10.0 
 LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.10.0
 
 locale:
@@ -3207,33 +3207,34 @@ locale:
  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
 [11] LC_MEASUREMENT=es_CR.UTF-8 LC_IDENTIFICATION=C       
 
+time zone: America/Costa_Rica
+tzcode source: system (glibc)
+
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] dplyr_1.0.8        tidyr_1.2.0        readxl_1.3.1       kableExtra_1.3.4  
+[1] dplyr_1.1.4        tidyr_1.3.0        readxl_1.4.3       kableExtra_1.3.4  
 [5] RColorBrewer_1.1-3 viridis_0.6.4      viridisLite_0.4.2  ggplot2_3.4.4     
 [9] knitr_1.45        
 
 loaded via a namespace (and not attached):
- [1] tidyselect_1.1.2    xfun_0.41           remotes_2.4.2.1    
- [4] purrr_0.3.4         colorspace_2.1-0    vctrs_0.6.5        
- [7] generics_0.1.2      htmltools_0.5.7     yaml_2.3.8         
-[10] utf8_1.2.4          rlang_1.1.3         pillar_1.9.0       
-[13] glue_1.7.0          withr_2.5.2         DBI_1.2.1          
-[16] lifecycle_1.0.4     stringr_1.5.1       munsell_0.5.0      
-[19] gtable_0.3.4        cellranger_1.1.0    rvest_1.0.3        
-[22] htmlwidgets_1.5.4   evaluate_0.23       fastmap_1.1.1      
-[25] fansi_1.0.6         Rcpp_1.0.12         xaringanExtra_0.7.0
-[28] scales_1.3.0        webshot_0.5.5       jsonlite_1.8.8     
-[31] systemfonts_1.0.4   gridExtra_2.3       digest_0.6.34      
-[34] packrat_0.9.2       stringi_1.8.3       sketchy_1.0.2      
-[37] grid_4.1.2          cli_3.6.2           tools_4.1.2        
-[40] magrittr_2.0.3      tibble_3.2.1        crayon_1.5.2       
-[43] pkgconfig_2.0.3     ellipsis_0.3.2      xml2_1.3.3         
-[46] assertthat_0.2.1    rmarkdown_2.25      svglite_2.1.0      
-[49] httr_1.4.2          rstudioapi_0.15.0   R6_2.5.1           
-[52] compiler_4.1.2     </code></pre>
+ [1] gtable_0.3.4        jsonlite_1.8.8      crayon_1.5.2       
+ [4] compiler_4.3.2      webshot_0.5.5       tidyselect_1.2.0   
+ [7] xml2_1.3.6          stringr_1.5.1       gridExtra_2.3      
+[10] systemfonts_1.0.5   scales_1.3.0        yaml_2.3.8         
+[13] fastmap_1.1.1       R6_2.5.1            generics_0.1.3     
+[16] htmlwidgets_1.6.4   tibble_3.2.1        munsell_0.5.0      
+[19] xaringanExtra_0.7.0 svglite_2.1.3       pillar_1.9.0       
+[22] rlang_1.1.3         utf8_1.2.4          stringi_1.8.3      
+[25] xfun_0.41           cli_3.6.2           withr_3.0.0        
+[28] magrittr_2.0.3      digest_0.6.34       rvest_1.0.3        
+[31] grid_4.3.2          rstudioapi_0.15.0   remotes_2.4.2.1    
+[34] packrat_0.9.2       lifecycle_1.0.4     vctrs_0.6.5        
+[37] evaluate_0.23       glue_1.7.0          cellranger_1.1.0   
+[40] sketchy_1.0.2       fansi_1.0.6         colorspace_2.1-0   
+[43] purrr_1.0.2         rmarkdown_2.25      httr_1.4.7         
+[46] tools_4.3.2         pkgconfig_2.0.3     htmltools_0.5.7    </code></pre>
 </div>
 </div>
 

@@ -60,7 +60,7 @@ Sin embargo, la mayoría de esos modelos estadísticos comunes no son más que c
  
 
 ::: {.alert .alert-info}
-# Objetivo del manual
+# Objetivo del manual {.unnumbered .unlisted}
 
   - Comprender la inferencia estadística a través de una única herramienta de modelaje (modelos lineales en sentido amplio)
 
@@ -1715,6 +1715,21 @@ knitr::include_graphics("./images/lemur.png")
 
  
 
+::: {.alert .alert-warning}
+
+## Lectura: _Understanding ‘it depends’ in ecology: a guide to hypothesising, visualising and interpreting statistical interactions_ {.unnumbered .unlisted}
+
+Los ecólogos utilizan habitualmente modelos estadísticos para detectar y explicar interacciones entre factores ecológicos, con el objetivo de evaluar si un efecto de interés cambia de signo o magnitud en distintos contextos. El artículo trata de los peligros de interpretan las interacciones estadísticas sin prestar atención a su propiedad fundamental de simetría, o a la escala de medida, ya sea aditiva o multiplicativa. [Acá pueden acceder al artículo](https://onlinelibrary.wiley.com/doi/full/10.1111/brv.12939).
+
+```{r, out.width = "100%", echo = FALSE, fig.align= "center"}
+
+knitr::include_graphics("./images/interaction.jpg")
+
+```
+:::
+
+ 
+
 ::: {.alert .alert-info}
 <font size="5">Ejercicio 7</font>
 
@@ -2215,11 +2230,13 @@ Este manual solo pretende sugerir un abordaje estadístico centrado en los model
 
 -   [Simulating data in R](https://aosmith.rbind.io/2018/08/29/getting-started-simulating-data/)
 
+- Spake, R., Bowler, D. E., Callaghan, C. T., Blowes, S. A., Doncaster, C. P., Antao, L. H., ... & Chase, J. M. (2023). [Understanding ‘it depends’ in ecology: a guide to hypothesising, visualising and interpreting statistical interactions](https://onlinelibrary.wiley.com/doi/full/10.1111/brv.12939). Biological Reviews.
+
  
 
 ------------------------------------------------------------------------
 
-<font size="4">Información de la sesión</font>
+# Información de la sesión {.unnumbered .unlisted}
 
 ```{r session info, echo=F}
 

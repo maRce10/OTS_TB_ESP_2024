@@ -17,7 +17,10 @@ load_packages(
     "writexl",
     "readxl",
     "tidyr",
-    "dplyr"
+    "dplyr",
+    "styler",
+    "quarto",
+    github = "hadley/emo"
   )
 )
 
