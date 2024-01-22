@@ -8,7 +8,7 @@ format:
 
 <center><font size="6"><b>Marcelo Araya-Salas</b></font></center>
 
-<center><img src="images/me.png" alt="me" width="700" height="100%"/></center>
+<center><img src="images/me_low_res.png" alt="me" width="700" height="100%"/></center>
 
 <font size="3">
 
