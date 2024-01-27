@@ -6,12 +6,12 @@ website:
   page-footer: Copyright 2024 | <a href="https://marce10.github.io">Marcelo Araya-Salas</a>
   title: "Ecología Tropical y Conservación 2024"
   search: true
-  site-url: https://marce10.github.io/R_avanzado_2023/
-  repo-url: https://github.com/maRce10/R_avanzado_2023/
+  site-url: https://marce10.github.io/OTS_TB_ESP_2024/
+  repo-url: https://github.com/maRce10/OTS_TB_ESP_2024-
   navbar:
     right:
       - icon: github
-        href: https://github.com/maRce10/R_avanzado_2023/
+        href: https://github.com/maRce10/OTS_TB_ESP_2024/
         aria-label: GitHub
     left:
       - href: index.qmd

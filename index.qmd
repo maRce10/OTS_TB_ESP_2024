@@ -1,5 +1,6 @@
 ---
-title: <font size="7"><b>Programación y métodos estadísticos avanzados en R</b></font>
+title: <font size="7"><b>Taller de Estadística</b></font>
+subtitle: <center><font size="6"><b>Ecología Tropical y Conservación 2024</font></center>
 date: ""
 format:
   html:
@@ -7,7 +8,7 @@ format:
     css: index_styles.css
 ---
 
-<center><font size="4"><b>Escuela de Biología, Universidad de Costa Rica<br></b></font></center>
+<center><font size="4"><b>Organización para Estudios Tropicales<br></b></font></center>
 
 <center><font size="4"><b><a href="https://marce10.github.io/">Marcelo Araya-Salas PhD</a> <br></b></font></center>
 
